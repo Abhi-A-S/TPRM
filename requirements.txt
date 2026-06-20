@@ -1,0 +1,6 @@
+Flask>=2.0
+PyMuPDF>=1.22.0
+pandas>=2.0
+numpy>=1.25
+streamlit>=1.25
+requests>=2.31
