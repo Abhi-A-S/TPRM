@@ -1,0 +1,401 @@
+vendor_id,vendor_name,vendor_type,annual_spend,risk_score,contract_start,contract_end,soc2,soc2_expiry,iso27001,iso27001_expiry,gdpr_dpa,breach_status,breach_date,under_investigation,access_type,data_sensitivity,current_access
+VND-0001,Secure Systems 1,Data Analytics,484337,87,2026-04-29,2027-02-10,True,2027-07-03,True,2026-11-05,True,False,,True,SFTP,LOW,True
+VND-0002,Titan Analytics 2,Payment Processing,382040,45,2025-01-27,2026-04-07,True,2027-07-05,True,2027-11-08,True,False,,False,Database,HIGH,True
+VND-0003,Nova Labs 3,Software,363891,69,2025-01-01,2026-04-13,True,2027-02-09,True,2026-06-18,False,False,,False,SFTP,HIGH,True
+VND-0004,Titan Services 4,Infrastructure,1014378,37,2025-12-26,2026-07-11,True,2027-08-23,False,,False,False,,False,Database,MEDIUM,True
+VND-0005,Vertex Cloud 5,Data Analytics,121341,76,2026-04-14,2027-05-11,True,2026-06-02,False,,True,False,,False,Application,HIGH,True
+VND-0006,Secure Partners 6,Software,1019500,63,2026-01-04,2027-02-11,False,,False,,False,False,,True,SFTP,LOW,True
+VND-0007,Apex Solutions 7,Software,913179,58,2025-06-30,2026-02-06,False,,False,,False,False,,False,Application,MEDIUM,True
+VND-0008,Apex Solutions 8,Cloud Services,482095,32,2025-10-21,2026-08-29,False,,True,2027-06-19,True,False,,False,Portal,MEDIUM,False
+VND-0009,Prime Systems 9,Data Analytics,920211,79,2025-05-18,2025-11-18,True,2026-09-02,False,,True,False,,False,API,HIGH,False
+VND-0010,Nova Analytics 10,Software,1190147,81,2024-12-09,2025-08-13,True,2027-01-14,False,,True,False,,False,Portal,LOW,True
+VND-0011,Quantum Systems 11,Infrastructure,251422,36,2024-12-21,2025-09-04,True,2026-10-18,True,2027-08-14,False,False,,False,Application,LOW,True
+VND-0012,Blue Cloud 12,Cloud Services,416369,60,2025-11-12,2026-11-15,True,2027-10-11,False,,True,False,,False,SFTP,MEDIUM,False
+VND-0013,Nova Services 13,Cloud Services,749377,95,2025-12-17,2026-07-15,True,2026-10-04,False,,False,False,,False,Portal,LOW,True
+VND-0014,Titan Systems 14,Cloud Services,1170691,29,2025-01-16,2025-10-09,True,2026-09-05,True,2025-12-15,False,True,2025-01-22,False,SFTP,HIGH,False
+VND-0015,Quantum Analytics 15,Cloud Services,643172,80,2026-03-23,2026-07-27,False,,False,,True,True,2026-04-06,False,Database,LOW,True
+VND-0016,Blue Analytics 16,Consulting,284119,56,2025-02-26,2025-12-06,True,2027-09-10,True,2025-12-14,True,False,,False,Portal,LOW,False
+VND-0017,Prime Services 17,Software,1070920,62,2024-08-15,2025-05-07,False,,True,2027-05-23,False,False,,False,API,HIGH,False
+VND-0018,Nova Analytics 18,Infrastructure,267469,81,2026-05-01,2026-12-27,False,,True,2027-08-22,True,False,,False,SFTP,MEDIUM,False
+VND-0019,Nova Labs 19,Cloud Services,948545,66,2026-05-04,2026-12-02,True,2027-06-11,False,,True,False,,False,Application,LOW,False
+VND-0020,Titan Solutions 20,Cloud Services,368539,86,2024-09-24,2025-08-24,True,2026-02-25,True,2026-11-05,True,False,,False,Application,MEDIUM,False
+VND-0021,Prime Systems 21,Software,76377,76,2025-03-10,2025-11-18,False,,False,,True,False,,False,Application,LOW,True
+VND-0022,Blue Analytics 22,Cloud Services,916054,42,2024-09-23,2025-08-17,False,,False,,False,False,,False,Application,MEDIUM,False
+VND-0023,Blue Networks 23,Cloud Services,933985,52,2026-02-02,2026-10-15,False,,True,2025-09-19,True,False,,False,Application,MEDIUM,False
+VND-0024,Vertex Cloud 24,Infrastructure,361806,43,2025-05-28,2026-01-13,True,2027-08-31,True,2026-05-06,True,False,,False,Application,MEDIUM,False
+VND-0025,Titan Partners 25,Data Analytics,651795,72,2025-08-10,2026-05-03,False,,False,,False,False,,False,SFTP,LOW,True
+VND-0026,Nova Solutions 26,Security,68474,42,2025-10-20,2027-02-16,False,,False,,True,False,,False,API,MEDIUM,True
+VND-0027,Titan Systems 27,Infrastructure,1163135,38,2025-08-11,2027-01-15,True,2026-08-12,True,2027-08-04,True,False,,False,Database,LOW,True
+VND-0028,Nova Cloud 28,Software,291489,20,2026-01-16,2027-07-10,True,2026-11-11,False,,True,False,,False,Database,LOW,False
+VND-0029,Titan Partners 29,Cloud Services,643232,66,2024-07-18,2025-02-12,False,,True,2027-05-08,True,False,,False,Application,LOW,True
+VND-0030,Prime Systems 30,Infrastructure,1159494,95,2024-09-10,2025-09-01,True,2026-02-15,True,2026-05-12,True,False,,True,Application,LOW,False
+VND-0031,Titan Networks 31,Payment Processing,676004,26,2025-02-04,2026-06-29,True,2027-08-07,True,2025-09-03,True,False,,False,Application,LOW,True
+VND-0032,Prime Solutions 32,Security,366098,74,2026-04-25,2027-08-02,True,2027-06-03,True,2026-08-12,False,False,,False,Database,MEDIUM,True
+VND-0033,Secure Cloud 33,Payment Processing,418273,48,2025-11-18,2026-12-12,True,2027-01-23,True,2026-11-04,True,False,,True,Database,HIGH,False
+VND-0034,Titan Systems 34,Cloud Services,1119878,61,2025-07-04,2025-12-01,True,2025-08-10,True,2025-07-02,False,False,,False,API,LOW,True
+VND-0035,Prime Networks 35,Consulting,720317,89,2026-02-28,2026-10-30,True,2026-09-25,False,,True,False,,False,SFTP,LOW,True
+VND-0036,Apex Analytics 36,Software,667077,52,2025-02-07,2026-04-13,True,2026-03-21,False,,True,False,,False,API,MEDIUM,True
+VND-0037,Titan Analytics 37,Consulting,273228,82,2025-12-02,2026-10-26,True,2027-03-26,True,2027-10-02,True,False,,False,SFTP,MEDIUM,True
+VND-0038,Nova Networks 38,Infrastructure,316587,28,2025-10-22,2026-03-12,True,2026-01-15,False,,False,False,,False,API,LOW,False
+VND-0039,Secure Labs 39,Cloud Services,313475,70,2024-10-28,2026-01-19,True,2025-07-03,False,,False,False,,False,Database,HIGH,False
+VND-0040,Secure Cloud 40,Security,358187,57,2025-04-06,2026-07-26,False,,True,2026-09-29,False,False,,False,API,HIGH,False
+VND-0041,Secure Services 41,Compliance,563722,75,2025-11-09,2026-04-22,False,,True,2025-11-16,True,False,,False,SFTP,LOW,True
+VND-0042,Quantum Services 42,Software,1186301,50,2026-05-09,2026-08-16,True,2027-10-15,True,2026-12-15,True,True,2026-03-25,False,Database,MEDIUM,True
+VND-0043,Titan Labs 43,Security,408573,80,2024-12-08,2025-10-11,False,,True,2026-08-30,False,False,,False,Portal,LOW,False
+VND-0044,Blue Services 44,Cloud Services,855220,83,2026-02-26,2027-02-17,False,,False,,True,False,,False,SFTP,LOW,False
+VND-0045,Nova Partners 45,Payment Processing,878177,27,2026-01-02,2026-08-04,False,,False,,True,False,,False,Application,MEDIUM,True
+VND-0046,Quantum Partners 46,Software,223560,55,2026-01-01,2026-09-02,True,2026-08-26,False,,True,False,,False,Database,MEDIUM,False
+VND-0047,Quantum Services 47,Software,1029404,38,2025-09-03,2026-10-28,True,2025-11-12,True,2027-07-07,False,False,,False,Application,MEDIUM,True
+VND-0048,Secure Services 48,Consulting,1160564,56,2025-01-30,2026-02-05,True,2027-08-11,False,,False,True,2023-11-06,False,Portal,LOW,True
+VND-0049,Titan Labs 49,Cloud Services,382858,94,2025-01-13,2025-10-15,True,2027-10-08,False,,True,False,,False,Application,LOW,True
+VND-0050,Blue Partners 50,Cloud Services,257219,75,2024-08-28,2025-07-18,False,,True,2025-09-04,True,False,,False,Database,LOW,True
+VND-0051,Apex Services 51,Payment Processing,1067676,55,2025-08-26,2026-08-17,True,2027-04-20,True,2027-03-02,True,True,2023-11-24,False,Portal,HIGH,False
+VND-0052,Apex Services 52,Software,842036,44,2025-03-11,2026-02-19,True,2027-09-22,True,2027-02-19,False,False,,False,Database,HIGH,False
+VND-0053,Titan Networks 53,Cloud Services,162988,92,2025-06-18,2026-06-08,True,2027-05-07,False,,True,False,,False,Portal,MEDIUM,True
+VND-0054,Vertex Analytics 54,Compliance,716960,68,2024-12-16,2026-04-03,False,,False,,True,False,,False,SFTP,MEDIUM,False
+VND-0055,Blue Cloud 55,Compliance,1144714,46,2025-09-28,2026-04-02,True,2027-11-28,False,,True,True,2024-04-27,False,API,HIGH,True
+VND-0056,Vertex Cloud 56,Infrastructure,844012,54,2025-11-17,2026-09-27,True,2026-12-17,True,2027-02-08,False,False,,False,Database,HIGH,True
+VND-0057,Quantum Partners 57,Consulting,774143,51,2025-02-01,2026-01-04,True,2027-01-22,True,2026-06-02,True,False,,False,Database,MEDIUM,False
+VND-0058,Blue Networks 58,Payment Processing,1110955,38,2025-10-08,2026-05-07,False,,True,2026-02-25,True,False,,True,API,HIGH,True
+VND-0059,Secure Analytics 59,Infrastructure,34951,68,2024-10-05,2025-08-02,True,2027-07-29,False,,False,False,,False,Application,MEDIUM,True
+VND-0060,Prime Analytics 60,Software,1042209,51,2025-04-11,2026-09-02,True,2026-09-23,False,,True,False,,False,API,LOW,True
+VND-0061,Blue Partners 61,Consulting,907371,86,2024-07-04,2025-04-15,False,,False,,True,True,2025-06-29,False,Application,MEDIUM,True
+VND-0062,Apex Analytics 62,Data Analytics,794157,62,2025-11-14,2027-02-20,True,2026-09-03,True,2027-02-17,True,False,,False,Application,MEDIUM,False
+VND-0063,Secure Networks 63,Data Analytics,374509,71,2025-12-15,2026-06-20,False,,False,,True,False,,False,SFTP,MEDIUM,True
+VND-0064,Nova Networks 64,Data Analytics,689204,52,2026-01-07,2027-06-28,False,,False,,True,True,2025-09-11,False,API,HIGH,True
+VND-0065,Vertex Solutions 65,Cloud Services,565793,42,2025-08-18,2026-08-11,False,,False,,True,False,,False,Portal,MEDIUM,True
+VND-0066,Secure Cloud 66,Data Analytics,1049260,20,2024-08-29,2025-12-21,True,2026-11-30,True,2026-12-31,True,False,,False,Database,LOW,True
+VND-0067,Titan Cloud 67,Cloud Services,826315,47,2024-12-08,2026-04-29,False,,True,2027-10-02,False,False,,False,Portal,MEDIUM,False
+VND-0068,Secure Systems 68,Payment Processing,225695,75,2025-06-07,2026-08-25,False,,True,2027-04-10,True,True,2025-11-13,True,API,LOW,False
+VND-0069,Secure Analytics 69,Cloud Services,308662,65,2025-09-14,2026-03-24,True,2027-07-23,True,2026-05-04,True,True,2025-03-27,False,Application,LOW,False
+VND-0070,Quantum Services 70,Cloud Services,1080373,54,2024-11-04,2025-07-20,True,2027-05-19,False,,True,False,,False,SFTP,MEDIUM,True
+VND-0071,Secure Labs 71,Security,968780,79,2024-07-27,2025-11-02,True,2027-06-29,True,2027-10-12,True,False,,False,SFTP,LOW,False
+VND-0072,Quantum Partners 72,Data Analytics,257853,83,2025-10-18,2026-10-01,True,2027-12-04,False,,True,False,,False,SFTP,HIGH,True
+VND-0073,Vertex Partners 73,Consulting,299923,70,2025-05-22,2026-05-28,True,2027-10-22,True,2025-12-05,False,False,,False,Portal,LOW,True
+VND-0074,Secure Services 74,Infrastructure,952056,56,2025-01-20,2026-02-07,True,2026-04-30,False,,True,True,2023-11-08,False,Database,HIGH,True
+VND-0075,Quantum Networks 75,Data Analytics,585405,36,2026-05-02,2026-10-14,False,,False,,True,False,,True,API,HIGH,True
+VND-0076,Nova Labs 76,Infrastructure,820530,77,2026-03-27,2027-05-25,False,,True,2026-08-12,True,False,,False,SFTP,LOW,True
+VND-0077,Blue Cloud 77,Security,1104230,61,2026-01-31,2026-12-18,False,,True,2025-09-13,True,True,2024-09-10,False,API,HIGH,True
+VND-0078,Apex Labs 78,Software,597774,82,2025-11-24,2026-06-07,True,2027-10-07,True,2026-11-02,True,False,,False,Portal,MEDIUM,True
+VND-0079,Titan Services 79,Payment Processing,398919,93,2026-04-04,2027-01-11,True,2026-09-03,True,2027-07-11,True,False,,False,SFTP,LOW,False
+VND-0080,Vertex Systems 80,Software,340583,28,2025-09-21,2026-05-19,False,,True,2026-10-11,True,False,,False,Application,LOW,False
+VND-0081,Prime Labs 81,Cloud Services,379390,92,2025-05-28,2026-03-11,True,2026-03-26,False,,True,False,,True,SFTP,MEDIUM,False
+VND-0082,Prime Services 82,Security,951148,75,2026-04-16,2027-08-14,False,,False,,True,True,2024-03-13,False,Application,MEDIUM,True
+VND-0083,Quantum Partners 83,Compliance,147970,73,2026-02-07,2026-11-19,False,,False,,True,False,,False,Database,LOW,True
+VND-0084,Quantum Systems 84,Data Analytics,513077,87,2024-10-06,2025-05-01,False,,False,,True,False,,False,SFTP,HIGH,True
+VND-0085,Prime Networks 85,Infrastructure,988121,59,2024-10-13,2026-03-11,True,2026-04-11,False,,False,False,,True,Database,MEDIUM,False
+VND-0086,Titan Systems 86,Software,1041017,20,2024-11-29,2026-04-26,True,2026-02-19,True,2025-12-30,True,True,2025-04-05,False,Application,LOW,True
+VND-0087,Apex Cloud 87,Compliance,533512,90,2025-05-26,2026-05-18,True,2027-05-14,False,,True,False,,False,Application,LOW,False
+VND-0088,Secure Analytics 88,Software,366380,71,2025-03-10,2026-07-09,True,2025-11-28,True,2027-01-23,True,False,,False,Database,HIGH,True
+VND-0089,Secure Services 89,Cloud Services,633454,75,2026-02-10,2026-10-13,True,2027-02-25,True,2025-06-22,True,False,,False,Database,MEDIUM,False
+VND-0090,Vertex Services 90,Security,1157801,75,2025-06-01,2026-11-13,False,,True,2026-06-02,True,False,,False,Application,MEDIUM,True
+VND-0091,Prime Analytics 91,Security,697912,72,2025-04-19,2025-10-03,True,2026-09-13,True,2026-12-08,False,False,,False,Application,LOW,True
+VND-0092,Quantum Solutions 92,Infrastructure,885300,48,2025-11-11,2026-03-12,True,2026-10-15,True,2027-05-10,True,True,2025-11-19,False,Portal,HIGH,True
+VND-0093,Blue Services 93,Compliance,173535,85,2024-07-03,2025-02-20,False,,False,,True,False,,False,Portal,MEDIUM,False
+VND-0094,Nova Analytics 94,Infrastructure,1123678,72,2025-07-07,2025-12-06,False,,False,,True,False,,False,Application,HIGH,True
+VND-0095,Vertex Analytics 95,Software,383765,92,2026-05-06,2027-03-16,True,2027-08-08,False,,True,False,,False,Application,LOW,False
+VND-0096,Nova Cloud 96,Software,648855,47,2025-04-08,2026-07-12,False,,True,2027-09-02,True,False,,False,Application,LOW,True
+VND-0097,Prime Partners 97,Infrastructure,1138800,69,2024-10-16,2025-06-13,False,,True,2026-12-24,False,False,,False,SFTP,MEDIUM,False
+VND-0098,Titan Solutions 98,Cloud Services,924440,63,2024-09-10,2024-12-31,False,,True,2026-08-02,True,False,,False,Database,LOW,True
+VND-0099,Prime Systems 99,Consulting,139178,54,2025-08-10,2026-03-14,False,,True,2027-03-23,False,False,,False,SFTP,LOW,True
+VND-0100,Titan Cloud 100,Compliance,268626,28,2025-02-05,2026-02-11,True,2026-12-24,True,2025-09-22,True,True,2024-10-19,False,Database,HIGH,False
+VND-0101,Nova Cloud 101,Data Analytics,1077630,44,2025-08-25,2025-12-07,False,,False,,True,True,2023-07-09,False,Database,LOW,True
+VND-0102,Secure Systems 102,Cloud Services,530159,33,2025-02-06,2025-12-29,False,,True,2026-12-21,True,False,,False,API,LOW,False
+VND-0103,Prime Services 103,Consulting,1113437,59,2026-02-01,2027-06-24,False,,False,,True,False,,False,SFTP,LOW,True
+VND-0104,Nova Partners 104,Infrastructure,710376,66,2024-09-12,2025-06-02,True,2027-01-02,False,,True,False,,False,Application,LOW,False
+VND-0105,Prime Solutions 105,Consulting,1182737,40,2025-10-16,2027-01-23,False,,False,,True,False,,False,Application,LOW,True
+VND-0106,Titan Services 106,Payment Processing,1086453,67,2025-04-13,2026-05-11,True,2027-09-23,True,2027-01-17,True,False,,False,SFTP,MEDIUM,False
+VND-0107,Prime Cloud 107,Software,1092838,82,2025-02-04,2025-11-10,True,2026-09-16,True,2026-10-26,True,False,,False,API,LOW,False
+VND-0108,Nova Systems 108,Infrastructure,575045,56,2024-09-17,2025-12-19,True,2027-08-28,True,2027-07-05,True,False,,True,Database,HIGH,False
+VND-0109,Prime Networks 109,Infrastructure,388454,29,2025-02-03,2026-05-14,True,2027-04-22,False,,False,False,,False,Portal,LOW,True
+VND-0110,Nova Networks 110,Security,790436,66,2026-04-25,2027-08-24,False,,True,2026-02-06,False,True,2023-08-20,False,Portal,HIGH,False
+VND-0111,Blue Analytics 111,Software,1156038,49,2024-07-13,2024-12-06,False,,False,,True,False,,False,Database,MEDIUM,False
+VND-0112,Secure Solutions 112,Software,229316,59,2025-08-19,2026-02-09,True,2025-09-23,True,2026-03-01,True,True,2026-02-24,False,Application,LOW,False
+VND-0113,Blue Networks 113,Data Analytics,1081894,66,2024-07-20,2024-12-18,True,2026-09-18,False,,False,False,,False,API,MEDIUM,True
+VND-0114,Secure Services 114,Compliance,1000165,65,2025-01-10,2025-11-25,True,2027-01-03,True,2025-07-27,False,False,,False,API,MEDIUM,False
+VND-0115,Apex Solutions 115,Compliance,1073271,84,2025-04-08,2026-03-15,True,2027-11-22,True,2027-08-13,True,False,,False,Database,LOW,True
+VND-0116,Quantum Services 116,Data Analytics,682081,22,2026-01-03,2027-01-04,False,,False,,False,True,2024-10-28,False,Database,MEDIUM,False
+VND-0117,Vertex Partners 117,Data Analytics,374386,21,2025-07-26,2026-02-21,True,2027-09-15,True,2025-10-23,True,False,,False,SFTP,HIGH,False
+VND-0118,Vertex Partners 118,Compliance,663481,49,2025-03-02,2026-02-28,True,2027-05-22,False,,True,False,,False,Portal,MEDIUM,True
+VND-0119,Prime Labs 119,Consulting,325236,69,2026-04-25,2027-09-24,True,2026-08-08,False,,True,False,,False,Portal,MEDIUM,False
+VND-0120,Nova Cloud 120,Cloud Services,256162,78,2025-04-26,2025-10-11,False,,True,2025-10-01,True,False,,False,Application,HIGH,False
+VND-0121,Nova Partners 121,Software,352170,59,2026-05-08,2027-02-08,False,,False,,True,False,,False,API,LOW,False
+VND-0122,Apex Cloud 122,Cloud Services,939785,73,2025-06-27,2026-04-18,True,2026-10-12,False,,True,False,,False,Portal,MEDIUM,True
+VND-0123,Titan Networks 123,Payment Processing,154442,43,2026-01-18,2026-07-08,False,,False,,True,False,,False,SFTP,MEDIUM,False
+VND-0124,Quantum Systems 124,Security,926736,89,2024-09-08,2025-04-13,True,2027-08-25,True,2025-11-08,True,False,,False,Application,HIGH,True
+VND-0125,Nova Partners 125,Data Analytics,1158563,40,2025-02-19,2026-08-05,False,,True,2026-10-06,False,False,,False,API,MEDIUM,False
+VND-0126,Secure Services 126,Cloud Services,269551,58,2025-10-01,2026-07-09,True,2027-07-14,True,2025-09-16,False,True,2024-10-17,False,API,LOW,False
+VND-0127,Nova Cloud 127,Payment Processing,966806,40,2025-11-30,2026-04-12,False,,True,2027-04-17,False,False,,False,Database,MEDIUM,False
+VND-0128,Titan Partners 128,Data Analytics,850731,77,2026-01-11,2026-11-12,True,2025-12-03,True,2026-09-21,True,False,,False,Application,LOW,False
+VND-0129,Blue Systems 129,Infrastructure,1124479,48,2026-01-24,2027-06-19,True,2027-07-07,True,2025-09-13,True,False,,False,SFTP,LOW,True
+VND-0130,Nova Analytics 130,Payment Processing,103644,51,2026-04-01,2027-05-27,False,,False,,True,False,,False,Database,HIGH,False
+VND-0131,Blue Solutions 131,Data Analytics,1058923,70,2025-03-29,2026-02-22,False,,True,2026-09-22,True,False,,False,API,LOW,False
+VND-0132,Secure Services 132,Software,1007431,67,2025-08-10,2026-02-27,True,2025-08-01,False,,True,False,,False,Application,LOW,True
+VND-0133,Titan Networks 133,Data Analytics,171267,93,2025-04-05,2025-12-06,False,,False,,True,False,,False,SFTP,LOW,False
+VND-0134,Quantum Labs 134,Cloud Services,335511,62,2026-04-20,2026-11-21,True,2025-10-17,False,,True,False,,False,Portal,MEDIUM,True
+VND-0135,Blue Systems 135,Software,424124,23,2025-02-26,2026-05-14,True,2025-12-11,True,2027-08-16,False,False,,False,SFTP,LOW,True
+VND-0136,Secure Cloud 136,Payment Processing,783395,92,2025-08-19,2026-06-21,True,2027-07-04,False,,True,False,,False,SFTP,LOW,False
+VND-0137,Titan Cloud 137,Cloud Services,727291,88,2025-08-28,2026-07-18,False,,True,2026-09-20,True,False,,False,Portal,LOW,False
+VND-0138,Quantum Solutions 138,Consulting,460961,57,2024-08-17,2025-08-14,True,2027-09-16,False,,False,False,,False,API,MEDIUM,False
+VND-0139,Blue Cloud 139,Infrastructure,98163,37,2026-03-11,2026-12-20,True,2026-01-09,True,2027-02-25,True,False,,False,API,HIGH,False
+VND-0140,Quantum Analytics 140,Security,546844,30,2026-05-07,2027-10-25,True,2027-06-11,False,,False,False,,False,Database,HIGH,True
+VND-0141,Vertex Solutions 141,Security,596121,67,2025-04-01,2026-04-24,True,2025-10-17,False,,True,False,,False,API,LOW,True
+VND-0142,Vertex Labs 142,Cloud Services,474001,60,2024-08-01,2025-08-16,False,,False,,True,False,,False,SFTP,LOW,True
+VND-0143,Quantum Solutions 143,Infrastructure,213047,39,2024-10-03,2025-12-16,False,,False,,False,False,,True,API,LOW,False
+VND-0144,Blue Solutions 144,Software,707848,75,2025-03-26,2026-07-16,True,2026-01-19,True,2025-08-01,True,False,,False,Database,LOW,True
+VND-0145,Blue Analytics 145,Cloud Services,112179,50,2024-12-13,2025-05-17,False,,False,,True,False,,False,SFTP,MEDIUM,False
+VND-0146,Vertex Solutions 146,Consulting,92409,26,2025-05-10,2026-01-15,True,2026-10-12,False,,True,False,,False,Application,MEDIUM,False
+VND-0147,Nova Systems 147,Data Analytics,757824,82,2025-03-09,2025-10-01,True,2026-12-25,False,,False,False,,False,Portal,MEDIUM,False
+VND-0148,Secure Cloud 148,Software,421982,87,2024-07-07,2025-04-24,True,2026-01-13,False,,True,False,,False,Application,LOW,True
+VND-0149,Titan Solutions 149,Payment Processing,310633,87,2025-05-31,2025-12-23,True,2027-06-04,True,2027-09-18,True,False,,False,SFTP,MEDIUM,True
+VND-0150,Vertex Cloud 150,Consulting,82100,89,2024-11-30,2025-06-10,True,2027-11-04,False,,True,False,,False,Database,LOW,False
+VND-0151,Vertex Solutions 151,Infrastructure,525704,24,2025-07-03,2025-11-19,False,,True,2027-06-06,True,False,,False,Application,MEDIUM,True
+VND-0152,Quantum Labs 152,Data Analytics,749164,67,2024-09-04,2025-07-21,True,2027-06-08,True,2027-01-04,True,False,,False,Application,LOW,False
+VND-0153,Titan Services 153,Payment Processing,1138635,46,2025-11-19,2026-09-19,True,2027-03-28,False,,True,False,,False,Database,MEDIUM,True
+VND-0154,Apex Systems 154,Consulting,660665,93,2025-10-16,2026-07-31,False,,False,,True,False,,False,SFTP,LOW,True
+VND-0155,Apex Analytics 155,Data Analytics,420719,43,2025-03-11,2026-02-02,True,2026-06-13,True,2027-07-25,False,False,,False,Portal,MEDIUM,True
+VND-0156,Blue Solutions 156,Consulting,692511,68,2025-05-15,2026-08-23,False,,False,,False,True,2024-09-08,True,Application,MEDIUM,False
+VND-0157,Apex Networks 157,Security,384516,21,2026-01-20,2026-06-30,True,2025-06-20,False,,True,False,,True,Database,LOW,True
+VND-0158,Nova Labs 158,Infrastructure,116701,56,2025-11-02,2026-04-15,True,2027-04-08,True,2027-07-24,True,False,,False,SFTP,MEDIUM,False
+VND-0159,Prime Labs 159,Cloud Services,712938,48,2025-05-24,2026-01-27,True,2026-11-09,True,2026-09-25,True,False,,False,Database,HIGH,True
+VND-0160,Apex Services 160,Software,880449,27,2025-11-19,2027-04-20,True,2026-10-03,True,2027-05-10,True,False,,False,Application,MEDIUM,False
+VND-0161,Blue Networks 161,Software,344384,89,2025-09-27,2026-08-21,True,2027-03-28,True,2026-09-20,True,False,,False,Database,MEDIUM,True
+VND-0162,Quantum Services 162,Cloud Services,522770,73,2024-11-10,2025-10-18,True,2027-06-26,True,2027-03-10,True,False,,False,Portal,LOW,True
+VND-0163,Apex Networks 163,Security,242030,60,2025-11-07,2026-04-13,True,2025-09-01,False,,True,False,,False,Database,MEDIUM,False
+VND-0164,Titan Services 164,Data Analytics,185184,24,2024-08-29,2025-06-27,True,2026-02-24,True,2026-10-30,False,False,,False,Application,LOW,False
+VND-0165,Vertex Cloud 165,Cloud Services,166539,26,2024-10-13,2025-08-11,False,,True,2026-04-12,True,False,,False,Portal,MEDIUM,True
+VND-0166,Apex Labs 166,Consulting,395780,62,2025-09-04,2025-12-29,False,,False,,False,False,,False,Portal,LOW,False
+VND-0167,Quantum Partners 167,Software,291994,51,2025-07-12,2026-02-28,True,2027-04-14,False,,True,False,,False,Application,MEDIUM,False
+VND-0168,Quantum Labs 168,Data Analytics,1022386,68,2025-08-18,2025-12-14,True,2026-08-31,False,,False,False,,False,Database,MEDIUM,False
+VND-0169,Titan Systems 169,Cloud Services,942033,37,2026-05-05,2027-03-17,True,2027-10-16,True,2026-09-30,True,False,,False,Portal,MEDIUM,True
+VND-0170,Quantum Cloud 170,Consulting,58770,86,2025-03-22,2025-10-30,False,,False,,True,False,,False,Database,HIGH,False
+VND-0171,Secure Labs 171,Consulting,605602,63,2024-11-30,2025-03-12,True,2026-08-04,False,,True,True,2023-10-13,True,SFTP,LOW,True
+VND-0172,Blue Cloud 172,Cloud Services,156493,62,2025-08-12,2026-05-08,True,2027-02-05,True,2026-08-17,False,True,2026-01-22,False,SFTP,MEDIUM,False
+VND-0173,Titan Networks 173,Consulting,1052828,32,2025-04-20,2026-04-07,True,2026-09-23,True,2027-05-28,True,False,,True,SFTP,LOW,True
+VND-0174,Blue Systems 174,Consulting,133859,39,2025-12-22,2026-11-18,True,2026-01-10,False,,False,False,,False,Application,MEDIUM,False
+VND-0175,Nova Solutions 175,Cloud Services,1188663,75,2025-03-04,2026-04-08,False,,False,,True,False,,False,API,MEDIUM,False
+VND-0176,Apex Services 176,Data Analytics,136499,29,2026-04-12,2026-08-05,True,2026-04-08,True,2027-07-24,True,False,,False,Database,LOW,False
+VND-0177,Vertex Partners 177,Infrastructure,974054,82,2026-04-07,2027-03-04,True,2027-09-29,False,,False,False,,False,SFTP,LOW,False
+VND-0178,Titan Systems 178,Cloud Services,175448,62,2025-06-09,2025-12-12,True,2026-05-04,True,2027-01-26,True,True,2023-08-10,False,Portal,MEDIUM,False
+VND-0179,Nova Networks 179,Payment Processing,538593,84,2025-02-21,2026-02-14,False,,False,,False,False,,False,Portal,LOW,False
+VND-0180,Secure Cloud 180,Infrastructure,507148,58,2025-05-30,2026-05-26,False,,True,2026-10-20,True,False,,False,API,HIGH,True
+VND-0181,Quantum Systems 181,Payment Processing,677930,29,2025-01-28,2025-12-16,True,2025-08-14,False,,True,False,,False,Application,LOW,False
+VND-0182,Nova Partners 182,Security,903928,70,2025-01-02,2025-04-06,True,2027-06-28,False,,False,False,,False,Application,MEDIUM,False
+VND-0183,Blue Services 183,Compliance,739532,86,2025-03-11,2025-11-26,True,2027-12-11,False,,True,True,2025-08-27,False,Application,HIGH,True
+VND-0184,Vertex Solutions 184,Compliance,1022040,34,2024-12-22,2025-11-25,False,,True,2026-12-01,False,False,,False,SFTP,MEDIUM,True
+VND-0185,Nova Networks 185,Consulting,401652,32,2025-08-06,2026-02-19,False,,True,2026-10-08,True,False,,True,Portal,LOW,True
+VND-0186,Nova Systems 186,Security,1137135,68,2026-05-20,2026-08-28,False,,False,,False,False,,False,Application,MEDIUM,False
+VND-0187,Blue Solutions 187,Consulting,218075,45,2026-04-17,2027-03-16,True,2026-11-20,True,2027-08-05,True,True,2026-02-25,False,API,LOW,False
+VND-0188,Quantum Partners 188,Infrastructure,1185365,66,2025-04-25,2025-10-13,True,2027-03-30,False,,True,True,2026-01-31,False,SFTP,MEDIUM,True
+VND-0189,Blue Systems 189,Software,1041050,25,2025-01-04,2025-10-12,True,2026-07-27,True,2026-05-17,True,False,,False,Application,MEDIUM,True
+VND-0190,Vertex Cloud 190,Infrastructure,868339,94,2025-05-05,2026-01-04,False,,True,2025-10-30,False,False,,False,Application,LOW,True
+VND-0191,Blue Analytics 191,Consulting,1008864,80,2025-04-11,2026-08-01,True,2027-07-16,True,2025-08-15,True,False,,False,Application,LOW,True
+VND-0192,Blue Systems 192,Consulting,937036,94,2026-05-21,2027-02-24,True,2026-08-11,False,,True,False,,False,API,LOW,False
+VND-0193,Apex Networks 193,Data Analytics,827210,77,2025-07-29,2025-10-29,True,2025-11-03,False,,False,False,,False,Application,LOW,False
+VND-0194,Secure Analytics 194,Software,568670,80,2025-02-19,2026-06-13,True,2027-08-16,True,2025-10-16,False,True,2024-05-19,False,Application,MEDIUM,True
+VND-0195,Vertex Cloud 195,Infrastructure,305205,39,2025-05-13,2025-12-09,True,2025-10-28,True,2027-06-13,False,True,2023-11-06,True,API,MEDIUM,False
+VND-0196,Secure Partners 196,Software,254350,95,2025-06-02,2026-05-17,False,,True,2026-01-02,True,False,,True,Database,HIGH,True
+VND-0197,Nova Systems 197,Cloud Services,702905,88,2025-08-16,2026-03-14,True,2026-12-04,False,,False,False,,False,Database,LOW,True
+VND-0198,Apex Systems 198,Payment Processing,945118,24,2025-06-12,2026-06-12,True,2027-05-26,False,,True,False,,False,Database,HIGH,True
+VND-0199,Secure Labs 199,Compliance,813921,93,2024-09-15,2025-07-08,True,2026-01-03,False,,True,False,,False,Application,HIGH,True
+VND-0200,Vertex Systems 200,Consulting,221336,55,2025-02-04,2025-06-27,True,2026-08-23,True,2027-08-25,True,False,,False,Database,LOW,True
+VND-0201,Nova Systems 201,Data Analytics,111804,22,2025-03-06,2025-12-16,False,,True,2026-03-01,True,False,,False,SFTP,LOW,True
+VND-0202,Prime Cloud 202,Consulting,862130,23,2026-04-22,2026-09-05,True,2026-12-10,False,,True,False,,False,Database,MEDIUM,True
+VND-0203,Apex Networks 203,Data Analytics,1056548,64,2025-11-19,2027-04-22,True,2025-07-17,True,2025-07-29,True,True,2024-04-26,False,API,LOW,True
+VND-0204,Nova Labs 204,Compliance,288991,70,2025-11-01,2026-03-05,True,2027-02-24,False,,False,False,,False,Database,LOW,True
+VND-0205,Vertex Analytics 205,Cloud Services,722508,53,2026-05-01,2026-08-02,True,2025-12-06,True,2027-06-12,False,False,,False,API,MEDIUM,False
+VND-0206,Apex Services 206,Cloud Services,407807,67,2025-04-17,2025-11-11,False,,False,,True,False,,True,Database,HIGH,True
+VND-0207,Titan Services 207,Security,185566,30,2025-02-24,2026-06-05,False,,False,,True,True,2025-11-28,False,API,MEDIUM,True
+VND-0208,Quantum Cloud 208,Data Analytics,726539,37,2026-05-03,2027-07-02,True,2025-12-08,True,2027-09-03,True,False,,False,Database,LOW,False
+VND-0209,Quantum Labs 209,Cloud Services,877004,35,2025-09-08,2026-03-24,False,,True,2027-04-15,False,False,,True,Database,MEDIUM,True
+VND-0210,Titan Labs 210,Consulting,1171800,64,2024-12-09,2025-04-05,False,,True,2027-04-03,True,False,,False,Database,MEDIUM,True
+VND-0211,Nova Solutions 211,Security,285694,68,2024-08-27,2025-03-14,True,2027-07-06,False,,True,False,,False,Database,LOW,False
+VND-0212,Prime Networks 212,Compliance,497556,71,2025-04-05,2026-02-03,False,,True,2025-09-18,True,False,,False,Portal,MEDIUM,True
+VND-0213,Nova Cloud 213,Infrastructure,565012,57,2025-12-07,2027-03-16,True,2027-01-09,True,2026-12-21,True,False,,False,API,LOW,False
+VND-0214,Blue Networks 214,Infrastructure,881881,80,2025-01-16,2025-07-18,True,2025-08-14,False,,True,False,,False,Application,HIGH,False
+VND-0215,Titan Solutions 215,Compliance,367623,63,2025-07-27,2026-09-20,True,2025-06-20,True,2027-08-09,True,False,,False,Portal,MEDIUM,True
+VND-0216,Vertex Partners 216,Security,754371,37,2025-01-14,2025-08-02,True,2026-11-28,True,2027-01-26,True,True,2025-10-03,False,Database,HIGH,False
+VND-0217,Titan Services 217,Data Analytics,1119585,33,2024-09-01,2026-02-02,False,,False,,True,True,2024-03-05,False,Application,LOW,True
+VND-0218,Quantum Services 218,Infrastructure,875440,33,2025-01-26,2026-01-09,False,,False,,False,False,,False,Database,MEDIUM,False
+VND-0219,Nova Cloud 219,Infrastructure,1177521,78,2025-10-12,2027-02-19,False,,True,2027-11-16,True,False,,False,Database,LOW,True
+VND-0220,Nova Services 220,Infrastructure,525812,88,2025-07-02,2026-04-29,True,2025-10-12,True,2026-01-06,True,True,2023-07-15,False,Application,LOW,False
+VND-0221,Prime Solutions 221,Data Analytics,108699,74,2024-11-27,2026-01-17,False,,False,,False,True,2026-05-16,False,SFTP,HIGH,False
+VND-0222,Blue Solutions 222,Infrastructure,908168,63,2025-04-23,2026-05-10,True,2026-07-26,True,2026-09-23,False,False,,False,SFTP,LOW,True
+VND-0223,Nova Labs 223,Compliance,294549,89,2025-05-08,2026-03-22,True,2026-10-11,False,,True,True,2025-09-04,True,Portal,LOW,False
+VND-0224,Blue Services 224,Payment Processing,757478,28,2025-02-27,2025-10-12,True,2027-07-16,True,2027-06-22,False,True,2023-09-23,False,Database,LOW,False
+VND-0225,Prime Services 225,Software,1057606,49,2024-08-14,2025-01-26,False,,True,2027-07-12,True,False,,False,API,LOW,True
+VND-0226,Quantum Services 226,Infrastructure,371932,28,2025-08-18,2026-05-29,True,2027-05-28,False,,True,False,,False,SFTP,HIGH,True
+VND-0227,Secure Partners 227,Compliance,37262,80,2025-06-03,2026-11-06,False,,False,,True,False,,False,Database,MEDIUM,True
+VND-0228,Secure Systems 228,Consulting,581603,66,2025-03-01,2025-12-05,True,2026-11-28,True,2027-08-10,True,False,,False,SFTP,MEDIUM,True
+VND-0229,Nova Cloud 229,Cloud Services,761537,67,2025-10-30,2026-08-10,False,,True,2026-08-13,True,False,,False,API,LOW,False
+VND-0230,Quantum Labs 230,Data Analytics,928847,33,2025-03-08,2026-03-01,True,2027-08-12,True,2026-11-30,False,False,,False,SFTP,HIGH,True
+VND-0231,Prime Systems 231,Infrastructure,247785,91,2025-09-17,2026-03-16,True,2027-11-01,True,2027-10-30,True,False,,False,Portal,HIGH,False
+VND-0232,Prime Cloud 232,Payment Processing,679382,76,2025-10-26,2026-02-22,True,2027-01-28,False,,True,False,,True,Portal,LOW,False
+VND-0233,Apex Cloud 233,Payment Processing,1052478,26,2025-07-12,2026-03-26,True,2025-08-08,False,,True,False,,False,Portal,LOW,False
+VND-0234,Secure Labs 234,Compliance,536732,45,2025-01-28,2025-10-28,False,,True,2025-10-30,True,False,,False,Application,LOW,False
+VND-0235,Nova Solutions 235,Consulting,856080,80,2025-08-31,2026-12-24,True,2026-09-19,True,2026-10-13,False,True,2025-09-23,False,Portal,LOW,False
+VND-0236,Blue Solutions 236,Security,521672,73,2025-03-06,2025-06-18,True,2025-09-25,True,2027-07-16,False,False,,True,Application,MEDIUM,False
+VND-0237,Secure Networks 237,Payment Processing,566058,26,2026-04-21,2027-06-07,False,,True,2026-08-01,False,False,,False,API,HIGH,False
+VND-0238,Titan Cloud 238,Consulting,928907,35,2024-11-24,2025-05-21,False,,False,,True,False,,False,SFTP,LOW,False
+VND-0239,Prime Systems 239,Payment Processing,178663,28,2025-07-03,2025-12-30,False,,False,,False,False,,False,SFTP,LOW,True
+VND-0240,Titan Partners 240,Data Analytics,1020578,36,2025-09-23,2026-02-05,True,2027-04-24,False,,True,False,,False,Database,MEDIUM,True
+VND-0241,Titan Analytics 241,Consulting,1092937,50,2024-09-22,2025-03-02,True,2025-06-26,True,2026-11-30,True,False,,False,SFTP,LOW,True
+VND-0242,Quantum Services 242,Payment Processing,1159370,85,2024-08-18,2025-06-01,True,2025-07-22,True,2026-04-14,True,False,,False,API,MEDIUM,True
+VND-0243,Titan Labs 243,Compliance,200936,29,2025-02-16,2026-03-29,True,2027-07-09,True,2026-11-26,False,False,,False,API,MEDIUM,False
+VND-0244,Apex Partners 244,Data Analytics,1025951,56,2026-04-15,2026-08-18,True,2026-10-11,False,,True,False,,False,SFTP,MEDIUM,True
+VND-0245,Nova Analytics 245,Software,283603,75,2025-05-09,2026-03-17,True,2026-11-13,False,,True,False,,False,Application,HIGH,True
+VND-0246,Vertex Services 246,Cloud Services,1015408,52,2025-01-21,2025-11-05,True,2026-10-16,False,,True,False,,False,Portal,HIGH,True
+VND-0247,Nova Partners 247,Payment Processing,302218,63,2025-04-15,2026-08-22,True,2027-08-19,True,2026-08-23,False,False,,True,Portal,MEDIUM,False
+VND-0248,Apex Systems 248,Data Analytics,338391,50,2024-11-07,2026-01-04,False,,False,,False,False,,False,Portal,LOW,True
+VND-0249,Nova Partners 249,Infrastructure,334269,91,2024-12-27,2025-07-04,True,2027-12-10,False,,False,False,,False,SFTP,MEDIUM,True
+VND-0250,Quantum Systems 250,Payment Processing,845771,61,2024-10-12,2026-03-12,False,,False,,True,False,,False,Portal,MEDIUM,True
+VND-0251,Blue Solutions 251,Security,183670,33,2024-10-12,2025-03-11,True,2027-02-06,True,2027-04-15,True,True,2025-10-23,False,SFTP,MEDIUM,False
+VND-0252,Quantum Networks 252,Payment Processing,485406,32,2024-09-04,2025-09-29,True,2027-08-31,False,,True,False,,False,Portal,MEDIUM,False
+VND-0253,Quantum Networks 253,Security,1151881,81,2025-08-18,2026-07-04,True,2027-01-22,True,2027-04-23,True,False,,False,Database,LOW,False
+VND-0254,Secure Partners 254,Software,273562,72,2025-10-03,2027-02-07,False,,False,,False,False,,False,API,LOW,True
+VND-0255,Vertex Solutions 255,Software,85486,28,2025-03-19,2025-09-22,False,,True,2026-10-06,False,False,,False,Portal,LOW,False
+VND-0256,Prime Cloud 256,Consulting,731927,87,2024-10-01,2025-08-07,False,,False,,True,False,,False,API,LOW,True
+VND-0257,Blue Analytics 257,Consulting,250223,59,2025-03-05,2026-01-05,True,2027-11-23,False,,True,False,,False,Database,LOW,True
+VND-0258,Quantum Services 258,Compliance,943521,73,2024-10-20,2025-07-20,True,2025-09-25,True,2026-07-24,False,False,,False,API,MEDIUM,True
+VND-0259,Secure Networks 259,Compliance,934580,51,2024-11-01,2026-02-25,False,,True,2027-10-07,True,False,,False,Application,MEDIUM,False
+VND-0260,Prime Networks 260,Payment Processing,337968,63,2025-07-13,2026-12-31,True,2026-10-27,True,2026-12-29,True,True,2024-02-21,True,Portal,MEDIUM,True
+VND-0261,Blue Solutions 261,Compliance,154368,71,2024-08-05,2025-08-02,True,2027-12-06,True,2027-08-19,False,False,,False,Database,HIGH,True
+VND-0262,Secure Systems 262,Software,833567,60,2024-10-19,2026-01-13,False,,True,2025-09-26,True,True,2024-07-15,False,Application,LOW,True
+VND-0263,Apex Systems 263,Payment Processing,903447,39,2026-03-06,2027-04-11,False,,False,,False,False,,False,API,MEDIUM,True
+VND-0264,Titan Labs 264,Compliance,933448,24,2026-02-25,2026-11-23,True,2026-11-22,True,2026-12-18,True,False,,False,Database,HIGH,True
+VND-0265,Prime Solutions 265,Payment Processing,1168995,51,2026-02-01,2026-05-10,True,2027-07-24,False,,False,False,,False,SFTP,LOW,True
+VND-0266,Blue Systems 266,Payment Processing,1177954,45,2026-03-21,2027-03-31,False,,True,2027-01-16,False,False,,False,Application,MEDIUM,True
+VND-0267,Nova Cloud 267,Software,916737,49,2026-02-22,2026-07-21,False,,False,,False,False,,False,Application,MEDIUM,True
+VND-0268,Nova Services 268,Software,759096,89,2025-04-02,2025-12-19,True,2026-08-10,True,2027-01-08,False,False,,False,Application,LOW,True
+VND-0269,Blue Systems 269,Consulting,1024612,39,2024-07-05,2025-11-14,False,,False,,True,False,,False,SFTP,MEDIUM,False
+VND-0270,Vertex Cloud 270,Software,340186,84,2025-03-26,2026-01-04,True,2025-10-08,False,,True,True,2025-06-13,True,Application,HIGH,True
+VND-0271,Nova Partners 271,Payment Processing,1134629,23,2026-04-08,2027-02-05,True,2026-08-15,True,2026-11-20,True,False,,False,API,LOW,False
+VND-0272,Vertex Partners 272,Compliance,573767,25,2025-08-27,2026-02-08,False,,True,2027-07-16,False,False,,False,SFTP,MEDIUM,False
+VND-0273,Blue Solutions 273,Cloud Services,384854,80,2025-07-29,2026-11-08,True,2027-04-09,True,2026-08-09,False,False,,True,Portal,LOW,True
+VND-0274,Vertex Partners 274,Compliance,931119,28,2024-12-13,2026-04-26,True,2026-06-05,False,,False,False,,False,SFTP,LOW,True
+VND-0275,Vertex Cloud 275,Payment Processing,965496,58,2024-07-28,2025-07-08,True,2027-01-16,False,,True,False,,False,SFTP,LOW,False
+VND-0276,Nova Networks 276,Compliance,121388,27,2024-08-20,2026-01-13,True,2027-04-21,False,,True,False,,False,SFTP,HIGH,True
+VND-0277,Blue Networks 277,Infrastructure,699422,78,2024-10-24,2025-03-23,True,2027-03-03,True,2025-11-28,True,False,,False,API,HIGH,True
+VND-0278,Quantum Solutions 278,Software,403563,77,2025-12-11,2026-04-24,False,,True,2026-10-02,True,False,,False,Portal,MEDIUM,True
+VND-0279,Nova Solutions 279,Security,1039722,75,2025-12-19,2027-06-07,False,,True,2026-12-20,False,False,,False,Portal,LOW,False
+VND-0280,Quantum Systems 280,Compliance,1116721,27,2025-02-28,2026-04-16,True,2025-08-02,True,2027-10-31,True,False,,False,API,MEDIUM,True
+VND-0281,Secure Cloud 281,Infrastructure,72581,87,2025-03-19,2025-12-16,True,2026-12-22,False,,True,True,2025-07-19,False,API,HIGH,False
+VND-0282,Blue Services 282,Consulting,970520,86,2024-09-05,2025-05-05,False,,False,,False,False,,False,Portal,LOW,False
+VND-0283,Nova Analytics 283,Data Analytics,911039,59,2025-11-08,2026-12-27,True,2026-01-13,True,2025-09-10,True,False,,False,Portal,LOW,False
+VND-0284,Nova Cloud 284,Cloud Services,349216,86,2024-12-30,2025-09-24,True,2027-01-14,False,,True,False,,False,API,HIGH,True
+VND-0285,Secure Services 285,Security,426057,43,2024-12-01,2026-01-08,True,2026-08-18,True,2027-02-05,True,False,,False,Database,HIGH,False
+VND-0286,Blue Solutions 286,Payment Processing,837579,42,2025-04-06,2026-06-16,False,,True,2026-01-13,True,False,,False,API,MEDIUM,True
+VND-0287,Titan Solutions 287,Infrastructure,314031,90,2024-12-06,2025-06-22,False,,False,,True,True,2025-07-17,False,API,LOW,False
+VND-0288,Prime Solutions 288,Cloud Services,493737,94,2024-12-07,2025-11-28,False,,False,,True,False,,False,Portal,MEDIUM,False
+VND-0289,Secure Analytics 289,Data Analytics,615422,79,2025-08-06,2026-12-26,True,2026-11-03,True,2026-07-25,False,False,,False,Application,MEDIUM,False
+VND-0290,Secure Analytics 290,Security,641498,91,2025-12-30,2026-09-11,True,2025-10-01,True,2027-11-14,False,False,,False,Portal,HIGH,False
+VND-0291,Vertex Services 291,Compliance,544519,56,2026-03-05,2027-08-05,True,2025-11-09,True,2026-08-05,True,False,,False,API,LOW,True
+VND-0292,Blue Analytics 292,Consulting,866140,69,2025-05-17,2025-09-20,False,,False,,True,False,,False,Portal,LOW,False
+VND-0293,Titan Services 293,Consulting,230354,28,2024-07-17,2025-11-13,False,,False,,True,False,,False,Application,LOW,False
+VND-0294,Prime Analytics 294,Software,547295,87,2024-11-17,2025-08-24,True,2027-04-14,False,,True,False,,False,SFTP,HIGH,True
+VND-0295,Nova Services 295,Security,144936,77,2024-10-20,2025-08-27,False,,False,,False,False,,False,Application,LOW,True
+VND-0296,Blue Partners 296,Compliance,904147,91,2025-10-08,2026-08-21,True,2026-07-24,False,,True,False,,False,Application,LOW,True
+VND-0297,Titan Networks 297,Infrastructure,885564,70,2026-02-23,2027-02-03,True,2027-07-15,True,2027-05-16,True,True,2023-09-15,False,Database,MEDIUM,False
+VND-0298,Vertex Labs 298,Compliance,310786,89,2025-12-28,2026-06-30,True,2027-06-01,False,,True,False,,True,Application,LOW,True
+VND-0299,Vertex Services 299,Security,291095,77,2025-04-13,2026-02-11,True,2026-08-21,False,,True,False,,False,Database,MEDIUM,True
+VND-0300,Nova Services 300,Infrastructure,517435,40,2025-02-24,2026-07-09,False,,False,,True,False,,False,API,LOW,False
+VND-0301,Quantum Systems 301,Software,854480,67,2025-03-26,2025-08-11,True,2027-04-19,True,2026-11-29,True,False,,False,API,LOW,False
+VND-0302,Prime Partners 302,Infrastructure,744903,81,2026-04-12,2026-12-25,False,,False,,False,False,,False,Database,LOW,True
+VND-0303,Blue Solutions 303,Consulting,802952,64,2026-03-19,2027-01-18,True,2027-08-09,True,2026-11-17,True,True,2026-05-26,False,Portal,MEDIUM,False
+VND-0304,Prime Labs 304,Software,318703,85,2024-08-15,2025-03-31,False,,False,,False,True,2025-03-23,False,Application,LOW,False
+VND-0305,Vertex Analytics 305,Software,909321,57,2025-12-26,2027-03-03,True,2027-11-05,False,,True,False,,False,Portal,LOW,True
+VND-0306,Apex Networks 306,Software,168114,56,2025-06-12,2025-12-03,True,2027-02-09,False,,False,False,,False,Application,HIGH,True
+VND-0307,Titan Analytics 307,Security,1090945,90,2024-10-28,2025-06-20,False,,False,,True,False,,False,Database,LOW,False
+VND-0308,Titan Networks 308,Cloud Services,390043,86,2025-12-15,2026-11-10,False,,False,,True,True,2024-10-16,False,SFTP,LOW,True
+VND-0309,Vertex Analytics 309,Consulting,538437,70,2026-02-18,2027-05-09,True,2025-09-15,True,2027-09-03,True,False,,False,Database,LOW,True
+VND-0310,Quantum Analytics 310,Consulting,369809,64,2026-02-24,2026-12-17,False,,True,2027-01-29,True,False,,False,API,LOW,False
+VND-0311,Vertex Cloud 311,Data Analytics,648904,52,2025-03-11,2026-05-13,True,2027-05-21,True,2026-08-26,True,False,,False,SFTP,HIGH,False
+VND-0312,Quantum Solutions 312,Payment Processing,1195930,70,2025-01-08,2025-12-12,True,2027-08-08,True,2027-04-04,False,False,,False,Database,LOW,True
+VND-0313,Secure Solutions 313,Software,277207,53,2025-05-09,2026-03-14,False,,False,,True,False,,False,API,LOW,False
+VND-0314,Blue Services 314,Security,908995,52,2026-01-25,2026-12-08,True,2026-10-05,False,,True,False,,False,Application,LOW,False
+VND-0315,Quantum Services 315,Data Analytics,937399,70,2025-08-27,2026-11-10,True,2027-04-22,False,,True,False,,False,SFTP,LOW,False
+VND-0316,Blue Cloud 316,Payment Processing,496628,32,2024-11-07,2025-11-26,True,2025-10-17,False,,True,False,,False,SFTP,MEDIUM,True
+VND-0317,Prime Services 317,Compliance,548354,64,2025-08-09,2026-03-29,True,2025-11-21,False,,True,False,,False,API,LOW,False
+VND-0318,Prime Analytics 318,Compliance,610314,43,2025-08-20,2027-01-09,False,,True,2026-10-28,True,False,,False,Database,MEDIUM,False
+VND-0319,Secure Partners 319,Consulting,1196770,77,2026-02-27,2026-10-28,False,,True,2027-03-16,True,False,,False,API,LOW,False
+VND-0320,Quantum Cloud 320,Payment Processing,1150733,58,2025-12-30,2027-04-04,True,2027-01-20,False,,False,False,,False,Database,LOW,True
+VND-0321,Titan Networks 321,Payment Processing,1176035,59,2024-11-05,2025-06-03,True,2027-03-23,True,2025-12-27,True,True,2026-02-24,False,API,LOW,False
+VND-0322,Nova Systems 322,Compliance,485386,36,2024-07-15,2025-07-25,False,,False,,True,False,,False,Application,LOW,False
+VND-0323,Secure Partners 323,Payment Processing,56057,84,2024-08-09,2025-03-04,True,2027-08-08,False,,False,False,,False,Database,MEDIUM,False
+VND-0324,Vertex Partners 324,Data Analytics,842825,39,2025-03-25,2025-08-02,True,2027-04-07,True,2026-10-15,False,False,,False,SFTP,MEDIUM,True
+VND-0325,Blue Services 325,Data Analytics,1124467,52,2024-08-05,2024-12-07,False,,True,2027-01-29,True,False,,False,Database,LOW,True
+VND-0326,Prime Labs 326,Software,691138,51,2025-04-24,2025-10-16,True,2027-06-22,True,2027-02-26,True,False,,False,Portal,HIGH,True
+VND-0327,Nova Cloud 327,Payment Processing,878246,85,2025-04-15,2026-02-13,False,,True,2026-12-21,True,False,,True,Portal,LOW,False
+VND-0328,Prime Services 328,Cloud Services,149142,53,2025-09-04,2026-07-12,True,2025-12-12,True,2027-04-01,True,False,,False,Database,HIGH,True
+VND-0329,Titan Partners 329,Payment Processing,1023712,70,2025-02-21,2025-12-06,True,2025-11-02,True,2025-09-12,True,False,,False,Application,MEDIUM,True
+VND-0330,Prime Solutions 330,Payment Processing,627068,88,2026-01-23,2026-11-20,False,,False,,True,True,2024-11-03,False,Portal,MEDIUM,False
+VND-0331,Apex Partners 331,Security,1107581,74,2026-04-26,2027-09-19,True,2026-11-21,False,,False,False,,False,API,MEDIUM,False
+VND-0332,Nova Labs 332,Consulting,295531,69,2024-07-25,2024-12-09,True,2027-05-22,False,,True,False,,True,Application,MEDIUM,True
+VND-0333,Secure Cloud 333,Data Analytics,523676,86,2026-04-19,2027-02-22,True,2026-10-31,True,2025-09-29,True,False,,False,API,HIGH,True
+VND-0334,Vertex Partners 334,Security,847055,41,2024-10-13,2026-01-02,True,2026-08-10,True,2027-11-12,True,False,,False,Database,LOW,False
+VND-0335,Titan Networks 335,Compliance,676659,24,2024-07-24,2025-06-22,True,2026-11-05,False,,False,False,,False,Portal,HIGH,False
+VND-0336,Vertex Solutions 336,Cloud Services,351058,56,2024-11-20,2025-07-01,True,2026-05-18,True,2025-07-12,True,True,2025-10-23,False,SFTP,MEDIUM,False
+VND-0337,Quantum Systems 337,Security,58308,53,2024-10-15,2025-06-21,False,,True,2026-10-10,True,False,,True,Portal,LOW,True
+VND-0338,Vertex Solutions 338,Software,164797,26,2025-03-30,2025-09-15,False,,False,,True,False,,False,SFTP,MEDIUM,True
+VND-0339,Vertex Systems 339,Cloud Services,1192940,56,2025-02-01,2025-11-22,False,,False,,True,True,2025-08-26,False,API,MEDIUM,True
+VND-0340,Prime Partners 340,Data Analytics,142639,93,2025-11-22,2026-07-23,True,2027-04-05,False,,True,True,2024-03-22,False,Portal,LOW,False
+VND-0341,Secure Solutions 341,Security,852846,83,2024-07-08,2025-06-25,True,2025-12-31,False,,False,False,,True,API,HIGH,False
+VND-0342,Apex Networks 342,Compliance,170191,95,2025-01-14,2025-10-28,True,2027-09-28,False,,True,False,,False,Portal,LOW,True
+VND-0343,Titan Services 343,Data Analytics,733222,39,2026-01-31,2026-06-30,True,2026-10-16,False,,False,False,,False,Portal,HIGH,False
+VND-0344,Prime Systems 344,Security,591025,78,2026-03-28,2027-09-01,True,2026-12-08,False,,False,False,,False,Portal,MEDIUM,True
+VND-0345,Quantum Partners 345,Security,450032,42,2025-08-11,2026-04-25,True,2026-10-05,True,2027-04-16,False,False,,False,Database,LOW,False
+VND-0346,Apex Analytics 346,Consulting,765049,35,2025-10-11,2026-07-05,True,2027-06-29,True,2027-05-08,True,False,,True,SFTP,LOW,True
+VND-0347,Secure Cloud 347,Security,647984,95,2025-09-29,2026-08-04,True,2025-09-03,True,2026-05-20,True,False,,False,SFTP,HIGH,True
+VND-0348,Nova Partners 348,Compliance,432196,44,2026-03-22,2026-07-12,True,2027-10-21,True,2026-05-24,True,False,,False,API,MEDIUM,False
+VND-0349,Apex Networks 349,Compliance,181148,20,2025-06-16,2025-12-02,False,,False,,True,False,,False,API,LOW,False
+VND-0350,Nova Networks 350,Data Analytics,250262,89,2025-10-08,2026-04-20,False,,False,,False,False,,False,Portal,MEDIUM,True
+VND-0351,Prime Systems 351,Consulting,38698,76,2026-05-14,2027-05-30,False,,False,,False,False,,False,SFTP,HIGH,False
+VND-0352,Blue Cloud 352,Payment Processing,372587,39,2025-04-29,2026-02-28,False,,True,2027-02-02,False,False,,False,Database,HIGH,False
+VND-0353,Nova Analytics 353,Consulting,428680,50,2025-01-28,2026-04-27,False,,False,,True,True,2024-04-10,False,SFTP,MEDIUM,True
+VND-0354,Prime Systems 354,Payment Processing,118028,74,2025-03-29,2026-03-10,False,,False,,False,True,2024-05-30,False,API,LOW,False
+VND-0355,Prime Services 355,Compliance,153022,93,2025-07-28,2026-04-14,False,,False,,True,False,,False,SFTP,HIGH,True
+VND-0356,Secure Services 356,Compliance,314246,21,2024-09-07,2025-07-14,False,,True,2027-03-14,True,False,,False,Database,HIGH,True
+VND-0357,Titan Systems 357,Data Analytics,982828,20,2026-01-28,2027-03-07,True,2026-09-06,True,2026-08-25,True,False,,False,API,MEDIUM,True
+VND-0358,Blue Services 358,Software,960009,72,2025-07-18,2026-10-30,False,,True,2027-03-13,True,False,,False,API,HIGH,True
+VND-0359,Apex Services 359,Software,866141,76,2026-03-03,2027-02-08,False,,False,,False,False,,False,Portal,LOW,True
+VND-0360,Blue Solutions 360,Consulting,751357,91,2026-01-20,2026-11-03,False,,False,,True,False,,False,Application,LOW,True
+VND-0361,Titan Partners 361,Cloud Services,802806,46,2025-01-26,2026-01-20,True,2027-09-27,False,,False,False,,False,Database,HIGH,True
+VND-0362,Secure Systems 362,Cloud Services,760002,58,2025-11-13,2026-04-10,True,2027-10-13,True,2025-11-14,True,False,,False,Database,MEDIUM,False
+VND-0363,Quantum Solutions 363,Cloud Services,38300,32,2026-01-05,2026-11-02,True,2026-07-30,True,2025-09-23,True,False,,False,API,LOW,False
+VND-0364,Titan Solutions 364,Software,48964,37,2026-03-03,2026-10-15,True,2026-09-12,True,2025-07-14,False,False,,False,API,MEDIUM,True
+VND-0365,Blue Analytics 365,Cloud Services,725545,64,2025-06-11,2026-07-14,True,2027-01-15,False,,False,False,,False,Portal,HIGH,False
+VND-0366,Apex Networks 366,Security,864623,89,2026-04-28,2026-12-17,True,2026-12-16,False,,False,True,2024-04-30,False,API,LOW,True
+VND-0367,Quantum Analytics 367,Payment Processing,307583,36,2025-11-23,2026-04-17,False,,False,,True,False,,True,Portal,LOW,False
+VND-0368,Prime Cloud 368,Software,482797,93,2024-12-26,2025-08-17,False,,False,,True,False,,False,Database,LOW,False
+VND-0369,Apex Analytics 369,Infrastructure,48804,76,2026-01-25,2027-02-06,True,2027-05-19,False,,True,False,,False,SFTP,MEDIUM,False
+VND-0370,Nova Analytics 370,Consulting,510300,55,2026-02-19,2027-03-02,False,,False,,False,False,,False,Database,MEDIUM,False
+VND-0371,Titan Networks 371,Payment Processing,671131,49,2024-08-21,2025-10-23,True,2026-06-01,True,2027-07-09,True,False,,False,Application,MEDIUM,True
+VND-0372,Titan Cloud 372,Security,1006381,78,2024-09-11,2025-10-08,True,2026-10-12,False,,True,False,,False,SFTP,LOW,True
+VND-0373,Secure Systems 373,Compliance,178301,91,2024-11-20,2025-08-06,False,,True,2026-09-11,False,False,,False,Database,LOW,False
+VND-0374,Blue Labs 374,Data Analytics,1077816,59,2025-09-28,2026-03-17,True,2026-01-15,False,,True,False,,False,Portal,LOW,True
+VND-0375,Nova Cloud 375,Security,782414,21,2024-11-29,2025-12-07,False,,True,2027-06-02,True,True,2023-10-17,False,Database,MEDIUM,True
+VND-0376,Blue Analytics 376,Infrastructure,1033368,58,2025-05-14,2026-01-06,True,2027-09-11,True,2026-05-12,True,False,,True,API,LOW,False
+VND-0377,Nova Systems 377,Software,1181501,46,2025-10-13,2026-04-04,True,2026-11-29,True,2027-03-17,False,False,,False,Portal,LOW,True
+VND-0378,Blue Networks 378,Cloud Services,543516,92,2026-05-07,2026-11-06,False,,False,,True,False,,False,Portal,HIGH,False
+VND-0379,Titan Analytics 379,Software,223371,68,2025-06-24,2026-01-25,True,2027-01-19,False,,True,False,,True,Database,HIGH,True
+VND-0380,Vertex Solutions 380,Software,25920,28,2024-08-02,2025-10-07,False,,True,2026-06-19,False,False,,False,Portal,MEDIUM,True
+VND-0381,Secure Systems 381,Cloud Services,913377,75,2026-01-20,2026-10-07,True,2026-11-21,False,,False,False,,False,SFTP,LOW,False
+VND-0382,Nova Services 382,Compliance,1070017,20,2026-04-11,2026-09-09,False,,False,,False,False,,True,Application,MEDIUM,False
+VND-0383,Secure Networks 383,Consulting,1185108,93,2024-07-06,2025-03-23,True,2027-01-27,True,2027-11-11,False,False,,True,Application,LOW,False
+VND-0384,Nova Systems 384,Cloud Services,807709,49,2025-10-09,2026-01-16,False,,True,2026-04-07,False,True,2023-11-05,False,Portal,LOW,False
+VND-0385,Apex Labs 385,Infrastructure,383119,30,2024-10-01,2025-07-30,True,2025-12-31,True,2026-04-09,True,False,,False,Database,LOW,False
+VND-0386,Vertex Cloud 386,Payment Processing,666913,55,2026-02-23,2027-01-31,True,2027-12-11,False,,True,False,,False,Database,HIGH,True
+VND-0387,Secure Systems 387,Infrastructure,653071,37,2025-04-03,2026-05-29,False,,True,2027-05-07,True,False,,False,Application,MEDIUM,True
+VND-0388,Quantum Systems 388,Cloud Services,270777,88,2025-01-16,2025-07-27,True,2026-07-25,False,,False,False,,False,Database,LOW,False
+VND-0389,Apex Solutions 389,Security,780153,66,2026-01-13,2026-05-02,False,,True,2027-07-23,False,False,,False,Database,MEDIUM,True
+VND-0390,Vertex Partners 390,Cloud Services,988600,88,2025-08-13,2026-04-15,True,2027-10-15,False,,False,False,,False,Application,LOW,False
+VND-0391,Vertex Solutions 391,Payment Processing,323911,83,2025-09-06,2026-03-17,True,2027-05-16,True,2027-10-16,True,False,,False,Database,LOW,True
+VND-0392,Prime Systems 392,Consulting,597344,62,2025-06-24,2025-12-23,True,2027-05-16,False,,True,False,,False,Application,LOW,False
+VND-0393,Titan Labs 393,Consulting,1115973,88,2026-03-18,2027-01-14,True,2026-08-09,True,2026-08-27,True,False,,False,Database,LOW,False
+VND-0394,Nova Analytics 394,Security,639563,64,2024-12-29,2025-06-15,True,2026-11-24,True,2027-10-20,True,False,,False,SFTP,LOW,True
+VND-0395,Apex Services 395,Security,705397,72,2025-06-30,2026-07-11,False,,False,,True,False,,False,Database,HIGH,True
+VND-0396,Quantum Analytics 396,Data Analytics,646289,46,2025-06-25,2025-12-25,False,,True,2025-10-03,False,False,,False,Application,LOW,True
+VND-0397,Quantum Partners 397,Software,1119068,21,2025-03-18,2026-02-23,True,2027-11-21,True,2025-07-24,True,False,,False,API,LOW,True
+VND-0398,Secure Cloud 398,Data Analytics,349399,20,2025-05-16,2025-08-17,False,,True,2025-10-30,True,False,,False,Database,LOW,False
+VND-0399,Nova Analytics 399,Compliance,259318,62,2025-03-07,2025-11-30,False,,False,,True,False,,False,Application,HIGH,True
+VND-0400,Secure Services 400,Infrastructure,464335,60,2024-09-18,2026-02-02,True,2026-05-01,False,,False,False,,False,Application,MEDIUM,False

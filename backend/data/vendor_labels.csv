@@ -1,0 +1,401 @@
+vendor_id,is_anomaly,anomaly_type,severity,expired_certifications,explanation
+VND-0001,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0002,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0003,True,EXPIRED_CERTIFICATION,HIGH,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0004,False,NONE,LOW,,No notable anomaly detected.
+VND-0005,True,EXPIRED_CERTIFICATION,HIGH,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0006,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0007,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0008,False,NONE,LOW,,No notable anomaly detected.
+VND-0009,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0010,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0011,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0012,False,NONE,LOW,,No notable anomaly detected.
+VND-0013,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0014,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Breach incident occurred while vendor maintained high-risk data access.
+VND-0015,True,RECENTLY_BREACHED_VENDOR,MEDIUM,,Vendor reported a recent breach and is still integrated with systems.
+VND-0016,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0017,False,NONE,LOW,,No notable anomaly detected.
+VND-0018,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0019,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0020,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0021,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0022,False,NONE,LOW,,No notable anomaly detected.
+VND-0023,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0024,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0025,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0026,False,NONE,LOW,,No notable anomaly detected.
+VND-0027,False,NONE,LOW,,No notable anomaly detected.
+VND-0028,False,NONE,LOW,,No notable anomaly detected.
+VND-0029,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0030,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0031,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0032,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0033,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0034,True,EXPIRED_CERTIFICATION,HIGH,"SOC2,ISO27001","Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0035,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0036,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0037,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0038,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0039,True,EXPIRED_CERTIFICATION,HIGH,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0040,False,NONE,LOW,,No notable anomaly detected.
+VND-0041,True,EXPIRED_CERTIFICATION,HIGH,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0042,True,RECENTLY_BREACHED_VENDOR,MEDIUM,,Vendor reported a recent breach and is still integrated with systems.
+VND-0043,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0044,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0045,False,NONE,LOW,,No notable anomaly detected.
+VND-0046,False,NONE,LOW,,No notable anomaly detected.
+VND-0047,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0048,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0049,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0050,True,EXPIRED_CERTIFICATION,HIGH,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0051,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Breach incident occurred while vendor maintained high-risk data access.
+VND-0052,False,NONE,LOW,,No notable anomaly detected.
+VND-0053,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0054,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0055,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Breach incident occurred while vendor maintained high-risk data access.
+VND-0056,False,NONE,LOW,,No notable anomaly detected.
+VND-0057,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0058,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0059,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0060,False,NONE,LOW,,No notable anomaly detected.
+VND-0061,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0062,False,NONE,LOW,,No notable anomaly detected.
+VND-0063,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0064,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Breach incident occurred while vendor maintained high-risk data access.
+VND-0065,False,NONE,LOW,,No notable anomaly detected.
+VND-0066,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0067,False,NONE,LOW,,No notable anomaly detected.
+VND-0068,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0069,True,EXPIRED_CERTIFICATION,HIGH,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0070,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0071,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0072,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0073,True,EXPIRED_CERTIFICATION,HIGH,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0074,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Vendor experienced a breach and still has access to highly sensitive customer data.
+VND-0075,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0076,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0077,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Vendor experienced a breach and still has access to highly sensitive customer data.
+VND-0078,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0079,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0080,False,NONE,LOW,,No notable anomaly detected.
+VND-0081,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0082,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0083,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0084,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0085,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0086,True,EXPIRED_CERTIFICATION,MEDIUM,"SOC2,ISO27001",Critical certification has expired and needs immediate renewal.
+VND-0087,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0088,True,EXPIRED_CERTIFICATION,HIGH,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0089,True,EXPIRED_CERTIFICATION,HIGH,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0090,True,EXPIRED_CERTIFICATION,HIGH,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0091,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0092,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Breach incident occurred while vendor maintained high-risk data access.
+VND-0093,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0094,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0095,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0096,False,NONE,LOW,,No notable anomaly detected.
+VND-0097,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0098,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0099,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0100,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Vendor experienced a breach and still has access to highly sensitive customer data.
+VND-0101,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0102,False,NONE,LOW,,No notable anomaly detected.
+VND-0103,False,NONE,LOW,,No notable anomaly detected.
+VND-0104,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0105,False,NONE,LOW,,No notable anomaly detected.
+VND-0106,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0107,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0108,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0109,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0110,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Breach incident occurred while vendor maintained high-risk data access.
+VND-0111,False,NONE,LOW,,No notable anomaly detected.
+VND-0112,True,EXPIRED_CERTIFICATION,MEDIUM,"SOC2,ISO27001","Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0113,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0114,True,EXPIRED_CERTIFICATION,HIGH,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0115,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0116,False,NONE,LOW,,No notable anomaly detected.
+VND-0117,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0118,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0119,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0120,True,EXPIRED_CERTIFICATION,HIGH,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0121,False,NONE,LOW,,No notable anomaly detected.
+VND-0122,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0123,False,NONE,LOW,,No notable anomaly detected.
+VND-0124,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0125,False,NONE,LOW,,No notable anomaly detected.
+VND-0126,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0127,False,NONE,LOW,,No notable anomaly detected.
+VND-0128,True,EXPIRED_CERTIFICATION,HIGH,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0129,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0130,False,NONE,LOW,,No notable anomaly detected.
+VND-0131,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0132,True,EXPIRED_CERTIFICATION,HIGH,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0133,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0134,True,EXPIRED_CERTIFICATION,HIGH,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0135,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0136,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0137,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0138,False,NONE,LOW,,No notable anomaly detected.
+VND-0139,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0140,False,NONE,LOW,,No notable anomaly detected.
+VND-0141,True,EXPIRED_CERTIFICATION,HIGH,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0142,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0143,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0144,True,EXPIRED_CERTIFICATION,HIGH,"SOC2,ISO27001","Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0145,False,NONE,LOW,,No notable anomaly detected.
+VND-0146,False,NONE,LOW,,No notable anomaly detected.
+VND-0147,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0148,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0149,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0150,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0151,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0152,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0153,False,NONE,LOW,,No notable anomaly detected.
+VND-0154,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0155,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0156,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0157,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0158,False,NONE,LOW,,No notable anomaly detected.
+VND-0159,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0160,False,NONE,LOW,,No notable anomaly detected.
+VND-0161,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0162,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0163,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0164,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0165,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0166,False,NONE,LOW,,No notable anomaly detected.
+VND-0167,False,NONE,LOW,,No notable anomaly detected.
+VND-0168,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0169,False,NONE,LOW,,No notable anomaly detected.
+VND-0170,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0171,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0172,True,RECENTLY_BREACHED_VENDOR,MEDIUM,,Breach occurred in the last year and vendor still retains access.
+VND-0173,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0174,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0175,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0176,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0177,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0178,True,EXPIRED_CERTIFICATION,HIGH,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0179,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0180,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0181,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0182,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0183,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Breach incident occurred while vendor maintained high-risk data access.
+VND-0184,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0185,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0186,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0187,True,RECENTLY_BREACHED_VENDOR,MEDIUM,,Vendor reported a recent breach and is still integrated with systems.
+VND-0188,True,RECENTLY_BREACHED_VENDOR,MEDIUM,,Vendor reported a recent breach and is still integrated with systems.
+VND-0189,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0190,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0191,True,EXPIRED_CERTIFICATION,HIGH,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0192,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0193,True,EXPIRED_CERTIFICATION,HIGH,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0194,True,EXPIRED_CERTIFICATION,HIGH,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0195,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0196,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0197,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0198,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0199,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0200,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0201,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0202,False,NONE,LOW,,No notable anomaly detected.
+VND-0203,True,EXPIRED_CERTIFICATION,HIGH,"SOC2,ISO27001","Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0204,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0205,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0206,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0207,True,RECENTLY_BREACHED_VENDOR,MEDIUM,,Breach occurred in the last year and vendor still retains access.
+VND-0208,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0209,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0210,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0211,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0212,True,EXPIRED_CERTIFICATION,HIGH,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0213,False,NONE,LOW,,No notable anomaly detected.
+VND-0214,True,EXPIRED_CERTIFICATION,HIGH,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0215,True,EXPIRED_CERTIFICATION,HIGH,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0216,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Breach incident occurred while vendor maintained high-risk data access.
+VND-0217,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0218,False,NONE,LOW,,No notable anomaly detected.
+VND-0219,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0220,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0221,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Breach incident occurred while vendor maintained high-risk data access.
+VND-0222,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0223,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0224,False,NONE,LOW,,No notable anomaly detected.
+VND-0225,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0226,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0227,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0228,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0229,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0230,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0231,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0232,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0233,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0234,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0235,True,RECENTLY_BREACHED_VENDOR,MEDIUM,,Breach occurred in the last year and vendor still retains access.
+VND-0236,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0237,False,NONE,LOW,,No notable anomaly detected.
+VND-0238,False,NONE,LOW,,No notable anomaly detected.
+VND-0239,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0240,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0241,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0242,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0243,False,NONE,LOW,,No notable anomaly detected.
+VND-0244,False,NONE,LOW,,No notable anomaly detected.
+VND-0245,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0246,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0247,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0248,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0249,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0250,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0251,True,RECENTLY_BREACHED_VENDOR,MEDIUM,,Breach occurred in the last year and vendor still retains access.
+VND-0252,False,NONE,LOW,,No notable anomaly detected.
+VND-0253,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0254,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0255,False,NONE,LOW,,No notable anomaly detected.
+VND-0256,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0257,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0258,True,EXPIRED_CERTIFICATION,HIGH,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0259,False,NONE,LOW,,No notable anomaly detected.
+VND-0260,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0261,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0262,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0263,False,NONE,LOW,,No notable anomaly detected.
+VND-0264,False,NONE,LOW,,No notable anomaly detected.
+VND-0265,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0266,False,NONE,LOW,,No notable anomaly detected.
+VND-0267,False,NONE,LOW,,No notable anomaly detected.
+VND-0268,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0269,False,NONE,LOW,,No notable anomaly detected.
+VND-0270,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Vendor experienced a breach and still has access to highly sensitive customer data.
+VND-0271,False,NONE,LOW,,No notable anomaly detected.
+VND-0272,False,NONE,LOW,,No notable anomaly detected.
+VND-0273,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0274,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0275,False,NONE,LOW,,No notable anomaly detected.
+VND-0276,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0277,True,EXPIRED_CERTIFICATION,HIGH,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0278,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0279,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0280,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0281,True,BREACHED_VENDOR_HIGH_ACCESS,CRITICAL,,Vendor experienced a breach and still has access to highly sensitive customer data.
+VND-0282,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0283,True,EXPIRED_CERTIFICATION,MEDIUM,"SOC2,ISO27001","Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0284,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0285,False,NONE,LOW,,No notable anomaly detected.
+VND-0286,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0287,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0288,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0289,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0290,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0291,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0292,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0293,False,NONE,LOW,,No notable anomaly detected.
+VND-0294,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0295,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0296,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0297,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0298,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0299,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0300,False,NONE,LOW,,No notable anomaly detected.
+VND-0301,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0302,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0303,True,RECENTLY_BREACHED_VENDOR,MEDIUM,,Vendor reported a recent breach and is still integrated with systems.
+VND-0304,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0305,False,NONE,LOW,,No notable anomaly detected.
+VND-0306,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0307,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0308,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0309,True,EXPIRED_CERTIFICATION,HIGH,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0310,False,NONE,LOW,,No notable anomaly detected.
+VND-0311,False,NONE,LOW,,No notable anomaly detected.
+VND-0312,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0313,False,NONE,LOW,,No notable anomaly detected.
+VND-0314,False,NONE,LOW,,No notable anomaly detected.
+VND-0315,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0316,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0317,True,EXPIRED_CERTIFICATION,HIGH,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0318,False,NONE,LOW,,No notable anomaly detected.
+VND-0319,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0320,False,NONE,LOW,,No notable anomaly detected.
+VND-0321,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0322,False,NONE,LOW,,No notable anomaly detected.
+VND-0323,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0324,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0325,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0326,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0327,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0328,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0329,True,EXPIRED_CERTIFICATION,HIGH,"SOC2,ISO27001",Critical certification has expired and needs immediate renewal.
+VND-0330,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0331,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0332,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0333,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0334,False,NONE,LOW,,No notable anomaly detected.
+VND-0335,False,NONE,LOW,,No notable anomaly detected.
+VND-0336,True,EXPIRED_CERTIFICATION,MEDIUM,"SOC2,ISO27001",Critical certification has expired and needs immediate renewal.
+VND-0337,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0338,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0339,True,RECENTLY_BREACHED_VENDOR,MEDIUM,,Vendor reported a recent breach and is still integrated with systems.
+VND-0340,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0341,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0342,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0343,False,NONE,LOW,,No notable anomaly detected.
+VND-0344,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0345,False,NONE,LOW,,No notable anomaly detected.
+VND-0346,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0347,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0348,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0349,False,NONE,LOW,,No notable anomaly detected.
+VND-0350,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0351,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0352,False,NONE,LOW,,No notable anomaly detected.
+VND-0353,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0354,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0355,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0356,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0357,False,NONE,LOW,,No notable anomaly detected.
+VND-0358,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0359,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0360,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0361,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0362,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0363,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0364,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0365,False,NONE,LOW,,No notable anomaly detected.
+VND-0366,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0367,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Pending investigation due to recent operational concerns.
+VND-0368,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0369,True,ELEVATED_RISK_VENDOR,LOW,,Risk score indicates elevated risk that should be monitored.
+VND-0370,False,NONE,LOW,,No notable anomaly detected.
+VND-0371,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0372,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0373,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0374,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,Critical certification has expired and needs immediate renewal.
+VND-0375,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0376,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0377,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0378,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0379,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0380,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0381,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0382,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0383,True,VENDOR_UNDER_INVESTIGATION,CRITICAL,,Vendor currently under investigation for compliance gaps.
+VND-0384,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0385,True,EXPIRED_CERTIFICATION,MEDIUM,"SOC2,ISO27001",Critical certification has expired and needs immediate renewal.
+VND-0386,False,NONE,LOW,,No notable anomaly detected.
+VND-0387,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0388,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0389,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Vendor access remains active after contract end date.
+VND-0390,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0391,True,HIGH_RISK_SCORE,HIGH,,Risk score exceeds 80 due to weak controls and missing certifications.
+VND-0392,False,NONE,LOW,,No notable anomaly detected.
+VND-0393,True,HIGH_RISK_SCORE,HIGH,,High overall risk score driven by certifications gaps and security findings.
+VND-0394,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0395,True,ELEVATED_RISK_VENDOR,LOW,,Vendor shows moderate risk but not critical yet.
+VND-0396,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0397,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,Critical certification has expired and needs immediate renewal.
+VND-0398,True,EXPIRED_CERTIFICATION,MEDIUM,ISO27001,"Vendor holds expired compliance certifications, increasing risk exposure."
+VND-0399,True,CONTRACT_EXPIRED_ACTIVE_ACCESS,MEDIUM,,Contract expired while vendor still has active access to systems.
+VND-0400,True,EXPIRED_CERTIFICATION,MEDIUM,SOC2,"Vendor holds expired compliance certifications, increasing risk exposure."
