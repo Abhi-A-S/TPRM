@@ -64,6 +64,47 @@ def display_risk(risk_data: dict) -> None:
         st.success(f"Risk Level: {risk_level}")
 
 
+def display_executive_summary(vendor_name: str, risk_data: dict) -> None:
+    risk_level = risk_data.get("risk_level", "Unknown")
+    risk_score = risk_data.get("risk_score", 0)
+    risk_factors = risk_data.get("risk_factors", [])[:3]
+
+    if risk_level == "Low":
+        status = "Vendor meets major compliance requirements."
+        priority = "Routine monitoring"
+        badge = "🟢 LOW RISK"
+        style = st.success
+    elif risk_level == "Medium":
+        status = "Vendor has several compliance or security gaps."
+        priority = "Remediation recommended"
+        badge = "🟠 MEDIUM RISK"
+        style = st.warning
+    else:
+        status = "Vendor presents significant security and compliance risk."
+        priority = "Immediate remediation required"
+        badge = "🔴 HIGH RISK"
+        style = st.error
+
+    st.markdown("---")
+    st.subheader("Executive Risk Summary")
+    st.write(f"**Vendor:** {vendor_name}")
+    col1, col2 = st.columns(2)
+    col1.metric("Risk Score", risk_score)
+    col2.metric("Risk Level", risk_level)
+    style(f"{badge}")
+    st.write("**Assessment Status:**")
+    st.write(status)
+    st.write("**Top Issues:**")
+    if risk_factors:
+        for issue in risk_factors:
+            st.write(f"• {issue}")
+    else:
+        st.write("No major issues detected.")
+    st.write("**Priority:**")
+    st.write(priority)
+    st.markdown("---")
+
+
 def display_risk_factors(risk_factors: list[str]) -> None:
     st.header("Risk Factors")
     if not risk_factors:
@@ -99,6 +140,7 @@ def main() -> None:
             try:
                 result = analyze_file(uploaded_file)
                 st.success("Analysis complete")
+                display_executive_summary(result.get("vendor_name", "Vendor"), result.get("risk", {}))
                 display_vendor_info(result.get("vendor_name", "Vendor"))
                 display_compliance(result.get("compliance", {}))
                 display_clauses(result.get("clauses", {}))
