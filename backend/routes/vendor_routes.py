@@ -8,6 +8,7 @@ from flask import Blueprint, Flask, current_app, request
 from backend.services.clause_extractor import extract_clauses
 from backend.services.compliance_parser import extract_compliance
 from backend.services.pdf_extractor import extract_text
+from backend.services.recommendation_engine import generate_recommendations
 from backend.services.risk_engine import calculate_risk
 
 vendor_bp = Blueprint("vendor", __name__)
@@ -74,6 +75,7 @@ def analyze_pdf() -> tuple[dict, int]:
     compliance = extract_compliance(raw_text)
     clauses = extract_clauses(raw_text)
     risk = calculate_risk(compliance, clauses)
+    recommendations = generate_recommendations(compliance, clauses)
 
     vendor_name = Path(safe_filename).stem or "Vendor"
     response = {
@@ -81,6 +83,7 @@ def analyze_pdf() -> tuple[dict, int]:
         "compliance": compliance,
         "clauses": clauses,
         "risk": risk,
+        "recommendations": recommendations,
     }
 
     return response, 200
