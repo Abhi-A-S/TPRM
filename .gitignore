@@ -2,3 +2,5 @@ backend/uploads/*test.pdf
 backend/__pycache__
 backend/routes/__pycache__
 backend/services/__pycache__
+backend/tests/__pycache__
+.pytest_cache
