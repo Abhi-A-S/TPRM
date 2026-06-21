@@ -95,7 +95,27 @@ def display_timing_metrics(timing: dict) -> None:
     st.header("Analysis Timings")
     st.metric("Document Parsing Time", f"{timing.get('document_parsing_seconds', 0.0):.2f} sec")
     st.metric("LLM Analysis Time", f"{timing.get('llm_analysis_seconds', 0.0):.2f} sec")
+    st.metric("Validation Time", f"{timing.get('validation_seconds', 0.0):.2f} sec")
     st.metric("Total Analysis Time", f"{timing.get('total_analysis_seconds', 0.0):.2f} sec")
+
+
+def display_extraction_validation(validation: dict) -> None:
+    st.header("Extraction Validation")
+    conflicts_found = validation.get("conflicts_found", 0)
+    if conflicts_found == 0:
+        st.write("No extraction conflicts detected.")
+        return
+
+    st.write(f"Conflicts Found: {conflicts_found}")
+    for conflict in validation.get("conflicts", []):
+        st.markdown("---")
+        st.write(f"**Field:** {conflict.get('field')} ")
+        st.write(f"**Rule Engine:** {conflict.get('rule_value')}")
+        st.write(f"**LLM:** {conflict.get('llm_value')}")
+        st.write(f"**Final Decision:** {conflict.get('final_value')}")
+        st.write(f"**Winner:** {conflict.get('winner')}")
+        st.write(f"**Confidence:** {conflict.get('confidence', 0.0) * 100:.0f}%")
+        st.write(f"**Reason:** {conflict.get('reason')}")
 
 
 def display_executive_summary(vendor_name: str, risk_data: dict) -> None:
@@ -416,6 +436,7 @@ def main() -> None:
                     display_recommendations(result.get("recommendations", []))
                     display_ai_vendor_intelligence(result.get("llm_insights", {}))
                     display_ai_risk_narrative(result.get("llm_insights", {}))
+                    display_extraction_validation(result.get("validation", {}))
                     display_timing_metrics(result.get("timing", {}))
                     with st.expander("Raw JSON Response"):
                         st.json(result)

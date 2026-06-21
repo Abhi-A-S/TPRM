@@ -8,6 +8,7 @@ from flask import Blueprint, Flask, current_app, request
 
 from backend.services.clause_extractor import extract_clauses
 from backend.services.compliance_parser import extract_compliance
+from backend.services.extraction_validator import validate_extraction_conflicts
 from backend.services.llm_vendor_analyzer import analyze_vendor_document
 from backend.services.pdf_extractor import extract_text
 from backend.services.recommendation_engine import generate_recommendations
@@ -91,6 +92,14 @@ def analyze_pdf() -> tuple[dict, int]:
     llm_insights = analyze_vendor_document(raw_text)
     llm_time = time.perf_counter() - llm_start
 
+    validation_start = time.perf_counter()
+    validation_result = validate_extraction_conflicts(
+        raw_text,
+        {"compliance": compliance, "clauses": clauses},
+        llm_insights,
+    )
+    validation_time = time.perf_counter() - validation_start
+
     risk_start = time.perf_counter()
     risk = calculate_risk(compliance, clauses)
     risk_time = time.perf_counter() - risk_start
@@ -107,17 +116,18 @@ def analyze_pdf() -> tuple[dict, int]:
         "compliance": compliance,
         "clauses": clauses,
         "llm_insights": llm_insights,
+        "validation": validation_result,
         "risk": risk,
         "recommendations": recommendations,
         "timing": {
             "document_parsing_seconds": text_result.get("duration_seconds", 0.0),
-
             "compliance_extraction_seconds": compliance_time,
             "clause_extraction_seconds": clause_time,
             "llm_analysis_seconds": llm_time,
+            "validation_seconds": validation_time,
             "risk_engine_seconds": risk_time,
             "recommendation_seconds": recommendation_time,
-
+            "conflicts_found": validation_result.get("conflicts_found", 0),
             "total_analysis_seconds": (
                 text_result.get("duration_seconds", 0.0)
                 + total_time
