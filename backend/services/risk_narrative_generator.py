@@ -87,30 +87,57 @@ def _recommendations(risk_level: str, gaps: List[str], contract_issues: List[str
 def generate_risk_narrative(
     document_intelligence: Dict[str, Any],
     risk: Dict[str, object],
+    ml_prediction: dict,
 ) -> str:
+    document_type = document_intelligence.get("document_type", "UNKNOWN")
     compliance = document_intelligence.get("compliance", {})
     clauses = document_intelligence.get("contract_findings", {})
     vendor_intel = document_intelligence.get("vendor_intelligence", {})
+    metadata = document_intelligence.get("metadata", {})
 
     risk_level = str(risk.get("risk_level", "Unknown")).upper()
     risk_score = int(risk.get("risk_score", 0) or 0)
     strengths = _build_strengths(compliance)
     gaps = _build_gaps(compliance)
+
     contract_issues = []
-    if not clauses.get("encryption_required", False):
-        contract_issues.append("encryption requirements were not identified")
-    if not clauses.get("termination_clause", False):
-        contract_issues.append("termination provisions were not detected")
-    if clauses.get("subprocessor_usage", False):
-        contract_issues.append("subprocessor usage requires governance review")
-    if clauses.get("incident_reporting_hours", 0) == 0:
-        contract_issues.append("incident reporting timeframe was not stated")
+    if document_type == "ISO27001_CERTIFICATE":
+        if compliance.get("iso27001", False):
+            contract_issues.append("ISO27001 certification detected")
+            expiration = str(metadata.get("expiration_date", "") or "").strip()
+            if expiration:
+                contract_issues.append(f"Certificate valid until {expiration}")
+        else:
+            contract_issues.append("ISO27001 certification was not confirmed")
+    elif document_type == "CONTRACT":
+        if not clauses.get("encryption_required", False):
+            contract_issues.append("encryption requirements were not clearly documented")
+        if not clauses.get("termination_clause", False):
+            contract_issues.append("termination provisions were not identified")
+        if clauses.get("subprocessor_usage", False):
+            contract_issues.append("third-party subprocessor usage requires review")
+        if int(clauses.get("incident_reporting_hours", 0) or 0) == 0:
+            contract_issues.append("incident reporting SLA was not defined")
+        elif int(clauses.get("incident_reporting_hours", 0) or 0) > 72:
+            contract_issues.append("incident reporting window exceeds 72 hours")
+    else:
+        if not clauses.get("encryption_required", False):
+            contract_issues.append("encryption requirements were not identified")
+        if not clauses.get("termination_clause", False):
+            contract_issues.append("termination provisions were not detected")
+        if clauses.get("subprocessor_usage", False):
+            contract_issues.append("third-party subprocessor usage requires review")
+        if int(clauses.get("incident_reporting_hours", 0) or 0) == 0:
+            contract_issues.append("incident reporting timeframe was not stated")
 
     data_concerns = []
     if vendor_intel.get("handles_pii"):
-        data_concerns.append("the vendor handles personal data")
-    if vendor_intel.get("data_access_level", "UNKNOWN") != "UNKNOWN":
-        data_concerns.append(f"data access level is {vendor_intel.get('data_access_level')}")
+        data_concerns.append("the document indicates handling of PII")
+    access = str(vendor_intel.get("data_access_level", "UNKNOWN")).upper()
+    if access and access != "UNKNOWN":
+        data_concerns.append(f"data access level is {access}")
+    if vendor_intel.get("subprocessor_usage"):
+        data_concerns.append("third-party subprocessor usage is present")
 
     drivers = risk.get("risk_factors", [])
     recommendations = _recommendations(risk_level, gaps, contract_issues)
@@ -149,6 +176,14 @@ def generate_risk_narrative(
         sentences.append(
             "Key risk drivers include " + ", ".join(drivers[:-1]) + (" and " + drivers[-1] if len(drivers) > 1 else drivers[0]) + "."
         )
+
+    if ml_prediction:
+        prediction_label = ml_prediction.get("predicted_severity", "Unknown")
+        confidence_pct = int((ml_prediction.get("prediction_confidence", 0.0) or 0.0) * 100)
+        sentences.insert(0, f"The ML model predicts {prediction_label} vendor risk with {confidence_pct}% confidence.")
+        ml_drivers = ml_prediction.get("top_drivers", [])
+        if ml_drivers:
+            sentences.append("ML top drivers include " + ", ".join(ml_drivers[:-1]) + (" and " + ml_drivers[-1] if len(ml_drivers) > 1 else ml_drivers[0]) + ".")
 
     if recommendations:
         sentences.append(

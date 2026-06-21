@@ -42,7 +42,7 @@ def test_high_test_pdf_risk():
     raw_text = extract_text(str(pdf_path))["raw_text"]
     compliance = extract_compliance(raw_text)
     clauses = extract_clauses(raw_text)
-    risk = calculate_risk(compliance, clauses)
+    risk = calculate_risk("UNKNOWN", compliance, clauses)
     assert risk["risk_level"] == "High"
 
 
@@ -51,5 +51,5 @@ def test_low_test_pdf_risk():
     raw_text = extract_text(str(pdf_path))["raw_text"]
     compliance = extract_compliance(raw_text)
     clauses = extract_clauses(raw_text)
-    risk = calculate_risk(compliance, clauses)
+    risk = calculate_risk("UNKNOWN", compliance, clauses)
     assert risk["risk_level"] == "Low"

@@ -95,6 +95,17 @@ def _build_prompt(text: str, document_type: str) -> str:
     return f"{prompt}\n\nDocument Text:\n{text}"
 
 
+def _is_iso27001_certificate(payload: Dict[str, Any], document_type: str) -> bool:
+    if document_type != "ISO27001_CERTIFICATE":
+        return False
+
+    certificate_number = str(payload.get("certificate_number", "") or "").strip()
+    issuer = str(payload.get("issuer", "") or "").strip()
+    iso_flag = bool(payload.get("iso27001", False))
+    expires = str(payload.get("expiration_date", "") or "").strip()
+    return bool(certificate_number and issuer and (iso_flag or expires))
+
+
 def _normalize_output(document_type: str, content: str, classification_confidence: float) -> Dict[str, Any]:
     try:
         payload = json.loads(content)
@@ -104,7 +115,16 @@ def _normalize_output(document_type: str, content: str, classification_confidenc
         logger.warning("Document extractor returned invalid JSON: %s", exc)
         payload = {}
 
-    return normalize_document_intelligence(payload, document_type, classification_confidence)
+    result = normalize_document_intelligence(payload, document_type, classification_confidence)
+
+    if document_type == "ISO27001_CERTIFICATE":
+        metadata = result.get("metadata", {})
+        if metadata.get("certificate_number") and metadata.get("issuer"):
+            if not result["compliance"].get("iso27001", False):
+                result["compliance"]["iso27001"] = True
+                logger.info("ISO certificate detected. Forcing iso27001=True")
+
+    return result
 
 
 def extract_document_data(text: str, document_type: str, classification_confidence: float = 0.0) -> Dict[str, Any]:
@@ -136,7 +156,10 @@ def extract_document_data(text: str, document_type: str, classification_confiden
         response.raise_for_status()
         data = response.json()
         content = data.get("message", {}).get("content", "")
-        return _normalize_output(document_type, content, classification_confidence)
+        result = _normalize_output(document_type, content, classification_confidence)
+        print("\n===== EXTRACTION OUTPUT =====")
+        print(json.dumps(result, indent=2))
+        return result
     except requests.RequestException as exc:
         logger.warning("Document extractor request failed: %s", exc)
     except ValueError as exc:
@@ -144,4 +167,6 @@ def extract_document_data(text: str, document_type: str, classification_confiden
     fallback = build_empty_document_schema()
     fallback["document_type"] = document_type
     fallback["confidence"] = min(max(classification_confidence, 0.0), 1.0)
+    print("\n===== EXTRACTION OUTPUT =====")
+    print(json.dumps(fallback, indent=2))
     return fallback

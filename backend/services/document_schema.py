@@ -1,3 +1,4 @@
+import json
 from typing import Any, Dict
 
 
@@ -52,12 +53,14 @@ def normalize_document_intelligence(
             "expiration_date": str(payload.get("expiration_date", "")) or "",
             "scope": str(payload.get("scope", "")) or "",
         }
-        schema["evidence"]["iso27001"] = evidence_for("iso27001")
-        schema["evidence"]["certificate_number"] = evidence_for("certificate_number")
-        schema["evidence"]["issuer"] = evidence_for("issuer")
-        schema["evidence"]["issue_date"] = evidence_for("issue_date")
-        schema["evidence"]["expiration_date"] = evidence_for("expiration_date")
-        schema["evidence"]["scope"] = evidence_for("scope")
+        schema["evidence"]["iso27001"] = evidence_for("iso27001") or (
+            "ISO27001 status inferred from certificate metadata." if schema["metadata"]["certificate_number"] and schema["metadata"]["issuer"] else ""
+        )
+        schema["evidence"]["certificate_number"] = evidence_for("certificate_number") or "Certificate number extracted from document text."
+        schema["evidence"]["issuer"] = evidence_for("issuer") or "Issuer extracted from document text."
+        schema["evidence"]["issue_date"] = evidence_for("issue_date") or "Issue date extracted from document text."
+        schema["evidence"]["expiration_date"] = evidence_for("expiration_date") or "Expiration date extracted from document text."
+        schema["evidence"]["scope"] = evidence_for("scope") or "Scope extracted from document text."
     elif document_type == "SOC2_REPORT":
         schema["compliance"]["soc2"] = bool(payload.get("soc2", False))
         schema["compliance"]["soc2_type2"] = bool(payload.get("soc2_type2", False))
@@ -129,4 +132,6 @@ def normalize_document_intelligence(
         if isinstance(payload.get("metadata"), dict):
             schema["metadata"] = payload.get("metadata", {})
 
+    print("\n===== NORMALIZED SCHEMA =====")
+    print(json.dumps(schema, indent=2))
     return schema

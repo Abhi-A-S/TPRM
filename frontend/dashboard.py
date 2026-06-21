@@ -124,6 +124,37 @@ def display_risk(risk_data: dict) -> None:
         st.success(f"Risk Level: {risk_level}")
 
 
+def display_ml_prediction(ml_prediction: dict) -> None:
+    st.header("ML Risk Prediction")
+    severity = ml_prediction.get("predicted_severity", "Unknown")
+    confidence = int((ml_prediction.get("prediction_confidence", 0.0) or 0.0) * 100)
+    error = ml_prediction.get("error")
+
+    if error or severity == "Unknown":
+        st.error("ML Prediction Error:")
+        if error:
+            st.write(error)
+        else:
+            st.write("Prediction returned Unknown severity.")
+        return
+
+    st.write(f"**Predicted Severity:** {severity}")
+    st.write(f"**Prediction Confidence:** {confidence}%")
+
+    if ml_prediction.get("class_probabilities"):
+        st.subheader("Probability Distribution")
+        for label, prob in ml_prediction.get("class_probabilities", {}).items():
+            st.write(f"{label}: {int(prob * 100)}%")
+
+    top_drivers = ml_prediction.get("top_drivers", [])
+    if top_drivers:
+        st.subheader("Top Drivers")
+        for driver in top_drivers:
+            st.write(f"• {driver}")
+    else:
+        st.write("No top drivers available.")
+
+
 def display_ai_vendor_intelligence(vendor_intelligence: dict) -> None:
     st.header("AI Vendor Intelligence")
     st.write(f"**Handles PII:** {'Yes' if vendor_intelligence.get('handles_pii') else 'No'}")
@@ -488,6 +519,7 @@ def main() -> None:
                     display_risk(result.get("risk", {}))
                     display_risk_factors(result.get("risk", {}).get("risk_factors", []))
                     display_recommendations(result.get("recommendations", []))
+                    display_ml_prediction(result.get("ml_prediction", {}))
                     display_ai_vendor_intelligence(result.get("document_intelligence", {}).get("vendor_intelligence", {}))
                     display_ai_risk_narrative(result.get("risk_narrative", ""))
                     display_extraction_validation(result.get("validation", {}))

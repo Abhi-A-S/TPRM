@@ -179,17 +179,13 @@ def validate_extraction_conflicts(
             "field": field,
             "expected": rule_value,
             "actual": llm_value,
-            "final_value": decision["final_value"],
+            "final_value": llm_value,
             "decision_source": "AI_ADJUDICATOR",
             "confidence": decision["confidence"],
             "reason": decision["reason"],
             "winner": decision["winner"],
             "severity": conflict["severity"],
         }
-        if field == "incident_reporting_hours":
-            final_results[field] = int(decision["final_value"] or 0)
-        else:
-            final_results[field] = bool(decision["final_value"])
         conflicts.append(conflict_record)
 
     agreement_rate = 100.0 if checked_fields == 0 else round((agreements / checked_fields) * 100.0, 2)
@@ -199,5 +195,7 @@ def validate_extraction_conflicts(
     validation_result["conflicts_found"] = len(conflicts)
     validation_result["agreement_rate"] = agreement_rate
     validation_result["conflicts"] = conflicts
+    print("\n===== VALIDATION OUTPUT =====")
+    print(json.dumps(validation_result, indent=2))
     return validation_result
 

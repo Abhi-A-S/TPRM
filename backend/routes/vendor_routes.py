@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 from datetime import datetime
@@ -15,6 +16,7 @@ from backend.services.pdf_extractor import extract_text
 from backend.services.recommendation_engine import generate_recommendations
 from backend.services.risk_engine import calculate_risk
 from backend.services.risk_narrative_generator import generate_risk_narrative
+from backend.ml.document_risk_predictor import predict_document_risk
 
 vendor_bp = Blueprint("vendor", __name__)
 logger = logging.getLogger(__name__)
@@ -102,6 +104,8 @@ def analyze_pdf() -> tuple[dict, int]:
         classification.get("confidence", 0.0),
     )
     llm_extraction["classification_reason"] = classification.get("reason", "")
+    print("\n===== AFTER EXTRACTION =====")
+    print(json.dumps(llm_extraction, indent=2))
     llm_time = time.perf_counter() - llm_start
 
     validation_start = time.perf_counter()
@@ -111,6 +115,12 @@ def analyze_pdf() -> tuple[dict, int]:
         llm_extraction,
     )
     validation_time = time.perf_counter() - validation_start
+    print("\n===== AFTER VALIDATION =====")
+    print(json.dumps(llm_extraction, indent=2))
+
+    ml_prediction_start = time.perf_counter()
+    document_prediction = predict_document_risk(llm_extraction)
+    ml_prediction_time = time.perf_counter() - ml_prediction_start
 
     normalized_clauses = {
         "encryption": bool(llm_extraction.get("contract_findings", {}).get("encryption_required", False)),
@@ -120,16 +130,29 @@ def analyze_pdf() -> tuple[dict, int]:
     }
 
     risk_start = time.perf_counter()
-    risk = calculate_risk(llm_extraction.get("compliance", {}), normalized_clauses)
+    risk = calculate_risk(
+        classification.get("document_type", "UNKNOWN"),
+        llm_extraction.get("compliance", {}),
+        normalized_clauses,
+        metadata=llm_extraction.get("metadata", {}),
+    )
     risk_time = time.perf_counter() - risk_start
 
     recommendation_start = time.perf_counter()
-    recommendations = generate_recommendations(llm_extraction.get("compliance", {}), normalized_clauses)
+    recommendations = generate_recommendations(
+        classification.get("document_type", "UNKNOWN"),
+        llm_extraction.get("compliance", {}),
+        normalized_clauses,
+        metadata=llm_extraction.get("metadata", {}),
+    )
     recommendation_time = time.perf_counter() - recommendation_start
+    print("\n===== BEFORE RISK ENGINE =====")
+    print(json.dumps(llm_extraction, indent=2))
 
     risk_narrative = generate_risk_narrative(
         llm_extraction,
         risk,
+        document_prediction,
     )
     total_time = time.perf_counter() - analysis_start
 
@@ -151,6 +174,7 @@ def analyze_pdf() -> tuple[dict, int]:
             "termination_clause": bool(llm_clauses.get("termination_clause", False)),
         },
         "validation": validation_result,
+        "ml_prediction": document_prediction,
         "risk": risk,
         "risk_narrative": risk_narrative,
         "recommendations": recommendations,
@@ -159,6 +183,7 @@ def analyze_pdf() -> tuple[dict, int]:
             "classification_seconds": classification_time,
             "llm_extraction_seconds": llm_time,
             "validation_seconds": validation_time,
+            "ml_prediction_seconds": ml_prediction_time,
             "risk_engine_seconds": risk_time,
             "recommendation_seconds": recommendation_time,
             "conflicts_found": validation_result.get("conflicts_found", 0),
