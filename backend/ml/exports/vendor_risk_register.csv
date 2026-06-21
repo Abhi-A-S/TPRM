@@ -1,0 +1,401 @@
+vendor_id,vendor_name,vendor_type,risk_score,predicted_severity,prediction_confidence,severity_rank,priority_score,risk_drivers
+VND-0196,Secure Partners 196,Software,95,CRITICAL,0.88,4,245.4,"Under Investigation, High Risk Score, Active Access After Contract Expiry, Missing SOC2, Expired Certifications, High Data Sensitivity"
+VND-0030,Prime Systems 30,Infrastructure,95,CRITICAL,0.8425,4,244.275,"Under Investigation, High Risk Score, Expired Certifications"
+VND-0327,Nova Cloud 327,Payment Processing,85,CRITICAL,0.9054311450609063,4,244.16293435182718,"Under Investigation, High Risk Score, Missing SOC2"
+VND-0270,Vertex Cloud 270,Software,84,CRITICAL,0.905,4,243.95000000000002,"Under Investigation, High Risk Score, Active Access After Contract Expiry, Missing ISO27001, Expired Certifications, High Data Sensitivity"
+VND-0298,Vertex Labs 298,Compliance,89,CRITICAL,0.8689253541890626,4,243.86776062567188,"Under Investigation, High Risk Score, Missing ISO27001"
+VND-0383,Secure Networks 383,Consulting,93,CRITICAL,0.8414506943001437,4,243.8435208290043,"Under Investigation, High Risk Score"
+VND-0081,Prime Labs 81,Cloud Services,92,CRITICAL,0.8444247467911657,4,243.732742403735,"Under Investigation, High Risk Score, Missing ISO27001, Expired Certifications"
+VND-0341,Secure Solutions 341,Security,83,CRITICAL,0.8875,4,243.225,"Under Investigation, High Risk Score, Missing ISO27001, Expired Certifications, High Data Sensitivity"
+VND-0223,Nova Labs 223,Compliance,89,CRITICAL,0.8369950738916256,4,242.9098522167488,"Under Investigation, High Risk Score, Missing ISO27001, Recent Breach"
+VND-0232,Prime Cloud 232,Payment Processing,76,CRITICAL,0.9119667435835155,4,242.55900230750547,"Under Investigation, Missing ISO27001"
+VND-0281,Secure Cloud 281,Infrastructure,87,CRITICAL,0.8125,4,241.775,"High Risk Score, Missing ISO27001, Recent Breach, High Data Sensitivity"
+VND-0001,Secure Systems 1,Data Analytics,87,CRITICAL,0.8093120805369128,4,241.67936241610738,"Under Investigation, High Risk Score"
+VND-0236,Blue Solutions 236,Security,73,CRITICAL,0.885,4,241.15,"Under Investigation, Expired Certifications"
+VND-0183,Blue Services 183,Compliance,86,CRITICAL,0.78045,4,240.6135,"High Risk Score, Active Access After Contract Expiry, Missing ISO27001, Recent Breach, High Data Sensitivity"
+VND-0068,Secure Systems 68,Payment Processing,75,CRITICAL,0.8375,4,240.125,"Under Investigation, Missing SOC2, Recent Breach"
+VND-0108,Nova Systems 108,Infrastructure,56,CRITICAL,0.9275,4,239.02499999999998,"Under Investigation, High Data Sensitivity"
+VND-0221,Prime Solutions 221,Data Analytics,74,CRITICAL,0.805,4,238.95000000000002,"Missing SOC2, Missing ISO27001, Recent Breach, High Data Sensitivity"
+VND-0260,Prime Networks 260,Payment Processing,63,CRITICAL,0.8710144927536231,4,238.73043478260868,Under Investigation
+VND-0247,Nova Partners 247,Payment Processing,63,CRITICAL,0.8588682662482815,4,238.36604798744844,Under Investigation
+VND-0033,Secure Cloud 33,Payment Processing,48,CRITICAL,0.9454425182481753,4,237.96327554744525,"Under Investigation, High Data Sensitivity"
+VND-0006,Secure Partners 6,Software,63,CRITICAL,0.8419690258994954,4,237.85907077698485,"Under Investigation, Missing SOC2, Missing ISO27001"
+VND-0376,Blue Analytics 376,Infrastructure,58,CRITICAL,0.845,4,236.95,"Under Investigation, Expired Certifications"
+VND-0337,Quantum Systems 337,Security,53,CRITICAL,0.8520109846972186,4,236.16032954091656,"Under Investigation, Active Access After Contract Expiry, Missing SOC2"
+VND-0273,Blue Solutions 273,Cloud Services,80,CRITICAL,0.655,4,235.65,Under Investigation
+VND-0379,Titan Analytics 379,Software,68,CRITICAL,0.713879781420765,4,235.01639344262296,"Under Investigation, Active Access After Contract Expiry, Missing ISO27001, High Data Sensitivity"
+VND-0367,Quantum Analytics 367,Payment Processing,36,CRITICAL,0.9231334068565529,4,234.89400220569658,"Under Investigation, Missing SOC2, Missing ISO27001"
+VND-0075,Quantum Networks 75,Data Analytics,36,CRITICAL,0.9075,4,234.42499999999998,"Under Investigation, Missing SOC2, Missing ISO27001, High Data Sensitivity"
+VND-0346,Apex Analytics 346,Consulting,35,CRITICAL,0.9084547154298818,4,234.25364146289644,Under Investigation
+VND-0206,Apex Services 206,Cloud Services,67,CRITICAL,0.69,4,234.1,"Under Investigation, Active Access After Contract Expiry, Missing SOC2, Missing ISO27001, High Data Sensitivity"
+VND-0077,Blue Cloud 77,Security,61,CRITICAL,0.7275,4,234.02499999999998,"Missing SOC2, Expired Certifications, High Data Sensitivity"
+VND-0051,Apex Services 51,Payment Processing,55,CRITICAL,0.7583836062546392,4,233.75150818763916,High Data Sensitivity
+VND-0064,Nova Networks 64,Data Analytics,52,CRITICAL,0.7695638297872341,4,233.48691489361704,"Missing SOC2, Missing ISO27001, Recent Breach, High Data Sensitivity"
+VND-0143,Quantum Solutions 143,Infrastructure,39,CRITICAL,0.856222570783191,4,233.48667712349575,"Under Investigation, Missing SOC2, Missing ISO27001"
+VND-0092,Quantum Solutions 92,Infrastructure,48,CRITICAL,0.7845638576429843,4,233.1369157292895,"Active Access After Contract Expiry, Recent Breach, High Data Sensitivity"
+VND-0195,Vertex Cloud 195,Infrastructure,39,CRITICAL,0.84,4,233.0,"Under Investigation, Expired Certifications"
+VND-0156,Blue Solutions 156,Consulting,68,CRITICAL,0.6438364328252695,4,232.91509298475808,"Under Investigation, Missing SOC2, Missing ISO27001"
+VND-0185,Nova Networks 185,Consulting,32,CRITICAL,0.8790748579624738,4,232.7722457388742,"Under Investigation, Active Access After Contract Expiry, Missing SOC2"
+VND-0085,Prime Networks 85,Infrastructure,59,CRITICAL,0.6925,4,232.57500000000002,"Under Investigation, Missing ISO27001, Expired Certifications"
+VND-0332,Nova Labs 332,Consulting,69,CRITICAL,0.6192257193317161,4,232.37677157995148,"Under Investigation, Active Access After Contract Expiry, Missing ISO27001"
+VND-0173,Titan Networks 173,Consulting,32,CRITICAL,0.8615825347886453,4,232.24747604365936,"Under Investigation, Active Access After Contract Expiry"
+VND-0216,Vertex Partners 216,Security,37,CRITICAL,0.8088797814207651,4,231.66639344262296,"Recent Breach, High Data Sensitivity"
+VND-0209,Quantum Labs 209,Cloud Services,35,CRITICAL,0.8132873700724721,4,231.39862110217416,"Under Investigation, Active Access After Contract Expiry, Missing SOC2"
+VND-0055,Blue Cloud 55,Compliance,46,CRITICAL,0.7181386603838482,4,230.74415981151543,"Active Access After Contract Expiry, Missing ISO27001, High Data Sensitivity"
+VND-0171,Secure Labs 171,Consulting,63,CRITICAL,0.6046385194137285,4,230.73915558241185,"Under Investigation, Active Access After Contract Expiry, Missing ISO27001"
+VND-0382,Nova Services 382,Compliance,20,CRITICAL,0.8663364328252695,4,229.9900929847581,"Under Investigation, Missing SOC2, Missing ISO27001"
+VND-0058,Blue Networks 58,Payment Processing,38,CRITICAL,0.7325,4,229.575,"Under Investigation, Active Access After Contract Expiry, Missing SOC2, Expired Certifications, High Data Sensitivity"
+VND-0157,Apex Networks 157,Security,21,CRITICAL,0.8279021673539174,4,229.03706502061752,"Under Investigation, Missing ISO27001, Expired Certifications"
+VND-0014,Titan Systems 14,Cloud Services,29,CRITICAL,0.765,4,228.75,"Expired Certifications, High Data Sensitivity"
+VND-0100,Titan Cloud 100,Compliance,28,CRITICAL,0.7625,4,228.475,"Expired Certifications, High Data Sensitivity"
+VND-0110,Nova Networks 110,Security,66,CRITICAL,0.4025,4,225.27499999999998,"Missing SOC2, Expired Certifications, High Data Sensitivity"
+VND-0199,Secure Labs 199,Compliance,93,HIGH,0.9454047731888964,3,196.9621431956669,"High Risk Score, Active Access After Contract Expiry, Missing ISO27001, Expired Certifications, High Data Sensitivity"
+VND-0154,Apex Systems 154,Consulting,93,HIGH,0.9295130970035153,3,196.48539291010545,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0378,Blue Networks 378,Cloud Services,92,HIGH,0.9352902275493125,3,196.45870682647939,"High Risk Score, Missing SOC2, Missing ISO27001, High Data Sensitivity"
+VND-0373,Secure Systems 373,Compliance,91,HIGH,0.9387796129811111,3,196.3633883894333,"High Risk Score, Missing SOC2"
+VND-0053,Titan Networks 53,Cloud Services,92,HIGH,0.9243306060393133,3,196.12991818117942,"High Risk Score, Active Access After Contract Expiry, Missing ISO27001"
+VND-0368,Prime Cloud 368,Software,93,HIGH,0.9138246366400621,3,196.01473909920185,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0079,Titan Services 79,Payment Processing,93,HIGH,0.9094184626529613,3,195.88255387958884,High Risk Score
+VND-0388,Quantum Systems 388,Cloud Services,88,HIGH,0.9423850133138844,3,195.87155039941652,"High Risk Score, Missing ISO27001"
+VND-0190,Vertex Cloud 190,Infrastructure,94,HIGH,0.895899125177647,3,195.6769737553294,"High Risk Score, Active Access After Contract Expiry, Missing SOC2, Expired Certifications"
+VND-0347,Secure Cloud 347,Security,95,HIGH,0.8848645484949833,3,195.5459364548495,"High Risk Score, Expired Certifications, High Data Sensitivity"
+VND-0124,Quantum Systems 124,Security,89,HIGH,0.9226108320251177,3,195.47832496075355,"High Risk Score, Active Access After Contract Expiry, Expired Certifications, High Data Sensitivity"
+VND-0231,Prime Systems 231,Infrastructure,91,HIGH,0.9079298717676966,3,195.4378961530309,"High Risk Score, High Data Sensitivity"
+VND-0049,Titan Labs 49,Cloud Services,94,HIGH,0.8853301658435523,3,195.3599049753066,"High Risk Score, Active Access After Contract Expiry, Missing ISO27001"
+VND-0342,Apex Networks 342,Compliance,95,HIGH,0.8771597163401489,3,195.31479149020447,"High Risk Score, Active Access After Contract Expiry, Missing ISO27001"
+VND-0288,Prime Solutions 288,Cloud Services,94,HIGH,0.8802182594396568,3,195.2065477831897,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0360,Blue Solutions 360,Consulting,91,HIGH,0.8965150531355763,3,195.09545159406727,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0084,Quantum Systems 84,Data Analytics,87,HIGH,0.9206486172535464,3,195.0194585176064,"High Risk Score, Active Access After Contract Expiry, Missing SOC2, Missing ISO27001, High Data Sensitivity"
+VND-0150,Vertex Cloud 150,Consulting,89,HIGH,0.9060689026264392,3,194.9820670787932,"High Risk Score, Missing ISO27001"
+VND-0308,Titan Networks 308,Cloud Services,86,HIGH,0.9219681059031867,3,194.8590431770956,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0294,Prime Analytics 294,Software,87,HIGH,0.9150738536859425,3,194.85221561057827,"High Risk Score, Active Access After Contract Expiry, Missing ISO27001, High Data Sensitivity"
+VND-0393,Titan Labs 393,Consulting,88,HIGH,0.9059725853101951,3,194.77917755930585,High Risk Score
+VND-0197,Nova Systems 197,Cloud Services,88,HIGH,0.9035441064293858,3,194.70632319288157,"High Risk Score, Active Access After Contract Expiry, Missing ISO27001"
+VND-0137,Titan Cloud 137,Cloud Services,88,HIGH,0.9030403544605583,3,194.69121063381675,"High Risk Score, Missing SOC2"
+VND-0340,Prime Partners 340,Data Analytics,93,HIGH,0.8692241685955078,3,194.67672505786524,"High Risk Score, Missing ISO27001"
+VND-0136,Secure Cloud 136,Payment Processing,92,HIGH,0.8749946758796981,3,194.64984027639096,"High Risk Score, Missing ISO27001"
+VND-0249,Nova Partners 249,Infrastructure,91,HIGH,0.8799985327516257,3,194.59995598254875,"High Risk Score, Active Access After Contract Expiry, Missing ISO27001"
+VND-0095,Vertex Analytics 95,Software,92,HIGH,0.8719983528718709,3,194.55995058615613,"High Risk Score, Missing ISO27001"
+VND-0390,Vertex Partners 390,Cloud Services,88,HIGH,0.8952708760335346,3,194.45812628100603,"High Risk Score, Missing ISO27001"
+VND-0355,Prime Services 355,Compliance,93,HIGH,0.8590578695390922,3,194.37173608617277,"High Risk Score, Active Access After Contract Expiry, Missing SOC2, Missing ISO27001, High Data Sensitivity"
+VND-0330,Prime Solutions 330,Payment Processing,88,HIGH,0.8913083243906178,3,194.33924973171852,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0268,Nova Services 268,Software,89,HIGH,0.8804823732890503,3,194.21447119867153,"High Risk Score, Active Access After Contract Expiry"
+VND-0290,Secure Analytics 290,Security,91,HIGH,0.865,3,194.14999999999998,"High Risk Score, Expired Certifications, High Data Sensitivity"
+VND-0037,Titan Analytics 37,Consulting,82,HIGH,0.9188088157800344,3,193.96426447340104,High Risk Score
+VND-0242,Quantum Services 242,Payment Processing,85,HIGH,0.8984600760456274,3,193.95380228136884,"High Risk Score, Active Access After Contract Expiry, Expired Certifications"
+VND-0256,Prime Cloud 256,Consulting,87,HIGH,0.8850379050518075,3,193.95113715155424,"High Risk Score, Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0087,Apex Cloud 87,Compliance,90,HIGH,0.8640753790644008,3,193.92226137193202,"High Risk Score, Missing ISO27001"
+VND-0366,Apex Networks 366,Security,89,HIGH,0.8687845312382803,3,193.8635359371484,"High Risk Score, Missing ISO27001"
+VND-0013,Nova Services 13,Cloud Services,95,HIGH,0.8268488408646815,3,193.80546522594045,"High Risk Score, Missing ISO27001"
+VND-0284,Nova Cloud 284,Cloud Services,86,HIGH,0.8857792867839268,3,193.77337860351778,"High Risk Score, Active Access After Contract Expiry, Missing ISO27001, High Data Sensitivity"
+VND-0035,Prime Networks 35,Consulting,89,HIGH,0.8657753869316241,3,193.77326160794874,"High Risk Score, Missing ISO27001"
+VND-0148,Secure Cloud 148,Software,87,HIGH,0.8780555831620488,3,193.74166749486147,"High Risk Score, Active Access After Contract Expiry, Missing ISO27001, Expired Certifications"
+VND-0170,Quantum Cloud 170,Consulting,86,HIGH,0.8815095316630148,3,193.64528594989042,"High Risk Score, Missing SOC2, Missing ISO27001, High Data Sensitivity"
+VND-0304,Prime Labs 304,Software,85,HIGH,0.8854660258731611,3,193.56398077619482,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0282,Blue Services 282,Consulting,86,HIGH,0.878147268866995,3,193.54441806600983,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0072,Quantum Partners 72,Data Analytics,83,HIGH,0.8971376888192342,3,193.514130664577,"High Risk Score, Missing ISO27001, High Data Sensitivity"
+VND-0093,Blue Services 93,Compliance,85,HIGH,0.8746785713711333,3,193.24035714113398,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0044,Blue Services 44,Cloud Services,83,HIGH,0.8866611733297272,3,193.1998351998918,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0302,Prime Partners 302,Infrastructure,81,HIGH,0.8884742691369322,3,192.85422807410797,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0115,Apex Solutions 115,Compliance,84,HIGH,0.8642425409599237,3,192.72727622879773,"High Risk Score, Active Access After Contract Expiry"
+VND-0307,Titan Analytics 307,Security,90,HIGH,0.8199377926429061,3,192.5981337792872,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0179,Nova Networks 179,Payment Processing,84,HIGH,0.8578713420984974,3,192.53614026295492,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0177,Vertex Partners 177,Infrastructure,82,HIGH,0.8710861504054715,3,192.53258451216416,"High Risk Score, Missing ISO27001"
+VND-0078,Apex Labs 78,Software,82,HIGH,0.8707931354059606,3,192.52379406217884,"High Risk Score, Active Access After Contract Expiry"
+VND-0287,Titan Solutions 287,Infrastructure,90,HIGH,0.8066135736386802,3,192.1984072091604,"High Risk Score, Missing SOC2, Missing ISO27001, Recent Breach"
+VND-0147,Nova Systems 147,Data Analytics,82,HIGH,0.8521477256834196,3,191.96443177050259,"High Risk Score, Missing ISO27001"
+VND-0133,Titan Networks 133,Data Analytics,93,HIGH,0.7749431035897946,3,191.84829310769382,"High Risk Score, Missing SOC2, Missing ISO27001"
+VND-0107,Prime Cloud 107,Software,82,HIGH,0.8478024270394395,3,191.83407281118318,High Risk Score
+VND-0061,Blue Partners 61,Consulting,86,HIGH,0.8183319604612851,3,191.74995881383853,"High Risk Score, Active Access After Contract Expiry, Missing SOC2, Missing ISO27001, Recent Breach"
+VND-0018,Nova Analytics 18,Infrastructure,81,HIGH,0.8515787821809888,3,191.74736346542966,"High Risk Score, Missing SOC2"
+VND-0144,Blue Solutions 144,Software,75,HIGH,0.8874234348414979,3,191.62270304524495,Expired Certifications
+VND-0214,Blue Networks 214,Infrastructure,80,HIGH,0.8437636653553465,3,191.3129099606604,"Missing ISO27001, Expired Certifications, High Data Sensitivity"
+VND-0161,Blue Networks 161,Software,89,HIGH,0.7818480127655075,3,191.25544038296525,High Risk Score
+VND-0192,Blue Systems 192,Consulting,94,HIGH,0.7466289050931162,3,191.1988671527935,"High Risk Score, Missing ISO27001"
+VND-0296,Blue Partners 296,Compliance,91,HIGH,0.7571394525451864,3,190.91418357635558,"High Risk Score, Missing ISO27001"
+VND-0253,Quantum Networks 253,Security,81,HIGH,0.8224324274087444,3,190.8729728222623,High Risk Score
+VND-0120,Nova Cloud 120,Cloud Services,78,HIGH,0.8313881725547989,3,190.54164517664395,"Missing SOC2, Expired Certifications, High Data Sensitivity"
+VND-0194,Secure Analytics 194,Software,80,HIGH,0.8159600760456275,3,190.47880228136881,"Active Access After Contract Expiry, Expired Certifications"
+VND-0128,Titan Partners 128,Data Analytics,77,HIGH,0.8358947569330876,3,190.47684270799263,Expired Certifications
+VND-0010,Nova Analytics 10,Software,81,HIGH,0.8039727503078484,3,190.31918250923545,"High Risk Score, Active Access After Contract Expiry, Missing ISO27001"
+VND-0088,Secure Analytics 88,Software,71,HIGH,0.8696400263939569,3,190.2892007918187,"Expired Certifications, High Data Sensitivity"
+VND-0050,Blue Partners 50,Cloud Services,75,HIGH,0.8285185900390201,3,189.8555577011706,"Active Access After Contract Expiry, Missing SOC2, Expired Certifications"
+VND-0193,Apex Networks 193,Data Analytics,77,HIGH,0.8070831285549629,3,189.61249385664888,"Missing ISO27001, Expired Certifications"
+VND-0258,Quantum Services 258,Compliance,73,HIGH,0.8066340102505904,3,188.7990203075177,"Active Access After Contract Expiry, Expired Certifications"
+VND-0149,Titan Solutions 149,Payment Processing,87,HIGH,0.70870331801557,3,188.66109954046712,"High Risk Score, Active Access After Contract Expiry"
+VND-0309,Vertex Analytics 309,Consulting,70,HIGH,0.8212065139794563,3,188.63619541938368,Expired Certifications
+VND-0041,Secure Services 41,Compliance,75,HIGH,0.7831875903070532,3,188.4956277092116,"Active Access After Contract Expiry, Missing SOC2, Expired Certifications"
+VND-0329,Titan Partners 329,Payment Processing,70,HIGH,0.8159159921415362,3,188.47747976424608,"Active Access After Contract Expiry, Expired Certifications"
+VND-0090,Vertex Services 90,Security,75,HIGH,0.7776673431482527,3,188.3300202944476,"Missing SOC2, Expired Certifications"
+VND-0350,Nova Networks 350,Data Analytics,89,HIGH,0.6818800897452598,3,188.2564026923578,"High Risk Score, Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0391,Vertex Solutions 391,Payment Processing,83,HIGH,0.7205895145153086,3,188.21768543545926,"High Risk Score, Active Access After Contract Expiry"
+VND-0215,Titan Solutions 215,Compliance,63,HIGH,0.8526756106176854,3,188.18026831853055,Expired Certifications
+VND-0089,Secure Services 89,Cloud Services,75,HIGH,0.7702828435358424,3,188.10848530607527,Expired Certifications
+VND-0323,Secure Partners 323,Payment Processing,84,HIGH,0.7028833088233177,3,187.88649926469955,"High Risk Score, Missing ISO27001"
+VND-0039,Secure Labs 39,Cloud Services,70,HIGH,0.7960004158702025,3,187.88001247610606,"Missing ISO27001, Expired Certifications, High Data Sensitivity"
+VND-0020,Titan Solutions 20,Cloud Services,86,HIGH,0.6827182754113679,3,187.68154826234104,"High Risk Score, Expired Certifications"
+VND-0003,Nova Labs 3,Software,69,HIGH,0.7907770187525227,3,187.5233105625757,"Active Access After Contract Expiry, Expired Certifications, High Data Sensitivity"
+VND-0220,Nova Services 220,Infrastructure,88,HIGH,0.6619556451612902,3,187.4586693548387,"High Risk Score, Expired Certifications"
+VND-0073,Vertex Partners 73,Consulting,70,HIGH,0.776595036458754,3,187.29785109376263,"Active Access After Contract Expiry, Expired Certifications"
+VND-0333,Secure Cloud 333,Data Analytics,86,HIGH,0.6470682302771854,3,186.61204690831556,"High Risk Score, Expired Certifications, High Data Sensitivity"
+VND-0134,Quantum Labs 134,Cloud Services,62,HIGH,0.8058311320309548,3,186.57493396092866,"Missing ISO27001, Expired Certifications"
+VND-0191,Blue Analytics 191,Consulting,80,HIGH,0.667570635279115,3,186.02711905837344,Expired Certifications
+VND-0141,Vertex Solutions 141,Security,67,HIGH,0.7536121370655487,3,186.00836411196647,"Active Access After Contract Expiry, Missing ISO27001, Expired Certifications"
+VND-0203,Apex Networks 203,Data Analytics,64,HIGH,0.7643976597840954,3,185.73192979352288,Expired Certifications
+VND-0277,Blue Networks 277,Infrastructure,78,HIGH,0.6705619495264942,3,185.71685848579483,"Active Access After Contract Expiry, Expired Certifications, High Data Sensitivity"
+VND-0114,Secure Services 114,Compliance,65,HIGH,0.7508542238937465,3,185.52562671681238,Expired Certifications
+VND-0069,Secure Analytics 69,Cloud Services,65,HIGH,0.7347072262733946,3,185.04121678820184,Expired Certifications
+VND-0034,Titan Systems 34,Cloud Services,61,HIGH,0.758686394600804,3,184.9605918380241,"Active Access After Contract Expiry, Expired Certifications"
+VND-0005,Vertex Cloud 5,Data Analytics,76,HIGH,0.5575,3,181.92499999999998,"Missing ISO27001, Expired Certifications, High Data Sensitivity"
+VND-0212,Prime Networks 212,Compliance,71,HIGH,0.545411231770099,3,180.56233695310294,"Active Access After Contract Expiry, Missing SOC2, Expired Certifications"
+VND-0317,Prime Services 317,Compliance,64,HIGH,0.46068022051262425,3,176.62040661537873,"Missing ISO27001, Expired Certifications"
+VND-0299,Vertex Services 299,Security,77,MEDIUM,0.9214571487740791,2,143.0437144632224,"Active Access After Contract Expiry, Missing ISO27001"
+VND-0295,Nova Services 295,Security,77,MEDIUM,0.9207754490765755,2,143.02326347229726,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0091,Prime Analytics 91,Security,72,MEDIUM,0.934229791832386,2,142.4268937549716,Active Access After Contract Expiry
+VND-0278,Quantum Solutions 278,Software,77,MEDIUM,0.9000090149661725,2,142.40027044898517,"Active Access After Contract Expiry, Missing SOC2"
+VND-0372,Titan Cloud 372,Security,78,MEDIUM,0.8815263401108294,2,142.04579020332488,"Active Access After Contract Expiry, Missing ISO27001"
+VND-0021,Prime Systems 21,Software,76,MEDIUM,0.8852087413013385,2,141.75626223904015,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0312,Quantum Solutions 312,Payment Processing,70,MEDIUM,0.9109667127642183,2,141.32900138292655,Active Access After Contract Expiry
+VND-0210,Titan Labs 210,Consulting,64,MEDIUM,0.9448956619868005,2,141.14686985960404,"Active Access After Contract Expiry, Missing SOC2"
+VND-0122,Apex Cloud 122,Cloud Services,73,MEDIUM,0.8838457886077588,2,141.11537365823276,"Active Access After Contract Expiry, Missing ISO27001"
+VND-0222,Blue Solutions 222,Infrastructure,63,MEDIUM,0.940314501316642,2,140.80943503949925,Active Access After Contract Expiry
+VND-0394,Nova Analytics 394,Security,64,MEDIUM,0.9276147974288904,2,140.62844392286672,Active Access After Contract Expiry
+VND-0245,Nova Analytics 245,Software,75,MEDIUM,0.8517701222613135,2,140.55310366783942,"Active Access After Contract Expiry, Missing ISO27001, High Data Sensitivity"
+VND-0188,Quantum Partners 188,Infrastructure,66,MEDIUM,0.911364937496496,2,140.54094812489487,"Active Access After Contract Expiry, Missing ISO27001, Recent Breach"
+VND-0204,Nova Labs 204,Compliance,70,MEDIUM,0.8842080618618736,2,140.5262418558562,"Active Access After Contract Expiry, Missing ISO27001"
+VND-0257,Blue Analytics 257,Consulting,59,MEDIUM,0.9522523873188317,2,140.36757161956496,"Active Access After Contract Expiry, Missing ISO27001"
+VND-0113,Blue Networks 113,Data Analytics,66,MEDIUM,0.9021038286926941,2,140.26311486078083,"Active Access After Contract Expiry, Missing ISO27001"
+VND-0025,Titan Partners 25,Data Analytics,72,MEDIUM,0.8614625434138339,2,140.243876302415,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0029,Titan Partners 29,Cloud Services,66,MEDIUM,0.8975618518336893,2,140.12685555501068,"Active Access After Contract Expiry, Missing SOC2"
+VND-0162,Quantum Services 162,Cloud Services,73,MEDIUM,0.8487900082238394,2,140.06370024671517,Active Access After Contract Expiry
+VND-0250,Quantum Systems 250,Payment Processing,61,MEDIUM,0.9245869992566706,2,139.9376099777001,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0399,Nova Analytics 399,Compliance,62,MEDIUM,0.9117487749216333,2,139.752463247649,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001, High Data Sensitivity"
+VND-0094,Nova Analytics 94,Infrastructure,72,MEDIUM,0.843285784930138,2,139.69857354790415,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001, High Data Sensitivity"
+VND-0235,Nova Solutions 235,Consulting,80,MEDIUM,0.78673549677164,2,139.6020649031492,Recent Breach
+VND-0007,Apex Solutions 7,Software,58,MEDIUM,0.9326416060122574,2,139.57924818036773,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0112,Secure Solutions 112,Software,59,MEDIUM,0.9238651685393259,2,139.5159550561798,"Expired Certifications, Recent Breach"
+VND-0142,Vertex Labs 142,Cloud Services,60,MEDIUM,0.9135348719404811,2,139.40604615821445,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0048,Secure Services 48,Consulting,56,MEDIUM,0.9347485370015579,2,139.24245611004673,"Active Access After Contract Expiry, Missing ISO27001"
+VND-0325,Blue Services 325,Data Analytics,52,MEDIUM,0.9607301085686991,2,139.22190325706097,"Active Access After Contract Expiry, Missing SOC2"
+VND-0015,Quantum Analytics 15,Cloud Services,80,MEDIUM,0.7656136777768664,2,138.968410333306,"Missing SOC2, Missing ISO27001, Recent Breach"
+VND-0200,Vertex Systems 200,Consulting,55,MEDIUM,0.9317769272841054,2,138.95330781852317,Active Access After Contract Expiry
+VND-0400,Secure Services 400,Infrastructure,60,MEDIUM,0.8962502880756005,2,138.88750864226802,"Missing ISO27001, Expired Certifications"
+VND-0098,Titan Solutions 98,Cloud Services,63,MEDIUM,0.8715792798193115,2,138.74737839457936,"Active Access After Contract Expiry, Missing SOC2"
+VND-0248,Apex Systems 248,Data Analytics,50,MEDIUM,0.9501537528414535,2,138.5046125852436,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0228,Secure Systems 228,Consulting,66,MEDIUM,0.8415585076884081,2,138.44675523065223,Active Access After Contract Expiry
+VND-0336,Vertex Solutions 336,Cloud Services,56,MEDIUM,0.9077719172860682,2,138.43315751858205,"Expired Certifications, Recent Breach"
+VND-0389,Apex Solutions 389,Security,66,MEDIUM,0.8401015563302086,2,138.40304668990626,"Active Access After Contract Expiry, Missing SOC2"
+VND-0016,Blue Analytics 16,Consulting,56,MEDIUM,0.9049448612617279,2,138.34834583785184,Expired Certifications
+VND-0339,Vertex Systems 339,Cloud Services,56,MEDIUM,0.9040394384887539,2,138.3211831546626,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001, Recent Breach"
+VND-0036,Apex Analytics 36,Software,52,MEDIUM,0.9305516178936408,2,138.31654853680922,"Active Access After Contract Expiry, Missing ISO27001, Expired Certifications"
+VND-0262,Secure Systems 262,Software,60,MEDIUM,0.876002278971029,2,138.28006836913087,"Active Access After Contract Expiry, Missing SOC2, Expired Certifications"
+VND-0362,Secure Systems 362,Cloud Services,58,MEDIUM,0.8839903857711938,2,138.11971157313582,Expired Certifications
+VND-0070,Quantum Services 70,Cloud Services,54,MEDIUM,0.9063837412810644,2,137.99151223843194,"Active Access After Contract Expiry, Missing ISO27001"
+VND-0118,Vertex Partners 118,Compliance,49,MEDIUM,0.9331304647152272,2,137.79391394145682,"Active Access After Contract Expiry, Missing ISO27001"
+VND-0303,Blue Solutions 303,Consulting,64,MEDIUM,0.8267742744213255,2,137.60322823263976,Recent Breach
+VND-0283,Nova Analytics 283,Data Analytics,59,MEDIUM,0.8594317479575142,2,137.58295243872544,Expired Certifications
+VND-0057,Quantum Partners 57,Consulting,51,MEDIUM,0.9121771195754476,2,137.56531358726343,Expired Certifications
+VND-0101,Nova Cloud 101,Data Analytics,44,MEDIUM,0.9581621093051504,2,137.54486327915453,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0180,Secure Cloud 180,Infrastructure,58,MEDIUM,0.859238125969031,2,137.37714377907093,"Active Access After Contract Expiry, Missing SOC2, High Data Sensitivity"
+VND-0371,Titan Networks 371,Payment Processing,49,MEDIUM,0.9184913590014293,2,137.3547407700429,"Active Access After Contract Expiry, Expired Certifications"
+VND-0159,Prime Labs 159,Cloud Services,48,MEDIUM,0.9245776036407536,2,137.3373281092226,"Active Access After Contract Expiry, High Data Sensitivity"
+VND-0353,Nova Analytics 353,Consulting,50,MEDIUM,0.9104932404753925,2,137.31479721426177,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0163,Apex Networks 163,Security,60,MEDIUM,0.8314714076026171,2,136.9441422280785,"Missing ISO27001, Expired Certifications"
+VND-0261,Blue Solutions 261,Compliance,71,MEDIUM,0.7552408360555843,2,136.85722508166754,"Active Access After Contract Expiry, High Data Sensitivity"
+VND-0241,Titan Analytics 241,Consulting,50,MEDIUM,0.8944429517437774,2,136.83328855231332,"Active Access After Contract Expiry, Expired Certifications"
+VND-0059,Secure Analytics 59,Infrastructure,68,MEDIUM,0.7715389716928247,2,136.74616915078474,"Active Access After Contract Expiry, Missing ISO27001"
+VND-0361,Titan Partners 361,Cloud Services,46,MEDIUM,0.9176909332586111,2,136.73072799775832,"Active Access After Contract Expiry, Missing ISO27001, High Data Sensitivity"
+VND-0225,Prime Services 225,Software,49,MEDIUM,0.8973555817875813,2,136.72066745362744,"Active Access After Contract Expiry, Missing SOC2"
+VND-0002,Titan Analytics 2,Payment Processing,45,MEDIUM,0.9205597265475888,2,136.61679179642766,"Active Access After Contract Expiry, High Data Sensitivity"
+VND-0321,Titan Networks 321,Payment Processing,59,MEDIUM,0.8251045709357482,2,136.55313712807245,"Expired Certifications, Recent Breach"
+VND-0265,Prime Solutions 265,Payment Processing,51,MEDIUM,0.878284765629478,2,136.54854296888433,"Active Access After Contract Expiry, Missing ISO27001"
+VND-0205,Vertex Analytics 205,Cloud Services,53,MEDIUM,0.8607628620002287,2,136.42288586000686,Expired Certifications
+VND-0155,Apex Analytics 155,Data Analytics,43,MEDIUM,0.9230458263366331,2,136.29137479009898,"Active Access After Contract Expiry, Expired Certifications"
+VND-0023,Blue Networks 23,Cloud Services,52,MEDIUM,0.8618040786744511,2,136.25412236023354,"Missing SOC2, Expired Certifications"
+VND-0306,Apex Networks 306,Software,56,MEDIUM,0.8345969285641144,2,136.2379078569234,"Active Access After Contract Expiry, Missing ISO27001, High Data Sensitivity"
+VND-0172,Blue Cloud 172,Cloud Services,62,MEDIUM,0.7940981017465678,2,136.22294305239703,Recent Breach
+VND-0099,Prime Systems 99,Consulting,54,MEDIUM,0.8467874371953923,2,136.20362311586177,"Active Access After Contract Expiry, Missing SOC2"
+VND-0377,Nova Systems 377,Software,46,MEDIUM,0.8975286663214246,2,136.12585998964272,Active Access After Contract Expiry
+VND-0324,Vertex Partners 324,Data Analytics,39,MEDIUM,0.9392673142329281,2,135.97801942698786,Active Access After Contract Expiry
+VND-0024,Vertex Cloud 24,Infrastructure,43,MEDIUM,0.9110612162966977,2,135.93183648890093,Expired Certifications
+VND-0384,Nova Systems 384,Cloud Services,49,MEDIUM,0.8661375007314396,2,135.7841250219432,"Missing SOC2, Expired Certifications"
+VND-0374,Blue Labs 374,Data Analytics,59,MEDIUM,0.7965488746975546,2,135.69646624092664,"Active Access After Contract Expiry, Missing ISO27001, Expired Certifications"
+VND-0240,Titan Partners 240,Data Analytics,36,MEDIUM,0.941626490226337,2,135.4487947067901,"Active Access After Contract Expiry, Missing ISO27001"
+VND-0217,Titan Services 217,Data Analytics,33,MEDIUM,0.9513450013319051,2,135.14035003995716,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0234,Secure Labs 234,Compliance,45,MEDIUM,0.8622124520977611,2,134.86637356293284,"Missing SOC2, Expired Certifications"
+VND-0316,Blue Cloud 316,Payment Processing,32,MEDIUM,0.9449483790093954,2,134.74845137028186,"Active Access After Contract Expiry, Missing ISO27001, Expired Certifications"
+VND-0387,Secure Systems 387,Infrastructure,37,MEDIUM,0.911145061020775,2,134.73435183062324,"Active Access After Contract Expiry, Missing SOC2"
+VND-0184,Vertex Solutions 184,Compliance,34,MEDIUM,0.9183118683633995,2,134.349356050902,"Active Access After Contract Expiry, Missing SOC2"
+VND-0286,Blue Solutions 286,Payment Processing,42,MEDIUM,0.8639152133271246,2,134.31745639981375,"Active Access After Contract Expiry, Missing SOC2, Expired Certifications"
+VND-0174,Blue Systems 174,Consulting,39,MEDIUM,0.8832622843250237,2,134.29786852975073,"Missing ISO27001, Expired Certifications"
+VND-0239,Prime Systems 239,Payment Processing,28,MEDIUM,0.9508744428667968,2,134.1262332860039,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0042,Quantum Services 42,Software,50,MEDIUM,0.7925352694192894,2,133.7760580825787,Recent Breach
+VND-0385,Apex Labs 385,Infrastructure,30,MEDIUM,0.9234232194598875,2,133.70269658379664,Expired Certifications
+VND-0011,Quantum Systems 11,Infrastructure,36,MEDIUM,0.875568801023459,2,133.46706403070377,Active Access After Contract Expiry
+VND-0109,Prime Networks 109,Infrastructure,29,MEDIUM,0.9212039606629768,2,133.43611881988932,"Active Access After Contract Expiry, Missing ISO27001"
+VND-0230,Quantum Labs 230,Data Analytics,33,MEDIUM,0.8851485984945736,2,133.1544579548372,"Active Access After Contract Expiry, High Data Sensitivity"
+VND-0226,Quantum Services 226,Infrastructure,28,MEDIUM,0.9161422475176927,2,133.08426742553078,"Active Access After Contract Expiry, Missing ISO27001, High Data Sensitivity"
+VND-0181,Quantum Systems 181,Payment Processing,29,MEDIUM,0.9065535546560498,2,132.9966066396815,"Missing ISO27001, Expired Certifications"
+VND-0176,Apex Services 176,Data Analytics,29,MEDIUM,0.9064188075046755,2,132.99256422514028,Expired Certifications
+VND-0047,Quantum Services 47,Software,38,MEDIUM,0.8440036077169882,2,132.92010823150966,Expired Certifications
+VND-0066,Secure Cloud 66,Data Analytics,20,MEDIUM,0.9608919193922748,2,132.82675758176825,Active Access After Contract Expiry
+VND-0338,Vertex Solutions 338,Software,26,MEDIUM,0.9194401153046807,2,132.78320345914042,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0038,Nova Networks 38,Infrastructure,28,MEDIUM,0.9041294964639819,2,132.72388489391946,"Missing ISO27001, Expired Certifications"
+VND-0328,Prime Services 328,Cloud Services,53,MEDIUM,0.7366813464269362,2,132.70044039280808,"Expired Certifications, High Data Sensitivity"
+VND-0129,Blue Systems 129,Infrastructure,48,MEDIUM,0.7688681630588651,2,132.66604489176595,Expired Certifications
+VND-0207,Titan Services 207,Security,30,MEDIUM,0.8887247474747474,2,132.66174242424242,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001, Recent Breach"
+VND-0246,Vertex Services 246,Cloud Services,52,MEDIUM,0.7397931749645618,2,132.59379524893686,"Active Access After Contract Expiry, Missing ISO27001, High Data Sensitivity"
+VND-0187,Blue Solutions 187,Consulting,45,MEDIUM,0.7845870666075976,2,132.53761199822793,Recent Breach
+VND-0135,Blue Systems 135,Software,23,MEDIUM,0.9291586153490442,2,132.47475846047132,"Active Access After Contract Expiry, Expired Certifications"
+VND-0274,Vertex Partners 274,Compliance,28,MEDIUM,0.8924716918406395,2,132.37415075521918,"Active Access After Contract Expiry, Missing ISO27001, Expired Certifications"
+VND-0375,Nova Cloud 375,Security,21,MEDIUM,0.9358647968970812,2,132.27594390691243,"Active Access After Contract Expiry, Missing SOC2"
+VND-0363,Quantum Solutions 363,Cloud Services,32,MEDIUM,0.86017845290889,2,132.2053535872667,Expired Certifications
+VND-0396,Quantum Analytics 396,Data Analytics,46,MEDIUM,0.7628532915999134,2,132.0855987479974,"Active Access After Contract Expiry, Missing SOC2, Expired Certifications"
+VND-0208,Quantum Cloud 208,Data Analytics,37,MEDIUM,0.8212651986796473,2,132.0379559603894,Expired Certifications
+VND-0151,Vertex Solutions 151,Infrastructure,24,MEDIUM,0.9046205871316865,2,131.9386176139506,"Active Access After Contract Expiry, Missing SOC2"
+VND-0398,Secure Cloud 398,Data Analytics,20,MEDIUM,0.9305267096205925,2,131.91580128861779,"Missing SOC2, Expired Certifications"
+VND-0326,Prime Labs 326,Software,51,MEDIUM,0.7228024380105624,2,131.88407314031687,"Active Access After Contract Expiry, High Data Sensitivity"
+VND-0189,Blue Systems 189,Software,25,MEDIUM,0.8950493544929595,2,131.8514806347888,"Active Access After Contract Expiry, Expired Certifications"
+VND-0126,Secure Services 126,Cloud Services,58,MEDIUM,0.6708202875931214,2,131.72460862779363,Expired Certifications
+VND-0201,Nova Systems 201,Data Analytics,22,MEDIUM,0.9030006443967283,2,131.49001933190186,"Active Access After Contract Expiry, Missing SOC2, Expired Certifications"
+VND-0164,Titan Services 164,Data Analytics,24,MEDIUM,0.8869888731802643,2,131.40966619540794,Expired Certifications
+VND-0280,Quantum Systems 280,Compliance,27,MEDIUM,0.8642977808357719,2,131.32893342507316,"Active Access After Contract Expiry, Expired Certifications"
+VND-0086,Titan Systems 86,Software,20,MEDIUM,0.9101354515050167,2,131.30406354515048,"Active Access After Contract Expiry, Expired Certifications"
+VND-0233,Apex Cloud 233,Payment Processing,26,MEDIUM,0.8686298768404199,2,131.2588963052126,"Missing ISO27001, Expired Certifications"
+VND-0165,Vertex Cloud 165,Cloud Services,26,MEDIUM,0.8650740266227779,2,131.15222079868332,"Active Access After Contract Expiry, Missing SOC2, Expired Certifications"
+VND-0031,Titan Networks 31,Payment Processing,26,MEDIUM,0.8594689374318242,2,130.9840681229547,Expired Certifications
+VND-0356,Secure Services 356,Compliance,21,MEDIUM,0.8856399216001641,2,130.7691976480049,"Active Access After Contract Expiry, Missing SOC2, High Data Sensitivity"
+VND-0251,Blue Solutions 251,Security,33,MEDIUM,0.8038211318785481,2,130.71463395635644,Recent Breach
+VND-0276,Nova Networks 276,Compliance,27,MEDIUM,0.8084736194433074,2,129.65420858329924,"Active Access After Contract Expiry, Missing ISO27001, High Data Sensitivity"
+VND-0132,Secure Services 132,Software,67,MEDIUM,0.5312935554108563,2,129.33880666232568,"Active Access After Contract Expiry, Missing ISO27001, Expired Certifications"
+VND-0178,Titan Systems 178,Cloud Services,62,MEDIUM,0.5616831128248626,2,129.25049338474588,Expired Certifications
+VND-0380,Vertex Solutions 380,Software,28,MEDIUM,0.7685847492295137,2,128.6575424768854,"Active Access After Contract Expiry, Missing SOC2, Expired Certifications"
+VND-0348,Nova Partners 348,Compliance,44,MEDIUM,0.6579238466584512,2,128.53771539975355,Expired Certifications
+VND-0198,Apex Systems 198,Payment Processing,24,MEDIUM,0.7469599976839436,2,127.20879993051831,"Active Access After Contract Expiry, Missing ISO27001, High Data Sensitivity"
+VND-0397,Quantum Partners 397,Software,21,MEDIUM,0.7549742804771394,2,126.84922841431418,"Active Access After Contract Expiry, Expired Certifications"
+VND-0117,Vertex Partners 117,Data Analytics,21,MEDIUM,0.7437166392629702,2,126.5114991778891,"Expired Certifications, High Data Sensitivity"
+VND-0364,Titan Solutions 364,Software,37,MEDIUM,0.6365301631358332,2,126.49590489407501,Expired Certifications
+VND-0074,Secure Services 74,Infrastructure,56,MEDIUM,0.43222167394499633,2,124.16665021834989,"Active Access After Contract Expiry, Missing ISO27001, Expired Certifications, High Data Sensitivity"
+VND-0291,Vertex Services 291,Compliance,56,MEDIUM,0.42188661863514887,2,123.85659855905446,Expired Certifications
+VND-0139,Blue Cloud 139,Infrastructure,37,MEDIUM,0.4976146754119323,2,122.32844026235797,"Expired Certifications, High Data Sensitivity"
+VND-0331,Apex Partners 331,Security,74,LOW,0.9737676762206244,1,94.01303028661873,Missing ISO27001
+VND-0344,Prime Systems 344,Security,78,LOW,0.936079084743902,1,93.68237254231707,Missing ISO27001
+VND-0032,Prime Solutions 32,Security,74,LOW,0.9447382982116312,1,93.14214894634894,
+VND-0219,Nova Cloud 219,Infrastructure,78,LOW,0.9151220067805439,1,93.05366020341631,Missing SOC2
+VND-0359,Apex Services 359,Software,76,LOW,0.8993988987705862,1,92.18196696311759,"Missing SOC2, Missing ISO27001"
+VND-0071,Secure Labs 71,Security,79,LOW,0.8767160655997008,1,92.10148196799102,
+VND-0182,Nova Partners 182,Security,70,LOW,0.9316198637244854,1,91.94859591173456,Missing ISO27001
+VND-0319,Secure Partners 319,Consulting,77,LOW,0.8834314626235615,1,91.90294387870685,Missing SOC2
+VND-0369,Apex Analytics 369,Infrastructure,76,LOW,0.8895849135399121,1,91.88754740619737,Missing ISO27001
+VND-0076,Nova Labs 76,Infrastructure,77,LOW,0.8821946418537618,1,91.86583925561285,Missing SOC2
+VND-0351,Prime Systems 351,Consulting,76,LOW,0.8859573301994681,1,91.77871990598405,"Missing SOC2, Missing ISO27001, High Data Sensitivity"
+VND-0301,Quantum Systems 301,Software,67,LOW,0.9392790119846566,1,91.5783703595397,
+VND-0168,Quantum Labs 168,Data Analytics,68,LOW,0.932391378388639,1,91.57174135165917,Missing ISO27001
+VND-0106,Titan Services 106,Payment Processing,67,LOW,0.9340132355532532,1,91.4203970665976,
+VND-0254,Secure Partners 254,Software,72,LOW,0.8983678946757385,1,91.35103684027216,"Missing SOC2, Missing ISO27001"
+VND-0054,Vertex Analytics 54,Compliance,68,LOW,0.924278403003145,1,91.32835209009434,"Missing SOC2, Missing ISO27001"
+VND-0062,Apex Analytics 62,Data Analytics,62,LOW,0.9604468715115518,1,91.21340614534657,
+VND-0119,Prime Labs 119,Consulting,69,LOW,0.9099769351753169,1,91.0993080552595,Missing ISO27001
+VND-0229,Nova Cloud 229,Cloud Services,67,LOW,0.9185760406352381,1,90.95728121905715,Missing SOC2
+VND-0082,Prime Services 82,Security,75,LOW,0.8617376814572272,1,90.85213044371682,"Missing SOC2, Missing ISO27001"
+VND-0279,Nova Solutions 279,Security,75,LOW,0.8614861533897187,1,90.84458460169157,Missing SOC2
+VND-0152,Quantum Labs 152,Data Analytics,67,LOW,0.9118069257725077,1,90.75420777317524,
+VND-0104,Nova Partners 104,Infrastructure,66,LOW,0.9179012340232218,1,90.73703702069666,Missing ISO27001
+VND-0381,Secure Systems 381,Cloud Services,75,LOW,0.8572014296890607,1,90.71604289067182,Missing ISO27001
+VND-0292,Blue Analytics 292,Consulting,69,LOW,0.8969596709402226,1,90.70879012820667,"Missing SOC2, Missing ISO27001"
+VND-0211,Nova Solutions 211,Security,68,LOW,0.902638486372277,1,90.6791545911683,Missing ISO27001
+VND-0121,Nova Partners 121,Software,59,LOW,0.9608662052470962,1,90.62598615741288,"Missing SOC2, Missing ISO27001"
+VND-0186,Nova Systems 186,Security,68,LOW,0.9001557719439579,1,90.60467315831875,"Missing SOC2, Missing ISO27001"
+VND-0009,Prime Systems 9,Data Analytics,79,LOW,0.8194092355065788,1,90.38227706519736,"Missing ISO27001, High Data Sensitivity"
+VND-0310,Quantum Analytics 310,Consulting,64,LOW,0.9167027016417155,1,90.30108104925147,Missing SOC2
+VND-0395,Apex Services 395,Security,72,LOW,0.861321246608361,1,90.23963739825084,"Missing SOC2, Missing ISO27001, High Data Sensitivity"
+VND-0392,Prime Systems 392,Consulting,62,LOW,0.9213543609458672,1,90.04063082837602,Missing ISO27001
+VND-0320,Quantum Cloud 320,Payment Processing,58,LOW,0.9470499807403587,1,90.01149942221076,Missing ISO27001
+VND-0097,Prime Partners 97,Infrastructure,69,LOW,0.8701094421303612,1,89.90328326391084,Missing SOC2
+VND-0043,Titan Labs 43,Security,80,LOW,0.7951283469921414,1,89.85385040976425,Missing SOC2
+VND-0040,Secure Cloud 40,Security,57,LOW,0.9473840805834122,1,89.82152241750236,"Missing SOC2, High Data Sensitivity"
+VND-0017,Prime Services 17,Software,62,LOW,0.9121650498438966,1,89.76495149531691,"Missing SOC2, High Data Sensitivity"
+VND-0166,Apex Labs 166,Consulting,62,LOW,0.9074254988278264,1,89.6227649648348,"Missing SOC2, Missing ISO27001"
+VND-0012,Blue Cloud 12,Cloud Services,60,LOW,0.9089606969921068,1,89.2688209097632,Missing ISO27001
+VND-0370,Nova Analytics 370,Consulting,55,LOW,0.9385745277518653,1,89.15723583255595,"Missing SOC2, Missing ISO27001"
+VND-0046,Quantum Partners 46,Software,55,LOW,0.9383808240806172,1,89.15142472241851,Missing ISO27001
+VND-0386,Vertex Cloud 386,Payment Processing,55,LOW,0.9383065813814981,1,89.14919744144494,"Missing ISO27001, High Data Sensitivity"
+VND-0313,Secure Solutions 313,Software,53,LOW,0.951453550639861,1,89.14360651919583,"Missing SOC2, Missing ISO27001"
+VND-0315,Quantum Services 315,Data Analytics,70,LOW,0.8333316704856599,1,88.9999501145698,Missing ISO27001
+VND-0019,Nova Labs 19,Cloud Services,66,LOW,0.8548549227900927,1,88.84564768370278,Missing ISO27001
+VND-0175,Nova Solutions 175,Cloud Services,75,LOW,0.7920175541423613,1,88.76052662427084,"Missing SOC2, Missing ISO27001"
+VND-0167,Quantum Partners 167,Software,51,LOW,0.9512335047703704,1,88.73700514311112,Missing ISO27001
+VND-0275,Vertex Cloud 275,Payment Processing,58,LOW,0.9034000079455785,1,88.70200023836736,Missing ISO27001
+VND-0158,Nova Labs 158,Infrastructure,56,LOW,0.9163105320414482,1,88.68931596124345,
+VND-0314,Blue Services 314,Security,52,LOW,0.9362931890378001,1,88.48879567113401,Missing ISO27001
+VND-0131,Blue Solutions 131,Data Analytics,70,LOW,0.8100705124554588,1,88.30211537366377,Missing SOC2
+VND-0056,Vertex Cloud 56,Infrastructure,54,LOW,0.9139000253302079,1,88.21700075990624,High Data Sensitivity
+VND-0103,Prime Services 103,Consulting,59,LOW,0.8784112405969584,1,88.15233721790875,"Missing SOC2, Missing ISO27001"
+VND-0213,Nova Cloud 213,Infrastructure,57,LOW,0.8876461165204174,1,88.02938349561254,
+VND-0354,Prime Systems 354,Payment Processing,74,LOW,0.7717678021567569,1,87.9530340647027,"Missing SOC2, Missing ISO27001"
+VND-0266,Blue Systems 266,Payment Processing,45,LOW,0.9634197983241858,1,87.90259394972557,Missing SOC2
+VND-0145,Blue Analytics 145,Cloud Services,50,LOW,0.9285863930238962,1,87.8575917907169,"Missing SOC2, Missing ISO27001"
+VND-0111,Blue Analytics 111,Software,49,LOW,0.934833013459973,1,87.84499040379919,"Missing SOC2, Missing ISO27001"
+VND-0138,Quantum Solutions 138,Consulting,57,LOW,0.8809081514943589,1,87.82724454483078,Missing ISO27001
+VND-0130,Nova Analytics 130,Payment Processing,51,LOW,0.9162863637084526,1,87.68859091125358,"Missing SOC2, Missing ISO27001, High Data Sensitivity"
+VND-0289,Secure Analytics 289,Data Analytics,79,LOW,0.7281652589776967,1,87.6449577693309,
+VND-0060,Prime Analytics 60,Software,51,LOW,0.908936242733186,1,87.46808728199558,Missing ISO27001
+VND-0318,Prime Analytics 318,Compliance,43,LOW,0.9612597264826747,1,87.43779179448023,Missing SOC2
+VND-0358,Blue Services 358,Software,72,LOW,0.7671568707292079,1,87.41470612187624,"Missing SOC2, High Data Sensitivity"
+VND-0153,Titan Services 153,Payment Processing,46,LOW,0.9390738832643799,1,87.3722164979314,Missing ISO27001
+VND-0267,Nova Cloud 267,Software,49,LOW,0.9175091722338031,1,87.32527516701408,"Missing SOC2, Missing ISO27001"
+VND-0305,Vertex Analytics 305,Software,57,LOW,0.8597714560456571,1,87.19314368136972,Missing ISO27001
+VND-0123,Titan Networks 123,Payment Processing,43,LOW,0.9501175324334364,1,87.10352597300309,"Missing SOC2, Missing ISO27001"
+VND-0263,Apex Systems 263,Payment Processing,39,LOW,0.9661925704422597,1,86.78577711326778,"Missing SOC2, Missing ISO27001"
+VND-0125,Nova Partners 125,Data Analytics,40,LOW,0.9553324114315724,1,86.65997234294717,Missing SOC2
+VND-0334,Vertex Partners 334,Security,41,LOW,0.9448700579631469,1,86.54610173889441,
+VND-0067,Titan Cloud 67,Cloud Services,47,LOW,0.903219650910327,1,86.49658952730982,Missing SOC2
+VND-0026,Nova Solutions 26,Security,42,LOW,0.934883815692249,1,86.44651447076748,"Missing SOC2, Missing ISO27001"
+VND-0311,Vertex Cloud 311,Data Analytics,52,LOW,0.8649240727332342,1,86.34772218199703,High Data Sensitivity
+VND-0269,Blue Systems 269,Consulting,39,LOW,0.9487099023880806,1,86.26129707164242,"Missing SOC2, Missing ISO27001"
+VND-0345,Quantum Partners 345,Security,42,LOW,0.9286657670680752,1,86.25997301204227,
+VND-0259,Secure Networks 259,Compliance,51,LOW,0.8685219834751413,1,86.25565950425424,Missing SOC2
+VND-0022,Blue Analytics 22,Cloud Services,42,LOW,0.9255395778298106,1,86.16618733489432,"Missing SOC2, Missing ISO27001"
+VND-0052,Apex Services 52,Software,44,LOW,0.9105690461421194,1,86.11707138426358,High Data Sensitivity
+VND-0365,Blue Analytics 365,Cloud Services,64,LOW,0.7675504112815003,1,85.826512338445,"Missing ISO27001, High Data Sensitivity"
+VND-0300,Nova Services 300,Infrastructure,40,LOW,0.9258676353180918,1,85.77602905954275,"Missing SOC2, Missing ISO27001"
+VND-0244,Apex Partners 244,Data Analytics,56,LOW,0.8173622128962377,1,85.72086638688712,Missing ISO27001
+VND-0065,Vertex Solutions 65,Cloud Services,42,LOW,0.9080528260458928,1,85.64158478137679,"Missing SOC2, Missing ISO27001"
+VND-0169,Titan Systems 169,Cloud Services,37,LOW,0.9401795072782128,1,85.60538521834638,
+VND-0127,Nova Cloud 127,Payment Processing,40,LOW,0.9167285072820913,1,85.50185521846274,Missing SOC2
+VND-0105,Prime Solutions 105,Consulting,40,LOW,0.9130392323849407,1,85.39117697154822,"Missing SOC2, Missing ISO27001"
+VND-0027,Titan Systems 27,Infrastructure,38,LOW,0.9222240928751353,1,85.26672278625405,
+VND-0218,Quantum Services 218,Infrastructure,33,LOW,0.9490190467431414,1,85.07057140229423,"Missing SOC2, Missing ISO27001"
+VND-0343,Titan Services 343,Data Analytics,39,LOW,0.9069979095281954,1,85.00993728584585,"Missing ISO27001, High Data Sensitivity"
+VND-0096,Nova Cloud 96,Software,47,LOW,0.8480440307927338,1,84.84132092378202,Missing SOC2
+VND-0238,Titan Cloud 238,Consulting,35,LOW,0.9269776464501837,1,84.80932939350551,"Missing SOC2, Missing ISO27001"
+VND-0285,Secure Services 285,Security,43,LOW,0.869468244047366,1,84.68404732142098,High Data Sensitivity
+VND-0160,Apex Services 160,Software,27,LOW,0.9694210103618336,1,84.48263031085501,
+VND-0008,Apex Solutions 8,Cloud Services,32,LOW,0.9298140291226333,1,84.294420873679,Missing SOC2
+VND-0102,Secure Systems 102,Cloud Services,33,LOW,0.9216625585923057,1,84.24987675776916,Missing SOC2
+VND-0322,Nova Systems 322,Compliance,36,LOW,0.9016571254530299,1,84.2497137635909,"Missing SOC2, Missing ISO27001"
+VND-0297,Titan Networks 297,Infrastructure,70,LOW,0.6717686067826404,1,84.15305820347922,
+VND-0140,Quantum Analytics 140,Security,30,LOW,0.937635492319157,1,84.12906476957471,"Missing ISO27001, High Data Sensitivity"
+VND-0237,Secure Networks 237,Payment Processing,26,LOW,0.9574043557165859,1,83.92213067149758,"Missing SOC2, High Data Sensitivity"
+VND-0252,Quantum Networks 252,Payment Processing,32,LOW,0.9140803193666598,1,83.8224095809998,Missing ISO27001
+VND-0045,Nova Partners 45,Payment Processing,27,LOW,0.9410228415816083,1,83.63068524744826,"Missing SOC2, Missing ISO27001"
+VND-0080,Vertex Systems 80,Software,28,LOW,0.9324017403436611,1,83.57205221030983,Missing SOC2
+VND-0243,Titan Labs 243,Compliance,29,LOW,0.9241017893845211,1,83.52305368153563,
+VND-0083,Quantum Partners 83,Compliance,73,LOW,0.6303359587211986,1,83.51007876163595,"Missing SOC2, Missing ISO27001"
+VND-0293,Titan Services 293,Consulting,28,LOW,0.9224349726519796,1,83.27304917955938,"Missing SOC2, Missing ISO27001"
+VND-0272,Vertex Partners 272,Compliance,25,LOW,0.9390791470226693,1,83.17237441068008,Missing SOC2
+VND-0146,Vertex Solutions 146,Consulting,26,LOW,0.9304914092459058,1,83.11474227737718,Missing ISO27001
+VND-0004,Titan Services 4,Infrastructure,37,LOW,0.8416994602176459,1,82.65098380652938,Missing ISO27001
+VND-0271,Nova Partners 271,Payment Processing,23,LOW,0.9314210147826013,1,82.54263044347803,
+VND-0202,Prime Cloud 202,Consulting,23,LOW,0.9248560028063909,1,82.34568008419171,Missing ISO27001
+VND-0357,Titan Systems 357,Data Analytics,20,LOW,0.9371167406018723,1,82.11350221805617,
+VND-0063,Secure Networks 63,Data Analytics,71,LOW,0.5950760739874813,1,82.05228221962444,"Active Access After Contract Expiry, Missing SOC2, Missing ISO27001"
+VND-0255,Vertex Solutions 255,Software,28,LOW,0.8796572908520731,1,81.98971872556218,Missing SOC2
+VND-0352,Blue Cloud 352,Payment Processing,39,LOW,0.7982557435713794,1,81.74767230714137,"Missing SOC2, High Data Sensitivity"
+VND-0028,Nova Cloud 28,Software,20,LOW,0.9240147268622699,1,81.72044180586809,Missing ISO27001
+VND-0264,Titan Labs 264,Compliance,24,LOW,0.8910790427997352,1,81.53237128399205,High Data Sensitivity
+VND-0227,Secure Partners 227,Compliance,80,LOW,0.4641226757163765,1,79.92368027149129,"Missing SOC2, Missing ISO27001"
+VND-0116,Quantum Services 116,Data Analytics,22,LOW,0.8260357353043198,1,79.1810720591296,"Missing SOC2, Missing ISO27001"
+VND-0224,Blue Services 224,Payment Processing,28,LOW,0.7757703523312613,1,78.87311056993784,
+VND-0349,Apex Networks 349,Compliance,20,LOW,0.7982562292287134,1,77.94768687686141,"Missing SOC2, Missing ISO27001"
+VND-0335,Titan Networks 335,Compliance,24,LOW,0.7529568258010008,1,77.38870477403002,"Missing ISO27001, High Data Sensitivity"

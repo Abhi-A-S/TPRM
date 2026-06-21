@@ -1,8 +1,16 @@
 import os
+from pathlib import Path
 from typing import Any
+import json
 
+import pandas as pd
 import requests
 import streamlit as st
+
+try:
+    import plotly.express as px
+except ImportError:
+    px = None
 
 BACKEND_URL = os.environ.get("TPRM_BACKEND_URL", "http://localhost:5000")
 ANALYZE_ENDPOINT = f"{BACKEND_URL}/analyze"
@@ -129,28 +137,220 @@ def analyze_file(file_buffer: Any) -> dict:
     response.raise_for_status()
     return response.json()
 
+def load_portfolio() -> pd.DataFrame:
+    path = Path(__file__).resolve().parents[1] / "backend" / "ml" / "exports" / "vendor_risk_register.csv"
+    if path.exists():
+        df = pd.read_csv(path)
+        df["prediction_confidence"] = df["prediction_confidence"].astype(float)
+        df["priority_score"] = df["priority_score"].astype(float)
+        df["risk_score"] = df["risk_score"].astype(float)
+        return df
+    st.warning("Vendor risk register file not found.")
+    return pd.DataFrame()
+
+
+def display_portfolio_summary(portfolio: pd.DataFrame) -> None:
+    st.header("Portfolio Summary")
+
+    counts = portfolio["predicted_severity"].value_counts().to_dict()
+
+    col1, col2, col3, col4, col5 = st.columns(5)
+
+    col1.metric("Total Vendors", len(portfolio))
+    col2.metric("Critical Vendors", counts.get("CRITICAL", 0))
+    col3.metric("High Vendors", counts.get("HIGH", 0))
+    col4.metric("Medium Vendors", counts.get("MEDIUM", 0))
+    col5.metric("Low Vendors", counts.get("LOW", 0))
+
+
+def display_model_performance() -> None:
+    metrics_path = Path(__file__).resolve().parents[1] / "backend" / "ml" / "models" / "model_metrics.json"
+    if not metrics_path.exists():
+        st.warning("Model metrics file not found.")
+        return
+
+    with metrics_path.open("r", encoding="utf-8") as f:
+        metrics = json.load(f)
+
+    accuracy = metrics.get("accuracy", 0.0) * 100
+    macro_f1 = metrics.get("macro_f1", 0.0) * 100
+    recall_high = metrics.get("recall_high", 0.0) * 100
+    recall_critical = metrics.get("recall_critical", 0.0) * 100
+    cv_accuracy_mean = metrics.get("cv_accuracy_mean", 0.0) * 100
+    cv_f1_mean = metrics.get("cv_f1_mean", 0.0) * 100
+    total_pipeline_seconds = metrics.get("timing", {}).get("total_pipeline_seconds", 0.0)
+
+    st.header("Model Performance")
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Accuracy", f"{accuracy:.2f}%")
+    col2.metric("Macro F1", f"{macro_f1:.2f}%")
+    col3.metric("Recall HIGH", f"{recall_high:.2f}%")
+
+    col4, col5, col6 = st.columns(3)
+    col4.metric("Recall CRITICAL", f"{recall_critical:.2f}%")
+    col5.metric("CV Accuracy Mean", f"{cv_accuracy_mean:.2f}%")
+    col6.metric("CV Macro F1 Mean", f"{cv_f1_mean:.2f}%")
+
+    st.metric("Total Pipeline Time", f"{total_pipeline_seconds:.2f} sec")
+    st.write(
+        "Priority metric for TPRM is recall on HIGH and CRITICAL vendors to minimize missed high-risk vendors."
+    )
+
+
+def display_model_explainability() -> None:
+    feature_path = Path(__file__).resolve().parents[1] / "backend" / "ml" / "models" / "feature_importance.csv"
+    if not feature_path.exists():
+        st.warning("Feature importance file not found.")
+        return
+
+    df = pd.read_csv(feature_path)
+    if df.empty:
+        st.warning("Feature importance file is empty.")
+        return
+
+    df = df.sort_values(by="importance", ascending=False).head(10).copy()
+    df["importance_pct"] = (df["importance"] * 100).round(2)
+
+    st.header("Model Explainability")
+    st.write(
+        "Feature importance is derived from the Random Forest model and indicates which vendor attributes most influence severity predictions."
+    )
+
+    if px is not None:
+        fig = px.bar(
+            df,
+            x="importance_pct",
+            y="feature",
+            orientation="h",
+            labels={"importance_pct": "Importance %", "feature": "Feature"},
+            text="importance_pct",
+        )
+        fig.update_layout(yaxis=dict(categoryorder="total ascending"), margin=dict(l=180, r=20, t=20, b=20))
+        st.plotly_chart(fig, use_container_width=True)
+    else:
+        display = df[["feature", "importance_pct"]].set_index("feature")
+        st.bar_chart(display)
+
+
+def display_severity_distribution(portfolio: pd.DataFrame) -> None:
+    st.header("Severity Distribution")
+
+    if portfolio.empty:
+        st.write("No portfolio data available.")
+        return
+
+    counts = portfolio["predicted_severity"].value_counts()
+
+    chart_df = pd.DataFrame({
+        "Severity": ["CRITICAL", "HIGH", "MEDIUM", "LOW"],
+        "Count": [
+            counts.get("CRITICAL", 0),
+            counts.get("HIGH", 0),
+            counts.get("MEDIUM", 0),
+            counts.get("LOW", 0),
+        ]
+    })
+
+    fig = px.bar(
+        chart_df,
+        x="Severity",
+        y="Count",
+        color="Severity",
+        color_discrete_map={
+            "CRITICAL": "red",
+            "HIGH": "orange",
+            "MEDIUM": "yellow",
+            "LOW": "green",
+        },
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
+
+def display_top_vendors(portfolio: pd.DataFrame) -> None:
+    st.header("Top 20 Riskiest Vendors")
+    if portfolio.empty:
+        st.write("No portfolio data available.")
+        return
+    top20 = (
+        portfolio.sort_values(by="priority_score", ascending=False)
+        .head(20)
+        .copy()
+    )
+    top20["confidence_pct"] = (top20["prediction_confidence"] * 100).round(1)
+    top20["risk_driver_count"] = top20["risk_drivers"].fillna("").apply(lambda v: len(str(v).split(", ")) if v else 0)
+    display = top20[
+        [
+            "vendor_name",
+            "vendor_type",
+            "predicted_severity",
+            "confidence_pct",
+            "risk_score",
+            "priority_score",
+            "risk_driver_count",
+        ]
+    ]
+    st.dataframe(display.rename(columns={"confidence_pct": "Confidence %", "risk_score": "Risk Score", "priority_score": "Priority Score", "risk_driver_count": "Risk Driver Count"}))
+
+
+def display_vendor_drilldown(portfolio: pd.DataFrame) -> None:
+    st.header("Vendor Drilldown")
+    if portfolio.empty:
+        st.write("No portfolio data available.")
+        return
+    vendor_names = portfolio["vendor_name"].tolist()
+    selected = st.selectbox("Select Vendor", vendor_names)
+    if selected:
+        vendor = portfolio[portfolio["vendor_name"] == selected].iloc[0]
+        st.write(f"**Vendor Name:** {vendor['vendor_name']}")
+        st.write(f"**Vendor Type:** {vendor['vendor_type']}")
+        st.write(f"**Predicted Severity:** {vendor['predicted_severity']}")
+        st.write(f"**Confidence %:** {vendor['prediction_confidence'] * 100:.1f}%")
+        st.write(f"**Priority Score:** {vendor['priority_score']:.2f}")
+        st.write("**Risk Drivers:**")
+        for driver in str(vendor["risk_drivers"]).split(", "):
+            if driver:
+                st.write(f"• {driver}")
+
+
+def portfolio_tab() -> None:
+    portfolio = load_portfolio()
+    display_portfolio_summary(portfolio)
+    display_model_performance()
+    display_model_explainability()
+    display_severity_distribution(portfolio)
+    display_top_vendors(portfolio)
+    display_vendor_drilldown(portfolio)
+    if not portfolio.empty:
+        csv = portfolio.to_csv(index=False).encode("utf-8")
+        st.download_button("Download Vendor Risk Register", csv, "vendor_risk_register.csv", "text/csv")
+
 
 def main() -> None:
     st.title("TPRM Explainable Risk Dashboard")
-    st.write("Upload vendor PDF and review compliance, risk factors, and recommended actions.")
+    tab = st.tabs(["Document Analysis", "Vendor Risk Portfolio"])
 
-    uploaded_file = st.file_uploader("Upload vendor document", type=["pdf"])
-    if uploaded_file is not None:
-        if st.button("Analyze"):
-            try:
-                result = analyze_file(uploaded_file)
-                st.success("Analysis complete")
-                display_executive_summary(result.get("vendor_name", "Vendor"), result.get("risk", {}))
-                display_vendor_info(result.get("vendor_name", "Vendor"))
-                display_compliance(result.get("compliance", {}))
-                display_clauses(result.get("clauses", {}))
-                display_risk(result.get("risk", {}))
-                display_risk_factors(result.get("risk", {}).get("risk_factors", []))
-                display_recommendations(result.get("recommendations", []))
-                with st.expander("Raw JSON Response"):
-                    st.json(result)
-            except requests.exceptions.RequestException as error:
-                st.error(f"Unable to analyze PDF: {error}")
+    with tab[0]:
+        st.write("Upload vendor PDF and review compliance, risk factors, and recommended actions.")
+        uploaded_file = st.file_uploader("Upload vendor document", type=["pdf"])
+        if uploaded_file is not None:
+            if st.button("Analyze"):
+                try:
+                    result = analyze_file(uploaded_file)
+                    st.success("Analysis complete")
+                    display_executive_summary(result.get("vendor_name", "Vendor"), result.get("risk", {}))
+                    display_vendor_info(result.get("vendor_name", "Vendor"))
+                    display_compliance(result.get("compliance", {}))
+                    display_clauses(result.get("clauses", {}))
+                    display_risk(result.get("risk", {}))
+                    display_risk_factors(result.get("risk", {}).get("risk_factors", []))
+                    display_recommendations(result.get("recommendations", []))
+                    with st.expander("Raw JSON Response"):
+                        st.json(result)
+                except requests.exceptions.RequestException as error:
+                    st.error(f"Unable to analyze PDF: {error}")
+
+    with tab[1]:
+        portfolio_tab()
 
 
 if __name__ == "__main__":
