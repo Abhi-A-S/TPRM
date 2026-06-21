@@ -1,0 +1,33 @@
+feature,importance
+risk_score,0.22010843811979383
+under_investigation,0.16329791684153055
+days_to_contract_expiry,0.0775479794135479
+active_access_after_contract,0.07544779824027285
+annual_spend,0.0557584264288633
+has_any_expired_cert,0.05441730485526568
+breach_status,0.03522100991947151
+current_access,0.033316891021150964
+recent_breach,0.02442439205683885
+soc2_expired,0.022771799768930095
+iso27001_expired,0.022753438627926465
+high_sensitivity,0.018864778521129222
+data_sensitivity_HIGH,0.018128439690960327
+data_sensitivity_MEDIUM,0.01337924526662812
+investigation_sensitive,0.01294653044744241
+gdpr_dpa,0.011700214998384112
+data_sensitivity_LOW,0.011573026454998121
+access_type_Portal,0.010377261527372854
+access_type_API,0.010134652050856119
+missing_both_certs,0.009961778981995838
+access_type_SFTP,0.00995620163139075
+vendor_type_Payment Processing,0.009222523004596852
+vendor_type_Data Analytics,0.008819356128723014
+vendor_type_Security,0.008779084418812233
+access_type_Database,0.00876378743828104
+vendor_type_Cloud Services,0.008635290029305192
+high_risk_and_breach,0.008030290469404998
+vendor_type_Compliance,0.007998363761840795
+access_type_Application,0.007933181310480205
+vendor_type_Consulting,0.007019377362225861
+vendor_type_Software,0.0065235063273055794
+vendor_type_Infrastructure,0.006187714884274444
