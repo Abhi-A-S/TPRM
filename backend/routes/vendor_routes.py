@@ -1,5 +1,6 @@
 import logging
 import os
+from datetime import datetime
 from pathlib import Path
 from typing import Dict
 
@@ -7,6 +8,7 @@ from flask import Blueprint, Flask, current_app, request
 
 from backend.services.clause_extractor import extract_clauses
 from backend.services.compliance_parser import extract_compliance
+from backend.services.llm_vendor_analyzer import analyze_vendor_document
 from backend.services.pdf_extractor import extract_text
 from backend.services.recommendation_engine import generate_recommendations
 from backend.services.risk_engine import calculate_risk
@@ -72,18 +74,65 @@ def analyze_pdf() -> tuple[dict, int]:
     logger.info("Analyzing PDF: %s", pdf_path)
     text_result = extract_text(str(pdf_path))
     raw_text = text_result.get("raw_text", "")
+
+    import time
+
+    analysis_start = time.perf_counter()
+
+    compliance_start = time.perf_counter()
     compliance = extract_compliance(raw_text)
+    compliance_time = time.perf_counter() - compliance_start
+
+    clause_start = time.perf_counter()
     clauses = extract_clauses(raw_text)
+    clause_time = time.perf_counter() - clause_start
+
+    llm_start = time.perf_counter()
+    llm_insights = analyze_vendor_document(raw_text)
+    llm_time = time.perf_counter() - llm_start
+
+    risk_start = time.perf_counter()
     risk = calculate_risk(compliance, clauses)
+    risk_time = time.perf_counter() - risk_start
+
+    recommendation_start = time.perf_counter()
     recommendations = generate_recommendations(compliance, clauses)
+    recommendation_time = time.perf_counter() - recommendation_start
+
+    total_time = time.perf_counter() - analysis_start
 
     vendor_name = Path(safe_filename).stem or "Vendor"
     response = {
         "vendor_name": vendor_name,
         "compliance": compliance,
         "clauses": clauses,
+        "llm_insights": llm_insights,
         "risk": risk,
         "recommendations": recommendations,
+        "timing": {
+            "document_parsing_seconds": text_result.get("duration_seconds", 0.0),
+
+            "compliance_extraction_seconds": compliance_time,
+            "clause_extraction_seconds": clause_time,
+            "llm_analysis_seconds": llm_time,
+            "risk_engine_seconds": risk_time,
+            "recommendation_seconds": recommendation_time,
+
+            "total_analysis_seconds": (
+                text_result.get("duration_seconds", 0.0)
+                + total_time
+            ),
+        }
     }
+    
+    print("\n===== ANALYSIS TIMING =====")
+
+    print(f"PDF Extraction     : {text_result.get('duration_seconds', 0.0):.2f}s")
+    print(f"Compliance Parser  : {compliance_time:.2f}s")
+    print(f"Clause Extraction  : {clause_time:.2f}s")
+    print(f"LLM Analysis       : {llm_time:.2f}s")
+    print(f"Risk Engine        : {risk_time:.2f}s")
+    print(f"Recommendations    : {recommendation_time:.2f}s")
+    print(f"Total              : {total_time:.2f}s")
 
     return response, 200

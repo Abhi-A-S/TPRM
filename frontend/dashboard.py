@@ -72,6 +72,32 @@ def display_risk(risk_data: dict) -> None:
         st.success(f"Risk Level: {risk_level}")
 
 
+def display_ai_vendor_intelligence(llm_insights: dict) -> None:
+    st.header("AI Vendor Intelligence")
+    st.write(f"**Handles PII:** {'Yes' if llm_insights.get('handles_pii') else 'No'}")
+    st.write(f"**Data Access Level:** {llm_insights.get('data_access_level', 'UNKNOWN')}" )
+    st.write(f"**Subprocessor Usage:** {'Yes' if llm_insights.get('subprocessor_usage') else 'No'}")
+    st.write(f"**Incident Reporting Hours:** {llm_insights.get('incident_reporting_hours', 0)}")
+    st.write(f"**Encryption Required:** {'Yes' if llm_insights.get('encryption_required') else 'No'}")
+    st.write(f"**Termination Clause:** {'Yes' if llm_insights.get('termination_clause') else 'No'}")
+
+
+def display_ai_risk_narrative(llm_insights: dict) -> None:
+    st.header("AI Risk Narrative")
+    narrative = llm_insights.get("risk_narrative", "")
+    if narrative:
+        st.write(narrative)
+    else:
+        st.write("No vendor risk narrative available.")
+
+
+def display_timing_metrics(timing: dict) -> None:
+    st.header("Analysis Timings")
+    st.metric("Document Parsing Time", f"{timing.get('document_parsing_seconds', 0.0):.2f} sec")
+    st.metric("LLM Analysis Time", f"{timing.get('llm_analysis_seconds', 0.0):.2f} sec")
+    st.metric("Total Analysis Time", f"{timing.get('total_analysis_seconds', 0.0):.2f} sec")
+
+
 def display_executive_summary(vendor_name: str, risk_data: dict) -> None:
     risk_level = risk_data.get("risk_level", "Unknown")
     risk_score = risk_data.get("risk_score", 0)
@@ -133,7 +159,7 @@ def display_recommendations(recommendations: list[str]) -> None:
 
 def analyze_file(file_buffer: Any) -> dict:
     files = {"file": (file_buffer.name, file_buffer, "application/pdf")}
-    response = requests.post(ANALYZE_ENDPOINT, files=files, timeout=30)
+    response = requests.post(ANALYZE_ENDPOINT, files=files, timeout=1000)
     response.raise_for_status()
     return response.json()
 
@@ -388,6 +414,9 @@ def main() -> None:
                     display_risk(result.get("risk", {}))
                     display_risk_factors(result.get("risk", {}).get("risk_factors", []))
                     display_recommendations(result.get("recommendations", []))
+                    display_ai_vendor_intelligence(result.get("llm_insights", {}))
+                    display_ai_risk_narrative(result.get("llm_insights", {}))
+                    display_timing_metrics(result.get("timing", {}))
                     with st.expander("Raw JSON Response"):
                         st.json(result)
                 except requests.exceptions.RequestException as error:
