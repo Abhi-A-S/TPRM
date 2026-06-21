@@ -163,6 +163,19 @@ def display_portfolio_summary(portfolio: pd.DataFrame) -> None:
     col5.metric("Low Vendors", counts.get("LOW", 0))
 
 
+def display_portfolio_risk_index(portfolio: pd.DataFrame) -> None:
+    counts = portfolio["predicted_severity"].value_counts().to_dict()
+    critical = counts.get("CRITICAL", 0)
+    high = counts.get("HIGH", 0)
+    medium = counts.get("MEDIUM", 0)
+    low = counts.get("LOW", 0)
+    total = len(portfolio) or 1
+    risk_index = (critical * 4 + high * 3 + medium * 2 + low * 1) / total
+
+    st.header("Portfolio Risk Index")
+    st.metric("Risk Index", f"{risk_index:.2f}")
+
+
 def display_model_performance() -> None:
     metrics_path = Path(__file__).resolve().parents[1] / "backend" / "ml" / "models" / "model_metrics.json"
     if not metrics_path.exists():
@@ -312,24 +325,55 @@ def display_vendor_drilldown(portfolio: pd.DataFrame) -> None:
                 st.write(f"• {driver}")
 
 
-def portfolio_tab() -> None:
+def executive_portfolio_tab() -> None:
     portfolio = load_portfolio()
     display_portfolio_summary(portfolio)
-    display_model_performance()
-    display_model_explainability()
+    display_portfolio_risk_index(portfolio)
     display_severity_distribution(portfolio)
     display_top_vendors(portfolio)
+
+
+def ml_analytics_tab() -> None:
+    display_model_performance()
+    display_model_explainability()
+    display_dataset_information()
+
+
+def vendor_register_tab() -> None:
+    portfolio = load_portfolio()
     display_vendor_drilldown(portfolio)
     if not portfolio.empty:
         csv = portfolio.to_csv(index=False).encode("utf-8")
         st.download_button("Download Vendor Risk Register", csv, "vendor_risk_register.csv", "text/csv")
 
 
+def display_dataset_information() -> None:
+    metrics_path = Path(__file__).resolve().parents[1] / "backend" / "ml" / "models" / "model_metrics.json"
+    if not metrics_path.exists():
+        st.warning("Model metrics file not found.")
+        return
+
+    with metrics_path.open("r", encoding="utf-8") as f:
+        metrics = json.load(f)
+
+    dataset_shape = metrics.get("dataset_shape", [0, 0])
+    train_size = metrics.get("train_size", 0)
+    test_size = metrics.get("test_size", 0)
+    feature_count = dataset_shape[1] if len(dataset_shape) > 1 else 0
+
+    st.header("Dataset Information")
+    col1, col2, col3, col4 = st.columns(4)
+    col1.metric("Dataset Size", f"{dataset_shape[0]} records")
+    col2.metric("Feature Count", feature_count)
+    col3.metric("Train Size", train_size)
+    col4.metric("Test Size", test_size)
+
+
 def main() -> None:
     st.title("TPRM Explainable Risk Dashboard")
-    tab = st.tabs(["Document Analysis", "Vendor Risk Portfolio"])
+    tabs = st.tabs(["Document Analysis", "Executive Portfolio", "ML Analytics", "Vendor Register"])
 
-    with tab[0]:
+    with tabs[0]:
         st.write("Upload vendor PDF and review compliance, risk factors, and recommended actions.")
         uploaded_file = st.file_uploader("Upload vendor document", type=["pdf"])
         if uploaded_file is not None:
@@ -349,8 +393,14 @@ def main() -> None:
                 except requests.exceptions.RequestException as error:
                     st.error(f"Unable to analyze PDF: {error}")
 
-    with tab[1]:
-        portfolio_tab()
+    with tabs[1]:
+        executive_portfolio_tab()
+
+    with tabs[2]:
+        ml_analytics_tab()
+
+    with tabs[3]:
+        vendor_register_tab()
 
 
 if __name__ == "__main__":
