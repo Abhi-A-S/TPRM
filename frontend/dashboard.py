@@ -57,6 +57,58 @@ def display_clauses(clauses: dict) -> None:
     st.write(f"{_status_indicator(clauses.get('termination_clause', False))} Termination Clause")
 
 
+def display_document_intelligence(document_type: str, confidence: float, intelligence: dict, validation: dict) -> None:
+    st.header("Document Intelligence")
+    st.write(f"**Document Type:** {document_type}")
+    st.write(f"**Classification Confidence:** {confidence * 100:.0f}%")
+    st.write(f"**Extraction Confidence:** {intelligence.get('confidence', 0.0) * 100:.0f}%")
+    st.write(f"**Classification Reason:** {intelligence.get('classification_reason', '') or 'N/A'}")
+
+    metadata = intelligence.get("metadata", {})
+    if metadata:
+        st.subheader("Extracted Metadata")
+        for key, value in metadata.items():
+            st.write(f"**{key.replace('_', ' ').title()}:** {value}")
+    else:
+        st.write("No additional metadata extracted.")
+
+    st.subheader("Normalized Extraction")
+    st.write("**Compliance Findings:**")
+    compliance = intelligence.get("compliance", {})
+    for label in ["soc2", "soc2_type2", "iso27001", "gdpr", "hipaa", "pci_dss"]:
+        st.write(f"{_status_indicator(compliance.get(label, False))} {label.replace('_', ' ').upper()}")
+
+    st.write("**Contract Findings:**")
+    findings = intelligence.get("contract_findings", {})
+    st.write(f"{_status_indicator(findings.get('encryption_required', False))} Encryption Required")
+    st.write(f"{_status_indicator(findings.get('termination_clause', False))} Termination Clause")
+    st.write(f"{_status_indicator(findings.get('subprocessor_usage', False))} Subprocessor Usage")
+    st.write(f"Incident Reporting Hours: {findings.get('incident_reporting_hours', 0)}")
+
+    vendor_intel = intelligence.get("vendor_intelligence", {})
+    st.write(f"Handles PII: {'Yes' if vendor_intel.get('handles_pii') else 'No'}")
+    st.write(f"Data Access Level: {vendor_intel.get('data_access_level', 'UNKNOWN')}")
+
+    evidence = intelligence.get("evidence", {})
+    if evidence:
+        st.subheader("Evidence")
+        for key, value in evidence.items():
+            if value:
+                st.write(f"**{key.replace('_', ' ').title()}:** {value}")
+    else:
+        st.write("No evidence extracted.")
+
+    st.subheader("Validation Status")
+    conflicts_found = validation.get("conflicts_found", 0)
+    agreement_rate = validation.get("agreement_rate", None)
+    if conflicts_found == 0:
+        st.write("No conflicts detected.")
+    else:
+        st.write(f"Conflicts Found: {conflicts_found}")
+    if agreement_rate is not None:
+        st.write(f"Agreement Rate: {agreement_rate}%")
+
+
 def display_risk(risk_data: dict) -> None:
     st.header("Risk Assessment")
     st.metric(label="Risk Score", value=risk_data.get("risk_score", 0))
@@ -72,21 +124,16 @@ def display_risk(risk_data: dict) -> None:
         st.success(f"Risk Level: {risk_level}")
 
 
-def display_ai_vendor_intelligence(llm_insights: dict) -> None:
+def display_ai_vendor_intelligence(vendor_intelligence: dict) -> None:
     st.header("AI Vendor Intelligence")
-    st.write(f"**Handles PII:** {'Yes' if llm_insights.get('handles_pii') else 'No'}")
-    st.write(f"**Data Access Level:** {llm_insights.get('data_access_level', 'UNKNOWN')}" )
-    st.write(f"**Subprocessor Usage:** {'Yes' if llm_insights.get('subprocessor_usage') else 'No'}")
-    st.write(f"**Incident Reporting Hours:** {llm_insights.get('incident_reporting_hours', 0)}")
-    st.write(f"**Encryption Required:** {'Yes' if llm_insights.get('encryption_required') else 'No'}")
-    st.write(f"**Termination Clause:** {'Yes' if llm_insights.get('termination_clause') else 'No'}")
+    st.write(f"**Handles PII:** {'Yes' if vendor_intelligence.get('handles_pii') else 'No'}")
+    st.write(f"**Data Access Level:** {vendor_intelligence.get('data_access_level', 'UNKNOWN')}")
 
 
-def display_ai_risk_narrative(llm_insights: dict) -> None:
+def display_ai_risk_narrative(risk_narrative: str) -> None:
     st.header("AI Risk Narrative")
-    narrative = llm_insights.get("risk_narrative", "")
-    if narrative:
-        st.write(narrative)
+    if risk_narrative:
+        st.write(risk_narrative)
     else:
         st.write("No vendor risk narrative available.")
 
@@ -94,7 +141,8 @@ def display_ai_risk_narrative(llm_insights: dict) -> None:
 def display_timing_metrics(timing: dict) -> None:
     st.header("Analysis Timings")
     st.metric("Document Parsing Time", f"{timing.get('document_parsing_seconds', 0.0):.2f} sec")
-    st.metric("LLM Analysis Time", f"{timing.get('llm_analysis_seconds', 0.0):.2f} sec")
+    st.metric("Classification Time", f"{timing.get('classification_seconds', 0.0):.2f} sec")
+    st.metric("LLM Extraction Time", f"{timing.get('llm_extraction_seconds', 0.0):.2f} sec")
     st.metric("Validation Time", f"{timing.get('validation_seconds', 0.0):.2f} sec")
     st.metric("Total Analysis Time", f"{timing.get('total_analysis_seconds', 0.0):.2f} sec")
 
@@ -429,13 +477,19 @@ def main() -> None:
                     st.success("Analysis complete")
                     display_executive_summary(result.get("vendor_name", "Vendor"), result.get("risk", {}))
                     display_vendor_info(result.get("vendor_name", "Vendor"))
+                    display_document_intelligence(
+                        result.get("document_type", "UNKNOWN"),
+                        result.get("classification_confidence", 0.0),
+                        result.get("document_intelligence", {}),
+                        result.get("validation", {}),
+                    )
                     display_compliance(result.get("compliance", {}))
                     display_clauses(result.get("clauses", {}))
                     display_risk(result.get("risk", {}))
                     display_risk_factors(result.get("risk", {}).get("risk_factors", []))
                     display_recommendations(result.get("recommendations", []))
-                    display_ai_vendor_intelligence(result.get("llm_insights", {}))
-                    display_ai_risk_narrative(result.get("llm_insights", {}))
+                    display_ai_vendor_intelligence(result.get("document_intelligence", {}).get("vendor_intelligence", {}))
+                    display_ai_risk_narrative(result.get("risk_narrative", ""))
                     display_extraction_validation(result.get("validation", {}))
                     display_timing_metrics(result.get("timing", {}))
                     with st.expander("Raw JSON Response"):

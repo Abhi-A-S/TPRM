@@ -8,11 +8,13 @@ from flask import Blueprint, Flask, current_app, request
 
 from backend.services.clause_extractor import extract_clauses
 from backend.services.compliance_parser import extract_compliance
+from backend.services.document_classifier import classify_document
+from backend.services.document_extractors import extract_document_data
 from backend.services.extraction_validator import validate_extraction_conflicts
-from backend.services.llm_vendor_analyzer import analyze_vendor_document
 from backend.services.pdf_extractor import extract_text
 from backend.services.recommendation_engine import generate_recommendations
 from backend.services.risk_engine import calculate_risk
+from backend.services.risk_narrative_generator import generate_risk_narrative
 
 vendor_bp = Blueprint("vendor", __name__)
 logger = logging.getLogger(__name__)
@@ -85,45 +87,77 @@ def analyze_pdf() -> tuple[dict, int]:
     compliance_time = time.perf_counter() - compliance_start
 
     clause_start = time.perf_counter()
+    # Legacy clause extraction is retained for validation, not primary extraction.
     clauses = extract_clauses(raw_text)
     clause_time = time.perf_counter() - clause_start
 
+    classification_start = time.perf_counter()
+    classification = classify_document(raw_text)
+    classification_time = time.perf_counter() - classification_start
+
     llm_start = time.perf_counter()
-    llm_insights = analyze_vendor_document(raw_text)
+    llm_extraction = extract_document_data(
+        raw_text,
+        classification.get("document_type", "UNKNOWN"),
+        classification.get("confidence", 0.0),
+    )
+    llm_extraction["classification_reason"] = classification.get("reason", "")
     llm_time = time.perf_counter() - llm_start
 
     validation_start = time.perf_counter()
     validation_result = validate_extraction_conflicts(
         raw_text,
         {"compliance": compliance, "clauses": clauses},
-        llm_insights,
+        llm_extraction,
     )
     validation_time = time.perf_counter() - validation_start
 
+    normalized_clauses = {
+        "encryption": bool(llm_extraction.get("contract_findings", {}).get("encryption_required", False)),
+        "subprocessor": bool(llm_extraction.get("contract_findings", {}).get("subprocessor_usage", False)),
+        "incident_reporting_hours": int(llm_extraction.get("contract_findings", {}).get("incident_reporting_hours", 0) or 0),
+        "termination_clause": bool(llm_extraction.get("contract_findings", {}).get("termination_clause", False)),
+    }
+
     risk_start = time.perf_counter()
-    risk = calculate_risk(compliance, clauses)
+    risk = calculate_risk(llm_extraction.get("compliance", {}), normalized_clauses)
     risk_time = time.perf_counter() - risk_start
 
     recommendation_start = time.perf_counter()
-    recommendations = generate_recommendations(compliance, clauses)
+    recommendations = generate_recommendations(llm_extraction.get("compliance", {}), normalized_clauses)
     recommendation_time = time.perf_counter() - recommendation_start
 
+    risk_narrative = generate_risk_narrative(
+        llm_extraction,
+        risk,
+    )
     total_time = time.perf_counter() - analysis_start
 
     vendor_name = Path(safe_filename).stem or "Vendor"
+    llm_clauses = llm_extraction.get("contract_findings", {})
     response = {
         "vendor_name": vendor_name,
-        "compliance": compliance,
-        "clauses": clauses,
-        "llm_insights": llm_insights,
+        "document_type": classification.get("document_type", "UNKNOWN"),
+        "classification_confidence": classification.get("confidence", 0.0),
+        "classification_reason": classification.get("reason", ""),
+        "document_intelligence": llm_extraction,
+        "rule_compliance": compliance,
+        "rule_clauses": clauses,
+        "compliance": llm_extraction.get("compliance", {}),
+        "clauses": {
+            "encryption": bool(llm_clauses.get("encryption_required", False)),
+            "subprocessor": bool(llm_clauses.get("subprocessor_usage", False)),
+            "incident_reporting_hours": int(llm_clauses.get("incident_reporting_hours", 0) or 0),
+            "termination_clause": bool(llm_clauses.get("termination_clause", False)),
+        },
         "validation": validation_result,
         "risk": risk,
+        "risk_narrative": risk_narrative,
         "recommendations": recommendations,
         "timing": {
             "document_parsing_seconds": text_result.get("duration_seconds", 0.0),
-            "compliance_extraction_seconds": compliance_time,
-            "clause_extraction_seconds": clause_time,
-            "llm_analysis_seconds": llm_time,
+            "classification_seconds": classification_time,
+            "llm_extraction_seconds": llm_time,
             "validation_seconds": validation_time,
             "risk_engine_seconds": risk_time,
             "recommendation_seconds": recommendation_time,

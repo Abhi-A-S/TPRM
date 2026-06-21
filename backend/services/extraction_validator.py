@@ -24,17 +24,25 @@ DEFAULT_VALIDATION = {
 }
 
 VALIDATION_FIELDS = [
+    "iso27001",
+    "soc2",
+    "soc2_type2",
+    "gdpr",
     "termination_clause",
-    "subprocessor_usage",
-    "incident_reporting_hours",
     "encryption_required",
+    "incident_reporting_hours",
+    "subprocessor_usage",
 ]
 
 FIELD_MAPPING = {
+    "iso27001": ("compliance", "iso27001"),
+    "soc2": ("compliance", "soc2"),
+    "soc2_type2": ("compliance", "soc2_type2"),
+    "gdpr": ("compliance", "gdpr"),
     "termination_clause": ("clauses", "termination_clause"),
-    "subprocessor_usage": ("clauses", "subprocessor"),
-    "incident_reporting_hours": ("clauses", "incident_reporting_hours"),
     "encryption_required": ("clauses", "encryption"),
+    "incident_reporting_hours": ("clauses", "incident_reporting_hours"),
+    "subprocessor_usage": ("clauses", "subprocessor"),
 }
 
 
@@ -113,6 +121,14 @@ def _compare_values(rule_value: Any, llm_value: Any, field: str) -> bool:
     return rule_value == llm_value
 
 
+def _get_conflict_severity(field: str) -> str:
+    if field in {"iso27001", "soc2", "soc2_type2", "gdpr", "termination_clause", "encryption_required", "subprocessor_usage"}:
+        return "HIGH"
+    if field == "incident_reporting_hours":
+        return "MEDIUM"
+    return "LOW"
+
+
 def validate_extraction_conflicts(
     document_text: str,
     rule_results: Dict[str, Any],
@@ -120,47 +136,68 @@ def validate_extraction_conflicts(
 ) -> Dict[str, Any]:
     conflicts: List[Dict[str, Any]] = []
     final_results: Dict[str, Any] = {
-        "handles_pii": bool(llm_results.get("handles_pii", False)),
-        "data_access_level": str(llm_results.get("data_access_level", "UNKNOWN")),
-        "risk_narrative": str(llm_results.get("risk_narrative", "")),
-        "termination_clause": bool(llm_results.get("termination_clause", False)),
-        "subprocessor_usage": bool(llm_results.get("subprocessor_usage", False)),
-        "incident_reporting_hours": int(llm_results.get("incident_reporting_hours", 0) or 0),
-        "encryption_required": bool(llm_results.get("encryption_required", False)),
+        "handles_pii": bool(llm_results.get("vendor_intelligence", {}).get("handles_pii", False)),
+        "data_access_level": str(llm_results.get("vendor_intelligence", {}).get("data_access_level", "UNKNOWN")),
+        "termination_clause": bool(llm_results.get("contract_findings", {}).get("termination_clause", False)),
+        "subprocessor_usage": bool(llm_results.get("contract_findings", {}).get("subprocessor_usage", False)),
+        "incident_reporting_hours": int(llm_results.get("contract_findings", {}).get("incident_reporting_hours", 0) or 0),
+        "encryption_required": bool(llm_results.get("contract_findings", {}).get("encryption_required", False)),
+        "iso27001": bool(llm_results.get("compliance", {}).get("iso27001", False)),
+        "soc2": bool(llm_results.get("compliance", {}).get("soc2", False)),
+        "soc2_type2": bool(llm_results.get("compliance", {}).get("soc2_type2", False)),
+        "gdpr": bool(llm_results.get("compliance", {}).get("gdpr", False)),
     }
+
+    checked_fields = 0
+    agreements = 0
 
     for field in VALIDATION_FIELDS:
         container, rule_field = FIELD_MAPPING[field]
         rule_value = rule_results.get(container, {}).get(rule_field)
-        llm_value = llm_results.get(field)
+        llm_value = (
+            llm_results.get("compliance", {}).get(field)
+            if container == "compliance"
+            else llm_results.get("contract_findings", {}).get(field)
+        )
 
         if llm_value is None:
             continue
 
+        checked_fields += 1
         if _compare_values(rule_value, llm_value, field):
+            agreements += 1
             continue
 
         conflict = {
             "field": field,
-            "rule_value": rule_value,
-            "llm_value": llm_value,
+            "expected": rule_value,
+            "actual": llm_value,
+            "severity": _get_conflict_severity(field),
         }
         decision = _adjudicate_conflict(document_text, conflict)
         conflict_record = {
             "field": field,
-            "rule_value": rule_value,
-            "llm_value": llm_value,
+            "expected": rule_value,
+            "actual": llm_value,
             "final_value": decision["final_value"],
             "decision_source": "AI_ADJUDICATOR",
             "confidence": decision["confidence"],
             "reason": decision["reason"],
             "winner": decision["winner"],
+            "severity": conflict["severity"],
         }
-        final_results[field] = bool(decision["final_value"]) if field != "incident_reporting_hours" else int(decision["final_value"] or 0)
+        if field == "incident_reporting_hours":
+            final_results[field] = int(decision["final_value"] or 0)
+        else:
+            final_results[field] = bool(decision["final_value"])
         conflicts.append(conflict_record)
+
+    agreement_rate = 100.0 if checked_fields == 0 else round((agreements / checked_fields) * 100.0, 2)
 
     validation_result = DEFAULT_VALIDATION.copy()
     validation_result["final_results"] = final_results
     validation_result["conflicts_found"] = len(conflicts)
+    validation_result["agreement_rate"] = agreement_rate
     validation_result["conflicts"] = conflicts
     return validation_result
+
