@@ -20,210 +20,259 @@ def _status_indicator(condition: bool) -> str:
     return "✅" if condition else "❌"
 
 
-def _risk_color(level: str) -> str:
-    normalized = level.lower()
+def _pretty_document_type(document_type: str) -> str:
+    mapping = {
+        "ISO27001_CERTIFICATE": "ISO27001 Certificate",
+        "SOC2_REPORT": "SOC2 Report",
+        "CONTRACT": "Contract",
+        "SECURITY_QUESTIONNAIRE": "Security Questionnaire",
+        "PRIVACY_POLICY": "Privacy Policy",
+        "DPA": "Data Processing Agreement",
+    }
+    return mapping.get(document_type, document_type.replace('_', ' ').title())
 
-    if normalized == "low":
-        return "green"
-
-    if normalized == "medium":
-        return "orange"
-
-    if normalized == "high":
-        return "red"
-
-    return "gray"
-
-
-def display_vendor_info(vendor_name: str) -> None:
-    st.header("Vendor Information")
-    st.write(f"**Vendor Name:** {vendor_name}")
-
-
-def display_compliance(compliance_data: dict) -> None:
-    st.header("Compliance Status")
-    for label in ["soc2", "soc2_type2", "iso27001", "gdpr", "hipaa", "pci_dss"]:
-        value = compliance_data.get(label, False)
-        display_label = label.replace("_", " ").upper()
-        st.write(f"{_status_indicator(value)} {display_label}")
-
-
-def display_clauses(clauses: dict) -> None:
-    st.header("Contract Findings")
-    st.write(f"{_status_indicator(clauses.get('encryption', False))} Encryption")
-    st.write(f"{_status_indicator(clauses.get('subprocessor', False))} Subprocessor Usage")
-    hours = clauses.get("incident_reporting_hours", 0)
-    st.write(f"Incident Reporting: {hours if hours else 'Not found'} hours")
-    st.write(f"{_status_indicator(clauses.get('termination_clause', False))} Termination Clause")
+DOCUMENT_CONTROLS = {
+    "ISO27001_CERTIFICATE": {
+        "compliance": ["iso27001"],
+        "contract": [],
+    },
+    "SOC2_REPORT": {
+        "compliance": ["soc2"],
+        "contract": [],
+    },
+    "CONTRACT": {
+        "compliance": [],
+        "contract": ["encryption", "termination_clause", "incident_reporting_hours", "subprocessor"],
+    },
+    "SECURITY_QUESTIONNAIRE": {
+        "compliance": ["gdpr", "hipaa", "pci_dss"],
+        "contract": ["encryption", "incident_reporting_hours"],
+    },
+}
 
 
-def display_document_intelligence(document_type: str, confidence: float, intelligence: dict, validation: dict) -> None:
-    st.header("Document Intelligence")
-    st.write(f"**Document Type:** {document_type}")
-    st.write(f"**Classification Confidence:** {confidence * 100:.0f}%")
-    st.write(f"**Extraction Confidence:** {intelligence.get('confidence', 0.0) * 100:.0f}%")
-    st.write(f"**Classification Reason:** {intelligence.get('classification_reason', '') or 'N/A'}")
-
-    metadata = intelligence.get("metadata", {})
-    if metadata:
-        st.subheader("Extracted Metadata")
-        for key, value in metadata.items():
-            st.write(f"**{key.replace('_', ' ').title()}:** {value}")
-    else:
-        st.write("No additional metadata extracted.")
-
-    st.subheader("Normalized Extraction")
-    st.write("**Compliance Findings:**")
-    compliance = intelligence.get("compliance", {})
-    for label in ["soc2", "soc2_type2", "iso27001", "gdpr", "hipaa", "pci_dss"]:
-        st.write(f"{_status_indicator(compliance.get(label, False))} {label.replace('_', ' ').upper()}")
-
-    st.write("**Contract Findings:**")
-    findings = intelligence.get("contract_findings", {})
-    st.write(f"{_status_indicator(findings.get('encryption_required', False))} Encryption Required")
-    st.write(f"{_status_indicator(findings.get('termination_clause', False))} Termination Clause")
-    st.write(f"{_status_indicator(findings.get('subprocessor_usage', False))} Subprocessor Usage")
-    st.write(f"Incident Reporting Hours: {findings.get('incident_reporting_hours', 0)}")
-
-    vendor_intel = intelligence.get("vendor_intelligence", {})
-    st.write(f"Handles PII: {'Yes' if vendor_intel.get('handles_pii') else 'No'}")
-    st.write(f"Data Access Level: {vendor_intel.get('data_access_level', 'UNKNOWN')}")
-
-    evidence = intelligence.get("evidence", {})
-    if evidence:
-        st.subheader("Evidence")
-        for key, value in evidence.items():
-            if value:
-                st.write(f"**{key.replace('_', ' ').title()}:** {value}")
-    else:
-        st.write("No evidence extracted.")
-
-    st.subheader("Validation Status")
-    conflicts_found = validation.get("conflicts_found", 0)
-    agreement_rate = validation.get("agreement_rate", None)
-    if conflicts_found == 0:
-        st.write("No conflicts detected.")
-    else:
-        st.write(f"Conflicts Found: {conflicts_found}")
-    if agreement_rate is not None:
-        st.write(f"Agreement Rate: {agreement_rate}%")
-
-
-def display_risk(risk_data: dict) -> None:
-    st.header("Risk Assessment")
-    st.metric(label="Risk Score", value=risk_data.get("risk_score", 0))
-    risk_level = risk_data.get("risk_level", "Unknown")
-
-    if risk_level == "High":
-        st.error(f"Risk Level: {risk_level}")
-
-    elif risk_level == "Medium":
-        st.warning(f"Risk Level: {risk_level}")
-
-    else:
-        st.success(f"Risk Level: {risk_level}")
-
-
-def display_ml_prediction(ml_prediction: dict) -> None:
-    st.header("ML Risk Prediction")
-    severity = ml_prediction.get("predicted_severity", "Unknown")
-    confidence = int((ml_prediction.get("prediction_confidence", 0.0) or 0.0) * 100)
-    error = ml_prediction.get("error")
-
-    if error or severity == "Unknown":
-        st.error("ML Prediction Error:")
-        if error:
-            st.write(error)
+def _compliance_coverage(document_type: str, compliance: dict) -> tuple[int, int]:
+    applicable = DOCUMENT_CONTROLS.get(document_type, {}).get("compliance", [])
+    found = 0
+    for control in applicable:
+        if control == "soc2":
+            if compliance.get("soc2", False) or compliance.get("soc2_type2", False):
+                found += 1
         else:
-            st.write("Prediction returned Unknown severity.")
-        return
+            if compliance.get(control, False):
+                found += 1
+    return found, len(applicable)
 
-    st.write(f"**Predicted Severity:** {severity}")
-    st.write(f"**Prediction Confidence:** {confidence}%")
 
-    if ml_prediction.get("class_probabilities"):
-        st.subheader("Probability Distribution")
-        for label, prob in ml_prediction.get("class_probabilities", {}).items():
-            st.write(f"{label}: {int(prob * 100)}%")
+def _contract_coverage(document_type: str, clauses: dict) -> tuple[int, int]:
+    applicable = DOCUMENT_CONTROLS.get(document_type, {}).get("contract", [])
+    found = 0
+    for control in applicable:
+        if control == "incident_reporting_hours":
+            if int(clauses.get("incident_reporting_hours", 0) or 0) > 0:
+                found += 1
+        else:
+            if bool(clauses.get(control, False)):
+                found += 1
+    return found, len(applicable)
 
-    top_drivers = ml_prediction.get("top_drivers", [])
-    if top_drivers:
-        st.subheader("Top Drivers")
-        for driver in top_drivers:
-            st.write(f"• {driver}")
+
+def display_vendor_overview(vendor_name: str, document_type: str) -> None:
+    st.subheader("Vendor Information")
+    st.write(f"**Vendor:** {vendor_name}")
+    st.write(f"**Document Type:** {_pretty_document_type(document_type)}")
+
+
+def display_document_intelligence(document_type: str, intelligence: dict) -> None:
+    st.subheader("Document Intelligence")
+    metadata = intelligence.get("metadata", {})
+
+    if document_type == "ISO27001_CERTIFICATE":
+        st.write(f"**Certificate Number:** {metadata.get('certificate_number', 'N/A')}")
+        st.write(f"**Issuer:** {metadata.get('issuer', 'N/A')}")
+        st.write(f"**Issue Date:** {metadata.get('issue_date', 'N/A')}")
+        st.write(f"**Expiration Date:** {metadata.get('expiration_date', 'N/A')}")
+    elif document_type == "SOC2_REPORT":
+        soc2_type = "SOC2 Type II" if intelligence.get("compliance", {}).get("soc2_type2", False) else "SOC2"
+        st.write(f"**SOC2 Type:** {soc2_type}")
+        st.write(f"**Audit Period:** {metadata.get('audit_period', 'N/A')}")
+        st.write(f"**Auditor:** {metadata.get('auditor', 'N/A')}")
+    elif document_type == "CONTRACT":
+        st.write(f"**Effective Date:** {metadata.get('effective_date', 'N/A')}")
+        st.write(f"**Termination Date:** {metadata.get('termination_date', 'N/A')}")
+        st.write(f"**Data Access Scope:** {metadata.get('scope', 'N/A')}")
     else:
-        st.write("No top drivers available.")
+        keys = ["certificate_number", "issuer", "issue_date", "expiration_date", "audit_period", "auditor", "effective_date", "termination_date", "scope"]
+        visible = {k: metadata.get(k) for k in keys if metadata.get(k)}
+        if visible:
+            for key, value in visible.items():
+                st.write(f"**{key.replace('_', ' ').title()}:** {value}")
+        else:
+            st.write("No executive metadata available.")
 
 
-def display_ai_vendor_intelligence(vendor_intelligence: dict) -> None:
-    st.header("AI Vendor Intelligence")
-    st.write(f"**Handles PII:** {'Yes' if vendor_intelligence.get('handles_pii') else 'No'}")
-    st.write(f"**Data Access Level:** {vendor_intelligence.get('data_access_level', 'UNKNOWN')}")
+def display_assessment_findings(document_type: str, compliance: dict, clauses: dict) -> None:
+    st.subheader("Assessment Findings")
+    controls = DOCUMENT_CONTROLS.get(document_type, {})
+    compliance_controls = controls.get("compliance", [])
+    contract_controls = controls.get("contract", [])
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("### Compliance Findings")
+
+        if compliance_controls:
+            for control in compliance_controls:
+                if control == "soc2":
+                    value = compliance.get("soc2", False) or compliance.get("soc2_type2", False)
+                    label = "SOC2"
+                else:
+                    value = compliance.get(control, False)
+                    label = control.replace("_", " ").upper()
+
+                st.write(f"{_status_indicator(value)} {label}")
+        else:
+            st.write("N/A")
+
+    with col2:
+        st.markdown("### Contract Findings")
+
+        if contract_controls:
+            for control in contract_controls:
+                if control == "incident_reporting_hours":
+                    value = int(clauses.get("incident_reporting_hours", 0) or 0) > 0
+                    label = "Incident Reporting"
+
+                elif control == "subprocessor":
+                    value = clauses.get("subprocessor", False)
+                    label = "Subprocessors"
+
+                else:
+                    value = clauses.get(control, False)
+                    label = control.replace("_", " ").title()
+
+                st.write(f"{_status_indicator(value)} {label}")
+        else:
+            st.write("N/A")
+
+    if not compliance_controls and not contract_controls:
+        st.write("No applicable controls were identified for this document type.")
+
+
+def _risk_driver_impact(driver: str) -> str:
+    driver_lower = driver.lower()
+    if "missing" in driver_lower or "expired" in driver_lower or "not detected" in driver_lower:
+        return "High"
+    if "third-party" in driver_lower or "incident" in driver_lower or "subprocessor" in driver_lower:
+        return "Medium"
+    return "Medium"
+
+
+def display_strengths(strengths: list[str]) -> None:
+    st.subheader("Strengths")
+    if not strengths:
+        st.write("No positive findings identified.")
+        return
+    for strength in strengths:
+        st.write(f"✓ {strength}")
+
+
+def display_risk_assessment(risk_data: dict) -> None:
+    st.subheader("Risk Assessment")
+    drivers = risk_data.get("risk_factors", [])[:3]
+
+    if drivers:
+        st.write("**Top Risk Drivers**")
+        for index, driver in enumerate(drivers, start=1):
+            impact = _risk_driver_impact(driver)
+            st.write(f"{index}. {driver}  —  Impact: **{impact}**")
+    else:
+        st.write("No top risk drivers identified. The document appears low risk based on current controls.")
+
+
+def display_recommendations(recommendations: list[str]) -> None:
+    st.subheader("Priority Actions")
+    if not recommendations:
+        st.write("No recommendations available.")
+        return
+    for recommendation in recommendations:
+        st.markdown(f"• **{recommendation}**")
 
 
 def display_ai_risk_narrative(risk_narrative: str) -> None:
-    st.header("AI Risk Narrative")
-    if risk_narrative:
-        st.write(risk_narrative)
-    else:
-        st.write("No vendor risk narrative available.")
-
-
-def display_timing_metrics(timing: dict) -> None:
-    st.header("Analysis Timings")
-    st.metric("Document Parsing Time", f"{timing.get('document_parsing_seconds', 0.0):.2f} sec")
-    st.metric("Classification Time", f"{timing.get('classification_seconds', 0.0):.2f} sec")
-    st.metric("LLM Extraction Time", f"{timing.get('llm_extraction_seconds', 0.0):.2f} sec")
-    st.metric("Validation Time", f"{timing.get('validation_seconds', 0.0):.2f} sec")
-    st.metric("Total Analysis Time", f"{timing.get('total_analysis_seconds', 0.0):.2f} sec")
-
-
-def display_extraction_validation(validation: dict) -> None:
-    st.header("Extraction Validation")
-    conflicts_found = validation.get("conflicts_found", 0)
-    if conflicts_found == 0:
-        st.write("No extraction conflicts detected.")
+    st.subheader("AI Risk Narrative")
+    if not risk_narrative:
+        st.write("No narrative available.")
         return
-
-    st.write(f"Conflicts Found: {conflicts_found}")
-    for conflict in validation.get("conflicts", []):
-        st.markdown("---")
-        st.write(f"**Field:** {conflict.get('field')} ")
-        st.write(f"**Rule Engine:** {conflict.get('rule_value')}")
-        st.write(f"**LLM:** {conflict.get('llm_value')}")
-        st.write(f"**Final Decision:** {conflict.get('final_value')}")
-        st.write(f"**Winner:** {conflict.get('winner')}")
-        st.write(f"**Confidence:** {conflict.get('confidence', 0.0) * 100:.0f}%")
-        st.write(f"**Reason:** {conflict.get('reason')}")
+    sentences = [s.strip() for s in risk_narrative.replace('\n', ' ').split('.') if s.strip()]
+    excerpt = '. '.join(sentences[:4])
+    if excerpt and not excerpt.endswith('.'):
+        excerpt += '.'
+    st.write(excerpt)
 
 
-def display_executive_summary(vendor_name: str, risk_data: dict) -> None:
+def display_processing_metrics(timing: dict) -> None:
+    st.subheader("Processing Metrics")
+    parse_time = timing.get("document_parsing_seconds", 0.0)
+    classification_time = timing.get("classification_seconds", 0.0)
+    extraction_time = timing.get("llm_extraction_seconds", 0.0)
+    total_time = timing.get("total_analysis_seconds", 0.0)
+
+    col1, col2, col3, col4 = st.columns(4)
+    col1.metric("PDF Parse", f"{parse_time:.2f}s")
+    col2.metric("Classification", f"{classification_time:.2f}s")
+    col3.metric("Extraction", f"{extraction_time:.2f}s")
+    col4.metric("Total", f"{total_time:.2f}s")
+
+
+def display_executive_summary(vendor_name: str, risk_data: dict, document_type: str, compliance: dict, clauses: dict) -> None:
     risk_level = risk_data.get("risk_level", "Unknown")
     risk_score = risk_data.get("risk_score", 0)
     risk_factors = risk_data.get("risk_factors", [])[:3]
+    compliance_count, compliance_total = _compliance_coverage(
+        document_type,
+        compliance,
+    )
+
+    contract_count, contract_total = _contract_coverage(
+        document_type,
+        clauses,
+    )
 
     if risk_level == "Low":
         status = "Vendor meets major compliance requirements."
         priority = "Routine monitoring"
-        badge = "🟢 LOW RISK"
+        badge = "🟢 LOW"
         style = st.success
     elif risk_level == "Medium":
         status = "Vendor has several compliance or security gaps."
         priority = "Remediation recommended"
-        badge = "🟠 MEDIUM RISK"
+        badge = "🟠 MEDIUM"
         style = st.warning
-    else:
+    elif risk_level == "High":
         status = "Vendor presents significant security and compliance risk."
         priority = "Immediate remediation required"
-        badge = "🔴 HIGH RISK"
+        badge = "🔴 HIGH"
         style = st.error
+    else:
+        status = "Risk level unavailable. Review details for more information."
+        priority = "Review findings"
+        badge = "⚪ UNKNOWN"
+        style = st.info
 
     st.markdown("---")
     st.subheader("Executive Risk Summary")
     st.write(f"**Vendor:** {vendor_name}")
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
     col1.metric("Risk Score", risk_score)
     col2.metric("Risk Level", risk_level)
+    col3.metric("Compliance Coverage", f"{compliance_count} / {compliance_total}")
+    st.write("**Contract Controls:**")
+    if contract_total > 0:
+        st.write(f"{contract_count} / {contract_total} detected")
+    else:
+        st.write("N/A")
     style(f"{badge}")
     st.write("**Assessment Status:**")
     st.write(status)
@@ -236,24 +285,6 @@ def display_executive_summary(vendor_name: str, risk_data: dict) -> None:
     st.write("**Priority:**")
     st.write(priority)
     st.markdown("---")
-
-
-def display_risk_factors(risk_factors: list[str]) -> None:
-    st.header("Risk Factors")
-    if not risk_factors:
-        st.write("No risk factors detected.")
-    else:
-        for factor in risk_factors:
-            st.write(f"• {factor}")
-
-
-def display_recommendations(recommendations: list[str]) -> None:
-    st.header("Recommendations")
-    if not recommendations:
-        st.write("No recommendations available.")
-    else:
-        for recommendation in recommendations:
-            st.write(f"• {recommendation}")
 
 
 def analyze_file(file_buffer: Any) -> dict:
@@ -499,33 +530,28 @@ def main() -> None:
     tabs = st.tabs(["Document Analysis", "Executive Portfolio", "ML Analytics", "Vendor Register"])
 
     with tabs[0]:
-        st.write("Upload vendor PDF and review compliance, risk factors, and recommended actions.")
+        st.write("Upload vendor document and review executive risk insights, control coverage, and priority actions.")
         uploaded_file = st.file_uploader("Upload vendor document", type=["pdf"])
         if uploaded_file is not None:
             if st.button("Analyze"):
                 try:
                     result = analyze_file(uploaded_file)
                     st.success("Analysis complete")
-                    display_executive_summary(result.get("vendor_name", "Vendor"), result.get("risk", {}))
-                    display_vendor_info(result.get("vendor_name", "Vendor"))
-                    display_document_intelligence(
+                    display_executive_summary(
+                        result.get("vendor_name", "Vendor"),
+                        result.get("risk", {}),
                         result.get("document_type", "UNKNOWN"),
-                        result.get("classification_confidence", 0.0),
-                        result.get("document_intelligence", {}),
-                        result.get("validation", {}),
+                        result.get("compliance", {}),
+                        result.get("clauses", {}),
                     )
-                    display_compliance(result.get("compliance", {}))
-                    display_clauses(result.get("clauses", {}))
-                    display_risk(result.get("risk", {}))
-                    display_risk_factors(result.get("risk", {}).get("risk_factors", []))
+                    display_vendor_overview(result.get("vendor_name", "Vendor"), result.get("document_type", "UNKNOWN"))
+                    display_document_intelligence(result.get("document_type", "UNKNOWN"), result.get("document_intelligence", {}))
+                    display_assessment_findings(result.get("document_type", "UNKNOWN"), result.get("compliance", {}), result.get("clauses", {}))
+                    display_strengths(result.get("risk", {}).get("strengths", []))
+                    display_risk_assessment(result.get("risk", {}))
                     display_recommendations(result.get("recommendations", []))
-                    display_ml_prediction(result.get("ml_prediction", {}))
-                    display_ai_vendor_intelligence(result.get("document_intelligence", {}).get("vendor_intelligence", {}))
                     display_ai_risk_narrative(result.get("risk_narrative", ""))
-                    display_extraction_validation(result.get("validation", {}))
-                    display_timing_metrics(result.get("timing", {}))
-                    with st.expander("Raw JSON Response"):
-                        st.json(result)
+                    display_processing_metrics(result.get("timing", {}))
                 except requests.exceptions.RequestException as error:
                     st.error(f"Unable to analyze PDF: {error}")
 
